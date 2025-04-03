@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.3.10)  1 APR 2025 16:28
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.3.10)  3 APR 2025 10:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2047,7 +2047,7 @@ ut line 256.
  [4] [5] [6]
 
 LaTeX Warning: Reference `proposition:change-of-basis-through-isomorphism' on p
-age 7 undefined on input line 607.
+age 7 undefined on input line 611.
 
 [7] [8] [9]
 פרק 2.
@@ -2055,7 +2055,7 @@ age 7 undefined on input line 607.
 
 ] [11]
 
-LaTeX Warning: Empty bibliography on input line 863.
+LaTeX Warning: Empty bibliography on input line 865.
 
 \tf@thm=\write8
 \openout8 = `algebra_2_recitations.thm'.
@@ -2159,16 +2159,16 @@ Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `algebra_2_recitations.out' has not changed.
-(rerunfilecheck)             Checksum: C9DD1875A672D33DBDE8831225C5721A;1299.
+(rerunfilecheck)             Checksum: 62DFC493592E7E95A90E98734A3BE64C;1293.
 Package logreq Info: Writing requests to 'algebra_2_recitations.run.xml'.
 \openout1 = `algebra_2_recitations.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43528 strings out of 476775
- 924955 string characters out of 5808212
- 1917073 words of memory out of 5000000
- 62911 multiletter control sequences out of 15000+600000
+ 43529 strings out of 476775
+ 924971 string characters out of 5808212
+ 1917055 words of memory out of 5000000
+ 62912 multiletter control sequences out of 15000+600000
  520252 words of font info for 99 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  115i,18n,118p,1293b,880s stack positions out of 10000i,1000n,20000p,200000b,200000s
