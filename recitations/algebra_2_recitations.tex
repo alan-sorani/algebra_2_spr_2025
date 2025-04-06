@@ -862,5 +862,405 @@ $\det\prs{A^{-1}} = \frac{1}{\det\prs{A}}$
  כנדרש.
 \end{solution}
 
+\chapter{המטריצה המצורפת וכלל קרמר}
+
+\section{הגדרות ותכונות בסיסיות}
+
+\begin{definition}[המטריצה המצורפת]
+תהי
+$A \in \Mat_{n}\prs{\mbb{F}}$.
+\emph{המטריצה המצורפת של
+$A$}
+היא המטריצה
+$\adj\prs{A} \in \Mat_n\prs{\mbb{F}}$
+המקיימת
+\begin{align*}
+\text{.} \adj\prs{A}_{i,j} = \prs{-1}^{i+j} \det\prs{A_{\prs{j,i}}}
+\end{align*}
+\end{definition}
+
+\begin{proposition}
+עבור
+$A \in\Mat_n\prs{\mbb{F}}$
+מתקיים
+\begin{align*}
+\text{.} A \adj\pr{A} = \adj\prs{A} A = \det\prs{A} I_n
+\end{align*}
+\end{proposition}
+
+\begin{corollary}
+עבור
+$A \in \Mat_n\prs{\mbb{F}}$
+הפיכה מתקיים
+\begin{align*}
+\text{.} A^{-1} = \frac{1}{\det\prs{A}} \adj\prs{A}
+\end{align*}
+\end{corollary}
+
+\begin{theorem}[כלל קרמר]
+תהי
+$A \in \Mat_n\prs{\mbb{F}}$
+הפיכה, ויהי
+$b \in \mbb{F}^n$.
+עבור כל
+$i \in\brs{n}$,
+נסמן ב־%
+$A_i$
+את המטריצה המתקבלת על ידי החלפת העמודה ה־%
+$i$
+של
+$A$
+ב־%
+$b$.
+אז, למשוואה
+$Ax = b$
+קיים פתרון יחיד
+$x \coloneqq \prs{x_i}_{i \in \brs{n}} \in \mbb{F}^n$
+הנתון על ידי
+\begin{align*}
+\text{.} \forall i \in \brs{n} \colon x_i = \frac{\det\prs{A_i}}{\det\prs{A}}
+\end{align*}
+\end{theorem}
+
+\section{תרגילים}
+
+\begin{exercisechap}
+תהי
+$A = \pmat{1 & -1 & 2 \\ 2 & 3 & 5 \\ -2 & 0 & 1} \in \Mat_3\prs{\mbb{R}}$.
+חשבו את
+$\adj\pr{A}$.
+\end{exercisechap}
+
+\begin{solution}
+נחשב את
+$\adj\prs{A}$
+לפי ההגדרה.
+\begin{align*}
+\adj\prs{A} &= \pmat{\det\pmat{3 & 5 \\ 0 & 1} & -\det\pmat{-1 & 2 \\ 0 & 1} & \det\pmat{-1 & 2 \\ 3 & 5} \\
+-\det\pmat{2 & 5 \\ -2 & 1} & \det\pmat{1 & 2 \\ -2 & 1} & -\det\pmat{1 & 2 \\ 2 & 5} \\
+\det\pmat{2 & 3 \\ -2 & 0} & -\det\pmat{1 & -1 \\ -2 & 0} & \det\pmat{1 & -1 \\ 2 & 3}}
+\\&=
+\pmat{3 & 1 & -11 \\ -12 & 5 & -1 \\ 6 & 2 & 5}
+\end{align*}
+\end{solution}
+
+\begin{exercisechap}
+היעזרו במטריצה המצורפת כדי לחשב את ההופכית עבור כל אחת מהמטריצות הבאות.
+
+\begin{align*}
+A &= \pmat{-2 & 3 & 2 \\ 6 & 0 & 3 \\ 4 & 1 & -1} \in \Mat_3\prs{\mbb{R}} \\
+B &= \pmat{\cos{\theta} & 0 & -\sin{\theta} \in \Mat_3\prs{\mbb{R}} \\
+0 & 1 & 0 \\
+\sin{\theta} & 0 & \cos{\theta}}
+\end{align*}
+עבור
+$\theta \in \mbb{R}$.
+\end{exercisechap}
+
+\begin{solution}
+עבור כל אחת משתי המטריצות, נחשב את הדטרמיננטה ואת המטריצה המצורפת שלה.
+מתקיים
+\begin{align*}
+\det\prs{A} &= -2 \det\pmat{0 & 3 \\ 1 & -1} - 3 \det\pmat{6 & 3 \\ 4 & -1} + 2 \det\pmat{6 & 0 \\ 4 & 1}
+\\&= -2 \cdot \prs{-3} - 3 \cdot \prs{-18} + 2 \cdot 6
+\\&= 72 \\
+\det\prs{B} &= 0 + 1 \cdot \det\pmat{\cos{\theta} & -\sin{\theta} \\ \sin{\theta} & \cos{\theta}} - 0
+\\&= \cos^2{\theta} + \sin^2{\theta}
+\\&= 1
+\end{align*}
+וכן
+\begin{align*}
+\adj\prs{A} &= \pmat{\det\pmat{0 & 3 \\ 1 & -1} & -\det\pmat{6 & 3 \\ 4 & -1} & \det\pmat{6 & 0 \\ 4 & 1} \\
+-\det\pmat{3 & 2 \\ 1 & -1} & \det\pmat{-2 & 2 \\ 4 & -1} & -\det\pmat{-2 & 3 \\ 4 & 1} \\
+\det\pmat{3 & 2 \\ 0 & 3} & -\det\pmat{-2 & 2 \\ 6 & 3} & \det\pmat{-2 & 3 \\ 6 & 0}}^t
+\\&= \pmat{-3 & 18 & 6 \\ 5 & -6 & 14 \\ 9 & 18 & -18}^t
+\\&= \pmat{-3 & 5 & 9 \\ 18 & -6 & 18 \\ 6 & 14 & -18} \\
+\adj\prs{B} &= \pmat{
+\det\pmat{1 & 0 \\ 0 & \cos\theta} & -\det\pmat{0 & 0 \\ \sin \theta & \cos \theta} & \det\pmat{0 & 1 \\ \sin\theta & 0} \\
+-\det\pmat{0 & - \sin\theta \\ 0 & \cos\theta} & \det\pmat{\cos \theta & - \sin \theta \\ \sin\theta & \cos\theta} & -\det\pmat{\cos \theta & 0 \\ \sin \theta & 0} \\
+\det\pmat{0 & -\sin\theta \\ 1 & 0} & -\det\pmat{\cos \theta & - \sin \theta \\ 0 & 0} & \det\pmat{\cos\theta & 0 \\ 0 & 1}}^t
+\\&=
+\pmat{\cos\theta & 0 & -\sin\theta \\ 0 & 1 & 0 \\ \sin \theta & 0 & \cos \theta}^t
+\\&=
+\pmat{\cos\theta & 0 & \sin\theta \\ 0 & 1 & 0 \\ -\sin \theta & 0 & \cos \theta}
+\end{align*}
+ולכן נקבל כי
+\begin{align*}
+A^{-1} &= \frac{1}{\det\prs{A}} \adj\prs{A}
+\\&= \frac{1}{72} \pmat{-3 & 5 & 9 \\ 18 & -6 & 18 \\ 6 & 14 & -18}
+\\&= \pmat{-1/24 & 5/72 & 1/8 \\ 1/4 & -1/12 & 1/4 \\ 1/12 & 7/36 & -1/4} \\
+B^{-1} &= \frac{1}{\det\prs{B}} \adj\prs{B}
+\\\text{,} \hphantom{B^{-1}} &= \pmat{\cos\theta & 0 & \sin\theta \\ 0 & 1 & 0 \\ -\sin \theta & 0 & \cos \theta}
+\end{align*}
+כנדרש.
+\end{solution}
+
+\begin{exercisechap}
+תהי
+$A \in \Mat_n\prs{\mbb{F}}$.
+הראו כי
+$\adj\prs{\adj\prs{A}} = \det\prs{A}^{n-2} A$.
+\end{exercisechap}
+
+\begin{solution}
+נניח תחילה כי
+$A$
+הפיכה.
+אז
+$\adj\prs{A} = \det\prs{A} A^{-1}$
+גם היא הפיכה. לפי אותה נוסחה נקבל כי
+\begin{align*}
+\adj\prs{\adj\prs{A}} &= \det\prs{\adj\prs{A}} \adj\prs{A}^{-1} \\
+\\&= \frac{\det\prs{\adj\prs{A}}}{\det\prs{A}} A
+\end{align*}
+ולכן נותר להראות כי
+\begin{align*}
+\text{.} \det\prs{\adj\prs{A}} = \det\prs{A}^{n-1}
+\end{align*}
+אכן
+\begin{align*}
+\det\prs{\adj\prs{A}} &= \det\prs{\det\prs{A} A^{-1}}
+\\&= \det\prs{A}^n \det\prs{A^{-1}}
+\\\text{,}\hphantom{\det\prs{\adj\prs{A}}}&= \det\prs{A}^{n-1}
+\end{align*}
+כנדרש.
+
+\end{solution}
+
+\begin{exercisechap}
+תהי
+$A \in \Mat_n\prs{\mbb{F}}$.
+הוכיחו את התכונות הבאות.
+
+\begin{enumerate}
+\item
+$\adj\prs{A^t} = \adj\prs{A}^t$.
+
+\item 
+$A$
+הפיכה אם ורק אם
+$\adj\prs{A}$
+הפיכה.
+
+\item
+אם
+$A$
+הפיכה, מתקיים
+$\adj\prs{A^{-1}} = \prs{\adj\prs{A}}^{-1}$.
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item 
+לכל
+$i,j \in \brs{n}$
+מתקיים
+\begin{align*}
+\text{.} \adj\prs{A^t}_{i,j} = \prs{-1}^{i+j} \det\prs{A^t_{\prs{j,i}}}
+\end{align*}
+אבל
+$A^t_{\prs{j,i}} = \prs{A_{\prs{i,j}}}^t$
+ולכן
+\begin{align*}
+\text{.} \adj\prs{A^t}_{i,j} = \prs{-1}^{i+j} \det\prs{A_{\prs{i,j}}}
+\end{align*}
+מצד שני,
+\begin{align*}
+\text{,} \adj\prs{A}^t_{i,j} = \adj\prs{A}_{j,i} = \prs{-1}^{i+j} \det\prs{A_{\prs{i,j}}}
+\end{align*}
+ולכן מתקיים שוויון
+\begin{align*}
+\text{,} \adj\prs{A^t} = \adj\prs{A}^t
+\end{align*}
+כנדרש.
+
+\item
+אם
+$A$
+הפיכה, מתקיים
+$\adj\prs{A} = \det\prs{A} A^{-1}$
+ולכן גם
+$\adj\prs{A}$
+הפיכה.
+
+להיפך, אם
+$\adj\prs{A}$
+הפיכה, גם
+$\adj\prs{\adj\prs{A}}$
+הפיכה. אך כיוון שמתקיים
+$\adj\prs{\adj\prs{A}} = \det\prs{A}^{n-2} A$,
+בהכרח גם
+$A$
+הפיכה (שכן אחרת אגף ימין אינו מטריצה הפיכה).
+
+\item
+נניח כי
+$A$
+הפיכה.
+אז
+\begin{align*}
+\adj\prs{A^{-1}} &= \det\prs{A^{-1}} \prs{A^{-1}}^{-1}
+\\&= \frac{1}{\det\prs{A}} A
+\end{align*}
+וגם
+\begin{align*}
+\adj\prs{A}^{-1} &= \prs{\det\prs{A} A^{-1}}^{-1}
+\\&= \frac{1}{\det\prs{A}} \prs{A^{-1}}^{-1}
+\\ \text{.} \hphantom{\adj\prs{A}^{-1}} &= \frac{1}{\det\prs{A}} A
+\end{align*}
+מכן נסיק כי
+\[\text{,} \adj\prs{A^{-1}} = \adj\prs{A}^{-1}\]
+כנדרש.
+\end{enumerate}
+\end{solution}
+
+\begin{exercisechap}
+היעזרו בכלל קרמר כדי לפתור את כל אחת ממערכות המשוואות הלינאריות הבאות, מעל
+$\mbb{Q}$.
+
+\begin{enumerate}
+\item
+\begin{align*}
+x + y + z &= 11 \\
+2x - 6y - z &= 0 \\
+3x + 4y + 2z &= 0
+\end{align*}
+\item
+\begin{align*}
+3x - 2y &= 7 \\
+3y - 2z &= 6 \\
+3z - 2x &= -1
+\end{align*}
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item
+נכתוב את מערכת המשוואות בעזרת מטריצות, בתור
+$A\vec{x} = b$
+כאשר
+\begin{align*}
+\text{.} A = \pmat{1 & 1 & 1 \\ 2 & -6 & -1 \\ 3 & 4 & 2}, \quad
+\vec{x} = \pmat{x \\ y \\ z}, \quad
+b = \pmat{11 \\ 0 \\ 0}
+\end{align*}
+מתקיים כי
+\begin{align*}
+\det\prs{A} &= \det\pmat{-6 & -1 \\ 4 & 2} - \det \pmat{2 & -1 \\ 3 & 2} + \det\pmat{2 & -6 \\ 3 & 4}
+\\&= -8 -7 + 26
+\\&= 11
+\\
+\det\prs{A_1} &= 11 \det\pmat{-6 & -1 \\ 4 & 2}
+\\&= -88
+\\
+\det\prs{A_2} &= -11 \det \pmat{2 & -1 \\ 3 & 2}
+\\&=
+-77
+\\
+\det\prs{A_3} &= 11 \det\pmat{2 & -6 \\ 3 & 4}
+\\&= 11 \cdot 26
+\end{align*}
+ולכן לפי כלל קרמר
+\begin{align*}
+x &= \det\prs{A_1} / \det\prs{A} = -8 \\
+y &= \det\prs{A_2} / \det\prs{A} = -7 \\
+\text{.} z &= \det\prs{A_3} / \det\prs{A} = 26
+\end{align*}
+
+\item
+נכתוב את מערכת המשוואות בעזרת מטריצות, בתור
+$A\vec{x} = b$
+כאשר
+\begin{align*}
+\text{.} A = \pmat{3 & -2 & 0 \\ 0 & 3 & -2 \\ -2 & 0 & 3}, \quad
+\vec{x} = \pmat{x \\ y \\ z}, \quad
+b = \pmat{7 \\ 6 \\ -1}
+\end{align*}
+מתקיים כי
+\begin{align*}
+\det\prs{A} &= 3 \cdot \det\pmat{3 & -2 \\ 0 & 3} + 2 \cdot \det \pmat{0 & -2 \\ -2 & 3}
+\\&= 27 - 8
+\\&= 19
+\\
+\det\prs{A_1} &= \det\pmat{7 & -2 & 0 \\ 6 & 3 & -2 \\ -1 & 0 & 3}
+\\&= 7 \cdot \det \pmat{3 & -2 \\ 0 & 3} + 2 \cdot \det\pmat{6 & -2 \\ -1 & 3}
+\\&= 7 \cdot 9 + 2 \cdot 16
+\\&= 63 + 32
+\\&= 95
+\\
+\det\prs{A_2} &= \det\pmat{3 & 7 & 0 \\ 0 & 6 & -2 \\ -2 & -1 & 3}
+\\&= 3 \cdot \det\pmat{6 & -2 \\ -1 & 3} - 7 \cdot \det\pmat{0 & -2 \\ -2 & 3}
+\\&= 3 \cdot 16 - 7 \cdot \prs{-4}
+\\&= 76
+\\
+\det\prs{A_3} &= \det\pmat{3 & -2 & 7 \\ 0 & 3 & 6 \\ -2 & 0 & -1}
+\\&= 3 \cdot \det\pmat{3 & 6 \\ 0 & -1} -2 \cdot \det\pmat{-2 & 7 \\ 3 & 6}
+\\&= -9 -2 \cdot \prs{-12 - 21}
+\\&= -9 + 66
+\\&= 57
+\end{align*}
+ולכן לפי כלל קרמר
+\begin{align*}
+x &= \det\prs{A_1} / \det\prs{A} = 95/19 = 5 \\
+y &= \det\prs{A_2} / \det\prs{A} = 76/19 = 4 \\
+\text{.} z &= \det\prs{A_3} / \det\prs{A} = 57/19 = 3
+\end{align*}
+\end{enumerate}
+\end{solution}
+
+\begin{exercisechap}
+תהי
+$A \in \Mat_n\prs{\mbb{F}}$,
+יהי
+$b \in \mbb{F}^n$
+ונניח כי
+$y \in \mbb{F}^n$
+מקיים
+$Ay = b$.
+
+תהי
+$\tilde{A}$
+מטריצה המתקבלת מ־%
+$A$
+על ידי כפל של העמודה ה־%
+$i$
+ב־%
+$\alpha \in\mbb{R}$.
+הראו ישירות לפי כלל קרמר כי
+$\tilde{y} = \pmat{y_1 \\ \vdots \\ y_{i-1} \\ y_i/\alpha \\ y_{i+1} \\ y_n}$
+פתרון עבור המערכת
+$\tilde{A}x = b$.
+\end{exercisechap}
+
+\begin{solution}
+מתקיים כי
+$\det\prs{\tilde{A}} = \alpha \det\prs{A}$.
+כמו כן
+$\det\prs{\tilde{A}_i} = \det\prs{A_i}$
+כיוון שמתקיים
+$\tilde{A}_i = A_i$,
+ולכל
+$j \in \brs{n} \setminus \set{i}$
+מתקיים
+$\det\prs{\tilde{A}_j} = \alpha \det\prs{A_j}$.
+
+לפי כלל קרמר נקבל כי
+$\tilde{y}$
+פתרון של המערכת
+$\tilde{A} x = b$,
+כיוון שמתקיים
+\begin{align*}
+\det\prs{\tilde{A}_i} / \det\prs{\tilde{A}} &= \det\prs{A_i} / \prs{\alpha \det\prs{A}} = y_i / \alpha
+\end{align*}
+וכן לכל
+$j \in \brs{n} \setminus \set{i}$
+מתקיים
+\begin{align*}
+\text{.} \det\prs{\tilde{A}_j} / \det\prs{\tilde{A}} = \alpha \det\prs{A_j} / \prs{\alpha \det\prs{A}} = \det\prs{A_j} / \det\prs{A} = y_j
+\end{align*}
+\end{solution}
+
 \printbibliography
 \end{document}

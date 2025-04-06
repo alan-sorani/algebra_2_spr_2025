@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.3.10)  3 APR 2025 10:49
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.3.10)  6 APR 2025 21:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2053,9 +2053,19 @@ age 7 undefined on input line 611.
 פרק 2.
 [10
 
-] [11]
+] [11] [12]
+פרק 3.
+Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
+put line 892.
+[13
 
-LaTeX Warning: Empty bibliography on input line 865.
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14]
+[15] [16] [17] [18]
+
+LaTeX Warning: Empty bibliography on input line 1265.
 
 \tf@thm=\write8
 \openout8 = `algebra_2_recitations.thm'.
@@ -2149,7 +2159,7 @@ The property list \__xpg_alias contains the pairs (without outer braces):
 >  {newzealand/target}  =>  {english}
 >  {newzealand/variant}  =>  {newzealand}
 >  {newzealand/options}  =>  {variant=newzealand}.
-[12] (./algebra_2_recitations.aux
+[19] (./algebra_2_recitations.aux
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
@@ -2159,18 +2169,18 @@ Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `algebra_2_recitations.out' has not changed.
-(rerunfilecheck)             Checksum: 62DFC493592E7E95A90E98734A3BE64C;1293.
+(rerunfilecheck)             Checksum: C0FD0D8F0E1A7E4B54C97C37BE85BBC3;1883.
 Package logreq Info: Writing requests to 'algebra_2_recitations.run.xml'.
 \openout1 = `algebra_2_recitations.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43529 strings out of 476775
- 924971 string characters out of 5808212
- 1917055 words of memory out of 5000000
- 62912 multiletter control sequences out of 15000+600000
+ 43532 strings out of 476775
+ 925004 string characters out of 5808212
+ 1924700 words of memory out of 5000000
+ 62915 multiletter control sequences out of 15000+600000
  520252 words of font info for 99 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 115i,18n,118p,1293b,880s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 115i,20n,118p,1293b,880s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on algebra_2_recitations.pdf (14 pages).
+Output written on algebra_2_recitations.pdf (21 pages).
