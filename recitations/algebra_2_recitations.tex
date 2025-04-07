@@ -725,7 +725,7 @@ $i$
 והעמודה ה־%
 $j$.
 המספר
-$\det\pr{A_{\pr{i,j}}}$
+$\det\prs{A_{\prs{i,j}}}$
 נקרא
 \emph{המינור}
 ה־$\prs{i,j}$ של
@@ -884,7 +884,7 @@ $\adj\prs{A} \in \Mat_n\prs{\mbb{F}}$
 $A \in\Mat_n\prs{\mbb{F}}$
 מתקיים
 \begin{align*}
-\text{.} A \adj\pr{A} = \adj\prs{A} A = \det\prs{A} I_n
+\text{.} A \adj\prs{A} = \adj\prs{A} A = \det\prs{A} I_n
 \end{align*}
 \end{proposition}
 
@@ -928,7 +928,7 @@ $x \coloneqq \prs{x_i}_{i \in \brs{n}} \in \mbb{F}^n$
 תהי
 $A = \pmat{1 & -1 & 2 \\ 2 & 3 & 5 \\ -2 & 0 & 1} \in \Mat_3\prs{\mbb{R}}$.
 חשבו את
-$\adj\pr{A}$.
+$\adj\prs{A}$.
 \end{exercisechap}
 
 \begin{solution}
@@ -997,16 +997,15 @@ B^{-1} &= \frac{1}{\det\prs{B}} \adj\prs{B}
 
 \begin{exercisechap}
 תהי
-$A \in \Mat_n\prs{\mbb{F}}$.
+$A \in \Mat_n\prs{\mbb{F}}$
+הפיכה.
 הראו כי
 $\adj\prs{\adj\prs{A}} = \det\prs{A}^{n-2} A$.
 \end{exercisechap}
 
 \begin{solution}
-נניח תחילה כי
 $A$
-הפיכה.
-אז
+הפיכה, לכן
 $\adj\prs{A} = \det\prs{A} A^{-1}$
 גם היא הפיכה. לפי אותה נוסחה נקבל כי
 \begin{align*}
@@ -1086,13 +1085,22 @@ $\adj\prs{A}$
 
 להיפך, אם
 $\adj\prs{A}$
-הפיכה, גם
-$\adj\prs{\adj\prs{A}}$
-הפיכה. אך כיוון שמתקיים
-$\adj\prs{\adj\prs{A}} = \det\prs{A}^{n-2} A$,
-בהכרח גם
+הפיכה, נכתוב
+\[\adj\prs{A} A = \det\prs{A} I_n \]
+ואז
+\[\text{.} A = \det\prs{A} \adj\prs{A}^{-1} \]
+אם
+$\det\prs{A} = 0$
+נקבל כי
+$A = 0$,
+אבל אז
+$\adj\prs{A} = 0$
+אינה הפיכה, בסתירה להנחה.
+לכן
+$\det\prs{A} \neq 0$,
+ולכן
 $A$
-הפיכה (שכן אחרת אגף ימין אינו מטריצה הפיכה).
+הפיכה.
 
 \item
 נניח כי

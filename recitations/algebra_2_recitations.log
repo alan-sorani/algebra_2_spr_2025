@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.3.10)  6 APR 2025 21:37
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.3.10)  7 APR 2025 15:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2063,9 +2063,12 @@ put line 892.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
-[15] [16] [17] [18]
+[15] [16] [17]
+Underfull \vbox (badness 5161) has occurred while \output is active []
 
-LaTeX Warning: Empty bibliography on input line 1265.
+ [18]
+
+LaTeX Warning: Empty bibliography on input line 1273.
 
 \tf@thm=\write8
 \openout8 = `algebra_2_recitations.thm'.
@@ -2177,7 +2180,7 @@ Package logreq Info: Writing requests to 'algebra_2_recitations.run.xml'.
 Here is how much of TeX's memory you used:
  43532 strings out of 476775
  925004 string characters out of 5808212
- 1924700 words of memory out of 5000000
+ 1925700 words of memory out of 5000000
  62915 multiletter control sequences out of 15000+600000
  520252 words of font info for 99 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
