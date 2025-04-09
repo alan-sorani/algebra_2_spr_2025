@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.3.10)  9 APR 2025 12:05
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.3.10)  9 APR 2025 23:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2067,11 +2067,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
 [15] [16] [17]
-Underfull \vbox (badness 5161) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [18]
+[19]
 
-LaTeX Warning: Empty bibliography on input line 1333.
+LaTeX Warning: Empty bibliography on input line 1377.
 
 \tf@thm=\write8
 \openout8 = `algebra_2_recitations.thm'.
@@ -2165,7 +2166,7 @@ The property list \__xpg_alias contains the pairs (without outer braces):
 >  {newzealand/target}  =>  {english}
 >  {newzealand/variant}  =>  {newzealand}
 >  {newzealand/options}  =>  {variant=newzealand}.
-[19] (./algebra_2_recitations.aux
+[20] (./algebra_2_recitations.aux
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
@@ -2181,12 +2182,12 @@ Package logreq Info: Writing requests to 'algebra_2_recitations.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43561 strings out of 476775
- 925740 string characters out of 5808212
+ 43562 strings out of 476775
+ 925767 string characters out of 5808212
  1926508 words of memory out of 5000000
- 62944 multiletter control sequences out of 15000+600000
+ 62945 multiletter control sequences out of 15000+600000
  520252 words of font info for 99 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  115i,20n,118p,1293b,880s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on algebra_2_recitations.pdf (21 pages).
+Output written on algebra_2_recitations.pdf (22 pages).
