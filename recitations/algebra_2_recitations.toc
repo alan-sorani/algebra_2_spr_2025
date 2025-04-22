@@ -10,3 +10,6 @@
 \contentsline {chapter}{\numberline {3}המטריצה המצורפת וכלל קרמר}{13}{chapter.3}%
 \contentsline {section}{\numberline {3.1}הגדרות ותכונות בסיסיות}{13}{section.3.1}%
 \contentsline {section}{\numberline {3.2}תרגילים}{13}{section.3.2}%
+\contentsline {chapter}{\numberline {4}מרחבים שמורים ולכסינות}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}מרחבים שמורים}{21}{section.4.1}%
+\contentsline {section}{\numberline {4.2}לכסינות}{24}{section.4.2}%
