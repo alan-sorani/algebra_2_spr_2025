@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.3.10)  23 APR 2025 00:20
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.3.10)  6 MAY 2025 23:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2098,9 +2098,12 @@ t line 1863.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [27]
-[28]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Empty bibliography on input line 2539.
+ [28]
+[29]
+
+LaTeX Warning: Empty bibliography on input line 2483.
 
 \tf@thm=\write8
 \openout8 = `algebra_2_recitations.thm'.
@@ -2194,7 +2197,7 @@ The property list \__xpg_alias contains the pairs (without outer braces):
 >  {newzealand/target}  =>  {english}
 >  {newzealand/variant}  =>  {newzealand}
 >  {newzealand/options}  =>  {variant=newzealand}.
-[29] (./algebra_2_recitations.aux
+(./algebra_2_recitations.aux
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
@@ -2212,7 +2215,7 @@ Package logreq Info: Writing requests to 'algebra_2_recitations.run.xml'.
 Here is how much of TeX's memory you used:
  43960 strings out of 476775
  931869 string characters out of 5808212
- 1935628 words of memory out of 5000000
+ 1935630 words of memory out of 5000000
  63339 multiletter control sequences out of 15000+600000
  520252 words of font info for 99 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
