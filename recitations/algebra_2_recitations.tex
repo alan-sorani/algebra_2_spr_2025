@@ -2480,5 +2480,879 @@ $r_g\prs{2} = 3$.
 \hspace{0pt}
 \pagebreak
 
+\chapter{צורת ז'ורדן}
+
+כדי לבצע חישובים על אופרטורים לינאריים, בדרך כלל יש לקחת בסיס ולערוך את החישובים על המטריצות המייצגות.
+נרצה לקחת בסיס שיתן לנו מטריצה שתאפשר חישובים פשוטים ככל הניתן: מטריצה אלכסונית. אין לכל אופרטור צורה אלכסונית, אבל, מעל שדה סגור אלגברית יש צורה
+``כמעט אלכסונית'' שנקראת
+\emph{צורת ז'ורדן}.
+
+\begin{definition}
+יהי
+$\lambda \in \mbb{F}$.
+נגדיר
+\emph{בלוק ז'ורדן מגודל
+$m$
+עם ערך עצמי
+$\lambda$}
+בתור
+\begin{align*}
+\text{.} J_m\prs{\lambda} \coloneqq \pmat{\lambda & 1 & & \\ & \lambda & \ddots & \\ & & \ddots & 1 \\ & & & \lambda} \in \Mat_m\prs{\mbb{F}}
+\end{align*}
+\end{definition}
+
+\begin{definition}[מטריצת ז'ורדן]
+מטריצה
+$A \in \Mat_n\prs{\mbb{F}}$
+נקראת
+\emph{מטריצת ז'ורדן}
+אם היא מטריצה אלכסונית בלוקים שכל הבלוקים בה הם בלוקי ז'ורדן.
+\end{definition}
+
+\begin{definition}[בסיס ז'ורדן]
+יהי
+$T \in \End_{\mbb{F}}\prs{V}$.
+\emph{בסיס ז'ורדן}
+עבור
+$T$
+הוא בסיס
+$B$
+של
+$V$
+עבורו
+$\brs{T}_B$
+מטריצת ז'ורדן.
+\end{definition}
+
+\begin{definition}[שדה סגור אלגברית]
+שדה
+$\mbb{F}$
+נקרא
+\emph{סגור אלגברית}
+אם לכל פולינום
+$p \in \mbb{F}\brs{x}$
+שאינו קבוע יש שורש.
+\end{definition}
+
+\begin{theorem}[משפט ז'ורדן]
+יהי
+$\mbb{F}$
+שדה סגור אלגברית, יהי
+$V$
+מרחב וקטורי סוף־מימדי מעל
+$\mbb{F}$
+ויהי
+$T \in \End_{\mbb{F}}\prs{V}$.
+קיים בסיס ז'ורדן עבור
+$T$,
+וצורת ז'ורדן של
+$T$
+יחידה עד כדי שינוי סדר הבלוקים.
+\end{theorem}
+
+בהוכחת משפט ז'ורדן בהרצאה, הסתכלנו קודם כל על אופרטורים שעבורם הערך העצמי היחיד הוא
+$0$,
+שהינם אופרטורים
+\emph{נילפוטנטיים}.
+נדון תחילה במשפט ז'ורדן עבור אופרטורים אלו.
+
+\section{אופרטורים נילפוטנטיים}
+
+עבור בלוק ז'ורדן
+$A = J_n\prs{0}$
+מתקיים
+$A^n = 0$,
+ולכן גם
+$T_A^n = 0$.
+נוכל באופן דומה לדבר על אופרטורים כלליים עם תכונה זאת.
+
+\begin{definition}[אופרטור נילפוטנטי]
+אופרטור
+$T \in \End_{\mbb{F}}\prs{V}$
+נקרא
+\emph{נילפוטנטי}
+אם קיים
+$i \in \mbb{N}_+$
+עבורו
+$T^i = 0$.
+
+הערך
+$k$
+המינימלי עבורו
+$T^k = 0$
+נקרא
+\emph{אינדקס הנילפוטנטיות}
+של
+$T$.
+\end{definition}
+
+התרגיל הבא מראה שאלו בדיוק האופרטורים שמעניינים אותנו כאשר אנו רוצות להתייחס רק לערך עצמי
+$0$.
+
+\begin{exercisechap}
+יהי
+$V$
+מרחב וקטורי סוף־מימדי מעל שדה
+\emph{סגור אלגברית}
+$\mbb{F}$,
+ויהי
+$T \in \End_{\mbb{F}}\prs{V}$.
+אז
+$T$
+נילפוטנטי אם ורק אם
+$0$
+הוא הערך העצמי היחיד של
+$T$.
+\end{exercisechap}
+
+\begin{solution}
+נניח כי
+$T$
+נילפוטנטי מאינדקס
+$k$, ויהי
+$\lambda$
+ערך עצמי של
+$T$
+עם וקטור עצמי
+$v$.
+אז
+$0 = T^k\prs{v} = \lambda^k v$
+וכיוון ש־%
+$v \neq 0$
+נקבל
+$\lambda^k = 0$
+ואז
+$\lambda = 0$.
+
+בכיוון השני, נניח כי
+$0$
+הוא הערך העצמי היחיד.
+ממשפט ז'ורדן, קיים בסיס
+$B$
+של
+$V$
+עבורו
+\begin{align*}
+\text{.} \brs{T}_B = \pmat{J_{m_1}\prs{0} & & \\ & \ddots & \\ & & J_{m_k}\prs{0}}
+\end{align*}
+לכל
+$i \in [k]$
+מתקיים
+$J_{m_i}\prs{0}^{m_i} = 0$,
+ולכן אם ניקח
+$m = \max_{i \in [k]} m_i$
+נקבל כי
+\begin{align*}
+\brs{T}_B^m = \pmat{J_{m_1}\prs{0}^m & & \\ & \ddots & \\ & & J_{m_k}\prs{0}^m} = 0
+\end{align*}
+ואז
+$T^m = 0$.
+\end{solution}
+
+\begin{exercisechap}
+תהי
+$T$
+נילפוטנטית מאינדס
+$k$.
+הראו שהעתקות
+$\prs{\id_V \pm T}$
+הפיכות ומצאו את ההופכיות שלהן.
+\end{exercisechap}
+
+\begin{solution}
+אנו יודעות כי
+\[\sum_{k \in \mbb{N}} r^k = \frac{1}{1-r}\]
+עבור
+$r < 0$.
+נרצה אם כן שההופכית של
+$\id_V - T$
+תהיה
+$\id_V + T + \ldots + T^{k-1}$.
+אכן,
+\begin{align*}
+\prs{\id_V - T}\prs{\id_V + T + \ldots + T^{k-1}} &= \sum_{i = 0}^{k-1} T^{i} - \sum_{i = 1}^k T^^i
+\\&= \id_V - T^k
+\\&= \id_V - 0
+\\ \text{.} \hphantom{\prs{\id_V - T}\prs{\id_V + T + \ldots + T^{k-1}}} &= \id_V
+\end{align*}
+
+כעת, אם
+$T$
+נילפוטנטית מאינדקס
+$k$
+גם
+$-T$
+נילפוטנטית מאינדקס
+$k$,
+לכן ההופכית של
+$\id_V + T = \id_V - \prs{-T}$
+היא
+\[\text{.} \id_V - T + T^2 - T^3 + \ldots + \prs{-1}^{k-1} T^{k-1}\]
+\end{solution}
+
+\subsection{מציאת בסיס ז'ורדן עבור אופרטורים נילפוטנטיים}
+
+\begin{definition}[אופרטור הזזה]
+יהי
+$V$
+מרחב וקטורי עם בסיס
+$B = \prs{v_1, \ldots, v_n}$
+ויהי
+$T \in \End_{\mbb{F}}\prs{V}$.
+נגיד כי
+$T$
+\emph{אופרטור הזזה ביחס לבסיס
+$B$}
+אם מתקיים
+\[\text{,} T\prs{v_i} = \fcases{v_{i-1} & i > 1 \\ 0 & i = 1}\]
+או באופן שקול אם
+$\brs{T}_B = J_n\prs{0}$.
+\end{definition}
+
+כדי למצוא בסיס ז'ורדן עבור אופרטור הזזה, נרצה למצוא וקטור
+$v \in V$
+עבורו
+$T^n\prs{v} = 0$
+אבל
+$T^{n-1}\prs{v} \neq 0$,
+ואז
+$\prs{T^{n-1}\prs{v}, T^{n-2}\prs{v}, \ldots, T\prs{v}, v}$
+יהיה בסיס ז'ורדן.
+
+\begin{exercisechap}
+תהי
+\begin{align*}
+A = \pmat{0 & 1 & 0 \\ 1 & 1 & 1 \\ -1 & -2 & -1} \in \Mat_3\prs{\mbb{C}}
+\end{align*}
+ויהי
+$T = T_A \in \End_{\mbb{C}}\prs{\mbb{C}^3}$.
+מיצאו בסיס ז'ורדן עבור
+$T$.
+\end{exercisechap}
+
+\begin{solution}
+מתקיים
+\begin{align*}
+A^2 &= \pmat{1 & 1 & 1 \\ 0 & 0 & 0 \\ -1 & -1 & -1} \\
+A^3 &= 0
+\end{align*}
+ולכן
+$A$
+נילפוטנטית מסדר
+$3 = \dim_{\mbb{C}}\prs{\mbb{C}^3}$.
+מתקיים
+$\ker\prs{T^2} = \Span\prs{e_1 - e_2, e_1 - e_3}$
+כי שני הוקטורים נמצאים בגרעין וכי
+$\dim\ker\prs{T^2} = 3 - \rank\prs{A^2} = 2$.
+ניקח
+$v \in \ker\prs{T^3} \setminus \ker\prs{T^2}$
+ואז יתקיים
+$T^3\prs{v} = 0$
+וגם
+$T^2\prs{v} \neq 0$.
+למשל, ניקח
+$v = e_1$,
+ואת הבסיס
+\[\text{.} \prs{T^2\prs{e_1}, T\prs{e_1}, e_1} = \prs{e_1 - e_3, e_2 - e_3, e_1}\]
+\end{solution}
+
+כעת, יתכנו אופרטורים נילפוטנטיים שאינם אופרטורי הזזה. באופן כללי, עבור אופרטורים כאלה, נשלים בסיס של
+$\ker\prs{T^{k-1}}$
+לבסיס של
+$\ker\prs{T^k}$
+ונסתכל על
+\emph{השרשראות}
+$\prs{T^{k-1}\prs{v}, \ldots, T\prs{v}, v}$
+שמתקבלות מהוקטורים המתאימים. אם שרשור השרשראות מאורך ששווה למימד של
+$V$,
+נקבל בסיס ז'ורדן
+\[\text{.}\prs{T^{k-1}\prs{v_1}, \ldots, T\prs{v_1}, v_1, T^{k-1}\prs{v_2}, \ldots, T\prs{v_2}, v_2, \ldots, T^{k-1}\prs{v_k}, \ldots, T\prs{v_k}, v_k}\]
+אבל, יתכן שזה לא המצב. במקרה זה, נחפש שרשראות קצרות יותר, שיתחילו בוקטורים באיזשהו
+$v \in \ker\prs{T^i} \setminus \ker\prs{T^{i-1}}$
+ויהיו מהצורה
+\[\text{.} \prs{T^{i-1}\prs{v}, \ldots, T\prs{v}, v}\]
+נראה בהמשך נוסחא לחישוב מספר בלוקי ז'ורדן מכל גודל, וכיוון שכל שרשרת כזאת תתאים לבלוק ז'ורדן, נוכל לדעת בדיוק אילו ערכי
+$i$
+לבדוק.
+
+\begin{remark}
+בכל שרשרת ז'ורדן עבור
+$T$
+יש וקטור עצמי יחיד. לכן עבור אופרטור נילפוטנטי $T$ הריבוי הגיאומטרי של
+$0$
+הוא מספר בלוקי הז'ורדן של
+$T$.
+\end{remark}
+
+\begin{remark}
+עבור
+$T \in \End_{\mbb{F}}\prs{V}$
+עם צורת ז'ורדן, עבור
+$n = \dim V$
+ועבור
+$i \in \brs{n}$,
+ההפרש
+\[\dim \ker\prs{T^i} - \dim \ker\prs{T^{i-1}}\]
+הוא מספר הוקטורים
+$v$
+בבסיס ז'ורדן של
+$T$
+עבורם
+$T^i\prs{v} = 0$
+אבל
+$T^{i-1}\prs{v} \neq 0$,
+כלומר מספר שרשראות הז'ורדן מאורך לפחות
+$i$
+בבסיס ז'ורדן.
+
+לכן
+\[\dim \ker\prs{T^i} - \dim \ker\prs{T^{i-1}}\]
+הוא בדיוק מספר הבלוקים מגודל לפחות
+$i$
+בצורת ז'ורדן של
+$T$.
+
+אז, מספר הבלוקים מגודל בדיוק
+$i$
+הוא מספר הבלוקים מגודל לפחות
+$i$
+פחות מספר הבלוקים מגודל לפחות
+$i+1$,
+שהוא
+\[\text{.} \dim \ker\prs{T^i} - \dim \ker\prs{T^{i-1}} - \prs{\dim \ker\prs{T^{i+1}} - \dim \ker\prs{T^i}} = 2 \dim\ker\prs{T^i} - \dim\ker\prs{T^{i+1}} - \dim\ker\prs{T^{i-1}}\]
+\end{remark}
+
+\begin{exercisechap}
+מצאו את צורת ז'ורדן של המטריצה
+\begin{align*}
+\text{.} A = \pmat{0 & 1 & \cdots & 1 \\ 0 & 0 & \ddots & \vdots \\ \vdots & \ddots & \ddots & 1 \\ 0 & \cdots & 0 & 0} \in \Mat_{\mbb{C}}\prs{n}
+\end{align*}
+\end{exercisechap}
+
+\begin{solution}
+$A_n$
+משולשת עליונה, לכן הערכים העצמיים שלה הם על האלכסון. לכן
+$0$
+ערך עצמי מריבוי אלגברי
+$n$.
+
+מתקיים
+$r\prs{A} = n-1$
+כי השורות בלתי־תלויות לינארית, ולכן הריבוי הגיאומטרי של
+$A$
+הוא
+$1$.
+נקבל כי בצורת ז'ורדן של
+$A$
+יש בלוק יחיד, כלומר
+$A \sim J_n\prs{0}$.
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$V = \mbb{C}^7$,
+יהי
+$T \in \End_{\mbb{C}}\prs{V}$
+אופרטור הזזה ביחס לבסיס הסטנדרטי, ויהי
+$S = T^3$.
+מיצאו בסיס ז'ורדן עבור
+$S$.
+\end{exercisechap}
+
+\begin{solution}
+נשים לב ראשית שמתקיים
+\begin{align*}
+\text{.} S\prs{e_i} = \fcases{e_{i-3} & i > 3 \\
+0 & i \leq 3}
+\end{align*}
+מתקיים אם כן
+$S^2\prs{e_7} = e_{7-2 \cdot 3} = e_1 \neq 0$
+וגם
+$S^3 = 0$
+ולכן
+$S$
+נילפוטנטי מאינדקס
+$3$.
+מתקיים
+$\ker\prs{S^2} = \Span\prs{e_1, \ldots, e_6}$.
+ניקח
+$e_7 \in \ker\prs{S^3} \setminus \ker\prs{S^2}$
+שיתאים לשרשרת ז'ורדן
+$\prs{S^2\prs{e_7}, S\prs{e_7}, e_7} = \prs{e_1, e_4, e_7}$.
+אורך השרשרת הוא
+$3$
+ואילו
+$\dim_{\mbb{C}}\prs{\mbb{C}^7} = 7$,
+ולכן יש למצוא עוד שרשראות ז'ורדן.
+
+מתקיים
+$\dim \ker\prs{S^2} - \dim \ker\prs{S} = 6-3 = 3$,
+וכפי שראינו זה מספר בלוקי הז'ורדן מגודל לפחות
+$2$
+לכן נחפש עוד שני וקטורים כאן, שיפתחו שרשראות נוספות.
+מתקיים
+$e_5, e_6 \in \ker\prs{S^2} \setminus \ker\prs{S}$
+ושני וקטורים אלו יחד בלתי תלויים בשרשרת
+$\prs{e_1, e_4, e_7}$
+שמצאנו. נשרשר את השרשרת שמצאנו עם השרשראות
+$\prs{S\prs{e_5}, e_5}, \prs{S\prs{e_6},e_6}$
+ונקבל בסיס ז'ורדן
+\[B = \prs{e_1, e_4, e_7, e_2, e_5, e_3, e_6}\]
+שעבורו
+\[\text{.} \brs{T}_B = \pmat{J_3\prs{0} & & \\ & J_2\prs{0} & \\ & & J_2\prs{0}}\]
+נשים לב שהבלוק מגודל
+$3$
+מופיע ראשון בדיוק כי השרשרת מאורך
+$3$
+היא זאת שכתבנו ראשונה. אם היינו משנות את סדר השרשראות, היה משתנה סדר הבלוקים.
+\end{solution}
+
+\begin{exercisechap}
+\begin{enumerate}
+\item הראו כי
+$J_n\prs{\lambda}^t \cong J_n\prs{\lambda}$,
+מעל
+$\mbb{C}$.
+\item הסיקו כי
+$A \cong A^t$
+לכל
+$A \in \Mat_n\prs{\mbb{C}}$.
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item
+נכתוב
+$T = T_{J_n\prs{\lambda}^t}$
+ונרצה למצוא בסיס
+$B$
+עבורו
+$\brs{T}_B = J_n\prs{\lambda}$.
+נניח תחילה כי
+$\lambda = 0$
+כשבמקרה זה מתקיים
+\[\text{.} T\prs{e_i} = \fcases{e_{i+1} & i < n \\ 0 & i = n}\]
+אז הבסיס
+$B = \prs{e_n, e_{n-1}, \ldots, e_2, e_1}$
+מקיים את הנדרש.
+
+באופן כללי,
+\[T = T_{J_n\prs{0}^t + \lambda I} = T_{J_n\prs{0}^t} + \lambda \id_{\mbb{C}^n}\]
+ולכן
+\[\brs{T}_B = \brs{T_{J_n\prs{0}^t}}_B + \lambda \brs{\id_{\mbb{C}^n}}_B = J_n\prs{0} + \lambda I = J_n\prs{\lambda}\]
+ולכן הבסיס
+$B$
+עדיין עובד.
+
+\item
+ממשפט ז'ורדן, קיימת מטריצה הפיכה
+$P \in \Mat_n\prs{\mbb{C}}$
+עבורה
+$P^{-1} A P = \diag{J_{m_1}\prs{\lambda_1}, \ldots, J_{m_k}\prs{\lambda_k}}$
+מטריצה אלכסונית בלוקים עם בלוקים
+$J_{m_i}\prs{\lambda_i}$.
+אז
+\[\text{.} P^t A^t \prs{P^t}^{-1} = \diag\prs{J_{m_1}\prs{\lambda_1}^t, \ldots, J_{m_k}\prs{\lambda_k}^t}\]
+כעת,
+$J_{m_1}\prs{\lambda_1}^t \cong J_{m_1}\prs{\lambda_1}$ 
+ולכן קיימות מטריצות
+$Q_i \in \Mat_n\prs{\mbb{C}}$
+הפיכות עבורן
+$Q_i^{-1} J_{m_i}\prs{\lambda_i}^t Q_i = J_{m_i}\prs{\lambda_i}$.
+ולכן אם נסמן
+$Q \coloneqq \diag\prs{Q_1, \ldots, Q_n}$
+נקבל כי
+\begin{align*}
+Q^{-1} \prs{P^t A^t \prs{P^t}^{-1}} Q &=
+Q^{-1} \diag\prs{J_{m_1}\prs{\lambda_1}^t, \ldots, J_{m_k}\prs{\lambda_k}^t} Q
+\\&= \diag\prs{Q_1^{-1} J_{m_1}\prs{\lambda_1}^t Q_1, \ldots, Q_k^t J_{m_k}\prs{\lambda_k}^t Q_k}
+\\&= \diag\prs{J_{m_1}\prs{\lambda_1}, \ldots, J_{m_k}\prs{\lambda_k}}
+\\&= P^{-1} A P
+\end{align*}
+כלומר
+\[A = \prs{P Q^{-1} P^t} A^t \prs{\prs{P^t}^{-1} Q P^{-1}} = \prs{P Q^{-1} P^t} A^t \prs{P Q^{-1} P^t}^{-1}\]
+ולכן
+$A \cong A^t$.
+\end{enumerate}
+\end{solution}
+
+\section{משפט ז'ורדן הכללי}
+
+לאחר שהבנו כיצד למצוא בסיס ז'ורדן עבור אופרטורים נילפוטנטיים, נוכל לדבר על אופרטורים כלליים. אם
+$\lambda_1, \ldots, \lambda_k$
+הערכים העצמיים השונים של
+$T \in \End_{\mbb{F}}\prs{V}$,
+נוכל לכתוב
+\[V = V_{\lambda_1}' \oplus \ldots \oplus V_{\lambda_k}'\]
+כאשר
+$V_{\lambda_i}'$
+\emph{מרחבים עצמיים מוכללים},
+שהינם
+$T$%
+־שמורים. כדי למצוא את הבלוקים עם ערך עצמי
+$\lambda_i$
+נסתכל על
+$\left. T \right|_{V_{\lambda_i}'} - \id_{V_{\lambda_i}'}$
+שהינו אופרטור נילפוטנטי על
+$V_{\lambda_i}'$,
+וניעזר באלגוריתם למציאת בסיס ז'ורדן למקרה הנילפוטנטי.
+
+\begin{definition}[מרחב עצמי מוכלל]
+יהי
+$V$
+מרחב וקטורי סוף־מימדי ויהי
+$T \in \End_{\mbb{F}}\prs{V}$.
+נסמן
+$n \coloneqq \dim_{\mbb{F}}\prs{V}$.
+\emph{המרחב העצמי המוכלל}
+של
+$\lambda \in \mbb{F}$
+עבור
+$T$
+הוא
+\[\text{.} V_{\lambda}' \coloneqq \ker\prs{\prs{T - \lambda \id_V}^n}\]
+\end{definition}
+
+\begin{theorem}[פירוק למרחבים עצמיים מוכללים]
+יהי
+$V$
+מרחב וקטורי סוף־מימדי מעל שדה סגור אלגברית, יהי
+$T \in \End_{\mbb{F}}\prs{V}$
+ויהיו
+$\lambda_1, \ldots, \lambda_k \in \mbb{F}$
+הערכים העצמיים השונים של
+$T$.
+אז
+$V_{\lambda_i}'$
+הינו
+$T$%
+־שמור לכל
+$i \in [k]$,
+וגם
+\[\text{.} V = \bigoplus V_{\lambda_i}'\]
+\end{theorem}
+
+לפני שנתאר את האלגוריתם הכללי, נזכיר תכונות שראינו בהרצאה.
+
+\begin{proposition}
+יהי
+$V$
+מרחב וקטורי סוף־מימדי מעל שדה סגור אלגברית, ויהי
+$T \in \End_{\mbb{F}}\prs{V}$.
+
+\begin{enumerate}
+\item 
+מספר הבלוקים עם ערך עצמי
+$\lambda \in \mbb{F}$
+בצורת ז'ורדן של
+$T$
+הוא
+$r_g\prs{\lambda}$,
+וסכום גדלי הבלוקים עם ערך עצמי
+$\lambda$
+הוא
+$r_a\prs{\lambda}$.
+
+\item
+הבלוק המקסימלי עם ערך עצמי
+$\lambda$
+בצורת ז'ורדן של
+$T$
+שווה לאינדקס הנילפוטנטיות של
+$\left. T \right|_{V'_\lambda} - \id_{V'_\lambda}$
+כאשר
+$V'_\lambda$
+המרחב העצמי המוכלל של
+$\lambda$
+עבור
+$T$.
+
+\item מספר הבלוקים עם ערך עצמי
+$\lambda$
+שהינם מגודל לפחות
+$r$
+הוא
+\[\text{.} \dim \ker\prs{\prs{T - \lambda \id_V}^r} - \dim \ker\prs{\prs{T - \lambda \id_V}^{r-1}}\]
+
+\item מספר הבלוקים עם ערך עצמי
+$\lambda$
+מגודל בדיוק
+$r$
+הוא
+\[\text{.} 2 \dim \ker\prs{\prs{T - \lambda \id_V}^r} - \dim \ker\prs{\prs{T - \lambda \id_V}^{r+1}} - \dim \ker\prs{\prs{T - \lambda \id_V}^{r-1}}\]
+\end{enumerate}
+\end{proposition}
+
+
+\subsection{מציאת בסיס ז'ורדן עבור אופרטור כללי}
+
+יהי
+$V$
+מרחב וקטורי ממימד סופי
+$n$
+מעל שדה סגור אלגברית
+$\mbb{F}$,
+יהי
+$T \in \End_{\mbb{F}}\prs{V}$,
+ויהיו
+$\lambda_1, \ldots, \lambda_k$
+הערכים העצמיים השונים של
+$T$.
+כדי למצוא בסיס ז'ורדן עבור
+$T$
+נסתכל על כל ערך עצמי בנפרד. לכל ערך עצמי
+$\lambda$
+האופרטור
+$\left. T \right|_{V'_\lambda} - \id_{V'_\lambda}$
+נילפוטנטי ולכן מהאלגוריתם במקרה הנילפונטי נוכל לקבל בסיס ז'ורדן
+$B_\lambda$
+עבורו. נשרשר את כל הבסיסים הללו ונקבל בסיס ז'ורדן
+$B = B_{\lambda_1} \cup \ldots \cup B_{\lambda_k}$
+עבור
+$T$.
+
+\begin{exercisechap}
+ידוע כי כל הערכים העצמיים של
+\[A \ceq \pmat{1 & 1 & 0 & 0 & 0 & 0 \\
+-1 & 3 & 0 & 0 & 0 & 0 \\
+-1 & 0 & 2 & 1 & 0 & 0 \\
+-1 & 0 & -1 & 3 & 1 & 0 \\
+-1 & 0 & -1 & 0 & 4 & 0 \\
+-1 & 0 & -1 & 0 & 2 & 2} \in \Mat_6\prs{\mbb{C}}\]
+רציונליים.
+מצאו צורת ובסיס ז'ורדן עבור
+$A$.
+\end{exercisechap}
+
+\begin{solution}
+נסמן
+$V = \mbb{C}^6$.
+
+חישוב ישיר נותן
+\[\text{.} p_A\prs{x} = \det\prs{xI - A} = x^6 - 15x^5 + 93x^4 - 305x^3 + 558x^2 - 540x + 216\]
+ממשפט ניחוש השורש הרציונלי אפשר למצוא את השורשים ולקבל
+\[\text{.} p_A\prs{x} = \prs{x-2}^3 \prs{x-3}^3\]
+
+נסתכל על הערכים העצמיים
+$2,3$
+בנפרד.
+
+\begin{description}
+\item[$\lambda = 3$:]
+מתקיים
+\[\prs{A-3I} = \pmat{-2 & 1 & 0 & 0 & 0 & 0 \\
+-1 & 0 & 0 & 0 & 0 & 0 \\
+-1 & 0 & -1 & 1 & 0 & 0 \\
+-1 & 0 & -1 & 0 & 1 & 0 \\
+-1 & 0 & -1 & 0 & 1 & 0 \\
+-1 & 0 & -1 & 0 & 2 & -1}\]
+ומרחב הפתרונות של המערכת ההומוגנית הוא
+\[\text{.} \ker\prs{T_A - 3\id_V} = \spn\set{\pmat{0\\0\\1\\1\\1\\1}}\]
+חישוב ישיר נותן כי
+\[\ker\prs{\prs{T_A - 3\id_V}^2} = \spn\set{\pmat{0\\0\\1\\1\\1\\1}, e_3}\]
+וגם
+\[\text{.} \ker\prs{\prs{T_A - 3\id_V}^3} = \spn\set{\pmat{0\\0\\1\\1\\1\\1}, e_3, e_4}\]
+אז,
+$e_4$
+פותח שרשרת ז'ורדן
+\[\text{.} B_3 = \pmat{\prs{A-3I}^2 e_4, \prs{A-3I}e_4, e_4} = \pmat{\pmat{0\\0\\-1\\-1\\-1\\-1}, e_3, e_4}\]
+
+\item[$\lambda = 2$:]
+מתקיים
+\[\ker\prs{T_A - 2\id_V} = \spn\set{e_6, \pmat{1\\1\\1\\1\\1\\0}}\]
+ולכן יש ל־%
+$2$
+ריבוי גיאומטרי
+$2$.
+אז יש שני בלוקי ז'ורדן עבור הערך העצמי
+$2$,
+ולכן השרשרת המקסימלית מגודל
+$2$.
+אפשר לראות כי סכום העמודות של
+\[A - 2I = \pmat{-1 & 1 & 0 & 0 & 0 & 0 \\
+-1 & 1 & 0 & 0 & 0 & 0 \\
+-1 & 0 & 0 & 1 & 0 & 0 \\
+-1 & 0 & -1 & 1 & 1 & 0 \\
+-1 & 0 & -1 & 0 & 2 & 0 \\
+-1 & 0 & -1 & 0 & 2 & 0}\]
+שווה
+$0$,
+ולכן
+$e_1 \in \ker\prs{\prs{T_A - \id_V}^2}$
+ונקבל
+\[\text{.} \ker\prs{\prs{T_A - \id_V}^2} = \spn\set{e_6, \pmat{1\\1\\1\\1\\1\\0}, e_1}\]
+אז
+$e_1$
+מתחיל שרשרת ז'ורדן
+\[\text{.} \prs{\prs{A-2I} e_1, e_1} = \prs{\pmat{-1\\-1\\-1\\-1\\-1\\-1}, e_1}\]
+
+חסרה שרשרת ז'ורדן מאורך
+$1$
+עבור
+$\lambda = 2$.
+היא וקטור עצמי של
+$2$
+שאינו תלוי ב־%
+$\prs{\prs{A-2I} e_1, e_1}$.
+למשל,
+$e_6$
+הוא כזה וקטור עצמי.
+
+נקבל בסיס ז'ורדן
+\[B_2 \coloneqq \prs{\pmat{-1\\-1\\-1\\-1\\-1\\-1}, e_1, e_6}\]
+של
+$\left. T \right|_{V'_2}$.
+
+\item[סיכום:]
+נסדר את השרשראות השונות בבסיס ונקבל בסיס ז'ורדן
+\[
+B = \pmat{\pmat{0\\0\\-1\\-1\\-1\\-1}, e_3, e_4, \pmat{-1\\-1\\-1\\-1\\-1\\-1}, e_1, e_6}
+\]
+לפיו
+\[\text{.} \brs{T_A}_B = \mrm{diag}\prs{J_3\prs{3}, J_2\prs{2}, J_1\prs{2}}\]
+\end{description}
+
+\end{solution}
+
+\begin{exercisechap}
+הראו כי
+\begin{align*}
+\text{.} J_n\prs{\lambda}^r = \pmat{\lambda^r & \pmat{r \\ 1} \lambda^{r-1} & \pmat{r \\ 2} \lambda^{r-2} & \cdots & \\ & \lambda^r & \ddots & & \vdots \\ & & \ddots & \ddots & \pmat{r\\2}\lambda^{r-2} \\ & & & \lambda^r & \pmat{r \\ 1} \lambda^{r-1} \\ & & & & \lambda^r}
+\end{align*}
+\end{exercisechap}
+
+\begin{solution}
+מתקיים
+\begin{align*}
+J_n\prs{\lambda}^r &= \prs{J_n\prs{0} + \lambda I}^r
+\end{align*}
+כאשר
+$J_n\prs{0}, \lambda I$
+מתחלפות כי
+$\lambda I$
+סקלרית.
+נקבל מהבינום של ניוטון כי
+\begin{align*}
+J_n\prs{\lambda}^r = \lambda^r I + \binom{r}{1} \lambda^{r-1} J_n\prs{0} + \binom{r}{2} \lambda^{r-2} J_n\prs{0}^2 + \ldots
+\end{align*}
+כאשר
+$J_n\prs{0}^k$
+היא מטריצה עם אפסים פרט ל־%
+$1$
+באלכסון ה־%
+$k$
+מעל האלכסון הראשי.
+לכן
+\begin{align*}
+\text{,} J_n\prs{\lambda}^r = \pmat{\lambda^r & \pmat{r \\ 1} \lambda^{r-1} & \pmat{r \\ 2} \lambda^{r-2} & \cdots & \\ & \lambda^r & \ddots & & \vdots \\ & & \ddots & \ddots & \pmat{r\\2}\lambda^{r-2} \\ & & & \lambda^r & \pmat{r \\ 1} \lambda^{r-1} \\ & & & & \lambda^r}
+\end{align*}
+כנדרש.
+\end{solution}
+
+\begin{exercisechap}
+תהי
+\[\text{.} A \ceq \pmat{2 & 4 & 0 \\ -1 & -2 & 0 \\ 8 & 7 & 9} \in \Mat_3\prs{\mbb{C}}\]
+חשבו את
+$A^{2025}$.
+\end{exercisechap}
+
+\begin{solution}
+נסמן
+$V = \mbb{C}^3$
+ונמצא בסיס ז'ורדן
+$B$
+עבור
+$A$.
+אז נקבל
+$P \in \Mat_3\prs{\mbb{C}}$
+עבורה
+$J \ceq P A P^{-1}$
+מטריצת ז'ורדן, ואז
+\begin{align*}
+A^{2025} &= \prs{P^{-1}JP}^{2025}
+= P^{-1}J^{2025}P
+\end{align*}
+כאשר מהחישוב הנ"ל נדע לחשב את
+$J^{2025}$.
+
+\begin{description}
+\item[ערכים עצמיים:]
+ניתן לראות כי
+$9$
+ערך עצמי של
+$A$
+כי
+$A e_3 = 9 e_3$.
+נסמן ב־%
+$\lambda_1, \lambda_2$
+את הערכים העצמיים הנוספים ונקבל
+\begin{align*}
+\lambda_1 + \lambda_2 + 9 = \tr\prs{A} = 9 \\
+9 \lambda_1 \lambda_2 = \det\prs{A} = 9\prs{-4+4} = 0
+\end{align*}
+לכן
+$\lambda_1 = \lambda_2 = 0$.
+
+נקבל כי
+$9$
+ערך עצמי מריבוי אלגברי
+$1$
+וכי
+$0$
+ערך עצמי מריבוי אלגברי
+$2$.
+בפרט,
+$\prs{e_3}$
+שרשרת ז'ורדן עבור הערך העצמי
+$9$.
+\item[שרשרת ז'ורדן עבור
+$\lambda = 0$:]
+ניתן לראות כי
+$r\prs{A} = 2$
+ולכן
+$\dim \ker \prs{T_A} = 1$.
+נשים לב כי
+\[2 e_1 - e_2 - e_3 \in \ker\prs{L_A}\]
+ולכן
+\[\text{.} \ker\prs{T_A} = \spn\prs{2 e_1 - e_2 - e_3}\]
+מתקיים
+\[A^2 = \pmat{0 & 0 & 0 \\ 0 & 0 & 0 \\ 81 & 81 & 81}\]
+לכן נוכל להשלים את
+$\prs{2 e_1 - e_2 - e_3}$
+לבסיס
+\[\prs{2 e_1 - e_2 - e_3, e_1 - e_3}\]
+של
+$\ker\prs{T_A^2}$.
+מתקיים
+\[A \prs{e_1 - e_3} = 2e_1 - e_2 - e_3\]
+לכן נקבל שרשרת ז'ורדן
+\[\text{.} \prs{A\prs{e_1 - e_3}, e_1 - e_3} = \prs{2e_1 - e_2 - e_3, e_1 - e_3}\]
+
+\item[מסקנה:]
+קיבלנו
+\[B \ceq \prs{2e_1 - e_2 - e_3, e_1 - e_3, e_3}\]
+עבורו
+\[\brs{T_A}_B = J \ceq \pmat{0 & 1 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 9}\]
+ולכן
+\begin{align*}
+\text{.} A &= \brs{T_A}_E
+= \brs{\id_V}^{B}_E \brs{T_A}_B \brs{\id_V}^E_B
+\end{align*}
+נסמן
+\[P \ceq \brs{\id_V}^B_E = \pmat{2 & 1 & 0 \\ -1 & 0 & 0 \\ -1 & -1 & 1}\]
+שעמודותיה הן וקטורי הבסיס
+$B$,
+ונקבל
+\[\text{.} A = P J P^{-1}\]
+אז
+\begin{align*}
+A^{2025} &= P J^{2025} P^{-1}
+\\&= \pmat{2 & 1 & 0 \\ -1 & 0 & 0 \\ -1 & -1 & 1} \pmat{0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 9^{2025}} \pmat{0 & -1 & 0 \\ 1 & 2 & 0 \\ 1 & 1 & 1}
+\\ \text{.} \hphantom{A^{2025}} &= \pmat{0 & 0 & 0 \\ 0 & 0 & 0 \\ 9^{2025} & 9^{2025} & 9^{2025}}
+\end{align*}
+\end{description}
+\end{solution}
+
 \printbibliography
 \end{document}
