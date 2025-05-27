@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.3.10)  25 MAY 2025 15:12
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.3.10)  27 MAY 2025 09:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2126,9 +2126,42 @@ Overfull \hbox (5.90886pt too wide) in paragraph at lines 3002--3014
 []
  []
 
-[33] [34] [35] [36] [37]
+[33] [34] [35] [36] [37] [38] [39
 
-LaTeX Warning: Empty bibliography on input line 3357.
+]
+פרק 6.
+[40
+
+] [41] [42] [43]
+Overfull \hbox (7.40146pt too wide) in paragraph at lines 3884--3892
+[][]\TU/Alef(0)/m/n/10 יהי $[]$ מרחב נורמי. \TU/Alef(0)/m/it/10 המטריקה המושרית
+ \TU/Alef(0)/m/n/10 על $\OML/cmm/m/it/10 V$ \TU/Alef(0)/m/n/10 היא $\OML/cmm/m/
+it/10 d [] \OT1/cmr/m/n/10 =$[]
+ []
+
+[44] [45] [46]
+Overfull \hbox (10.3735pt too wide) in paragraph at lines 4331--4332
+[][]\TU/Alef(0)/m/n/10 כדי למצוא בסיסים אורתונורמליים ומשלימים ישרים, ניעזר בתה
+ליך שלוקח בסיס כלשהו ומחזיר בסיס אורתונורמלי. []
+ []
+
+[47]
+Overfull \hbox (23.0421pt too wide) in paragraph at lines 4459--4468
+[]\TU/Alef(0)/m/n/10 של $\OML/cmm/m/it/10 V$\TU/Alef(0)/m/n/10 . נבצע את תהליך 
+גרם־שמידט כדי לקבל בסיס אורתונורמלי $[]$ עבורו $\OML/cmm/m/it/10 W \OT1/cmr/m/n
+/10 = [] []$[]
+ []
+
+
+Overfull \hbox (26.17805pt too wide) in paragraph at lines 4495--4509
+[]\TU/Alef(0)/m/n/10 כאשר $[]$ סימטרית ו־$[]$ אנטי־סימטרית. אז $[] \OMS/cmsy/m/
+n/10 2 \OML/cmm/m/it/10 W$ \TU/Alef(0)/m/n/10 וכיוון ש־$\OML/cmm/m/it/10 W[]$ \
+TU/Alef(0)/m/n/10 מרחב המטריצות האנטיסימטריות,[]
+ []
+
+[48]
+
+LaTeX Warning: Empty bibliography on input line 4564.
 
 \tf@thm=\write8
 \openout8 = `algebra_2_recitations.thm'.
@@ -2222,7 +2255,7 @@ The property list \__xpg_alias contains the pairs (without outer braces):
 >  {newzealand/target}  =>  {english}
 >  {newzealand/variant}  =>  {newzealand}
 >  {newzealand/options}  =>  {variant=newzealand}.
-[38] (./algebra_2_recitations.aux
+[49] (./algebra_2_recitations.aux
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
@@ -2232,18 +2265,18 @@ Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `algebra_2_recitations.out' has not changed.
-(rerunfilecheck)             Checksum: 10904CBB8AF1C5A53CBAD7D60A69D8DD;3898.
+(rerunfilecheck)             Checksum: 2284CD4FBB2E05AC3F1CACF0E99957F2;5581.
 Package logreq Info: Writing requests to 'algebra_2_recitations.run.xml'.
 \openout1 = `algebra_2_recitations.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43964 strings out of 476775
- 931916 string characters out of 5808212
- 1936989 words of memory out of 5000000
- 63343 multiletter control sequences out of 15000+600000
+ 43968 strings out of 476775
+ 931961 string characters out of 5808212
+ 1938767 words of memory out of 5000000
+ 63347 multiletter control sequences out of 15000+600000
  520252 words of font info for 99 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  115i,20n,118p,1293b,880s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on algebra_2_recitations.pdf (40 pages).
+Output written on algebra_2_recitations.pdf (51 pages).

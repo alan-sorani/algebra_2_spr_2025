@@ -46,19 +46,46 @@ $\mbb{F}$,
 יהי
 $T \in \End_{\mbb{F}}\prs{V}$
 אופרטור נילפוטנטי עם אינדקס נילפוטנטיות
-$k$,
-ולכל
-$i \in \brs{k}$
-יהי
-$B_i \coloneqq \prs{v_{i,1}, \ldots, v_{i,n_i}}$
-בסיס עבור
-$\ker\prs{T^i} \setminus \ker\prs{T^{i-1}}$.
+$k$.
 לכל
-$v \in \ker\prs{T^\ell} \setminus \ker\prs{T^{\ell - 1}}$
+$i \in \brs{n}$
 נסמן
+$n_i = \dim \ker\prs{T^i} - \dim \ker\prs{T^{i-1}}$
+שזהו מספר הבלוקים בצורת ז'ורדן של
+$T$
+מגודל לפחות
+$i$.
+יהי
+$B_1 = \prs{v^{\prs{1}}_1, \ldots, v^{\prs{1}}_{n_k}}$
+בסיס לגרעין
+$\ker\prs{T}$
+ונבנה באופן אינדוקטיבי קבוצות סדורות
+$B_i = \prs{v^{\prs{i}}_1, \ldots, v^{\prs{i}}_{n_i}}$
+כך שלכל
+$i$
+מתקיים כי
+$\biguplus_{i \in \brs{i}} B_i$
+בסיס עבור
+$\ker\prs{T^i}$.
+כלומר,
+$B_i$
+משלימה בסיס של
+$\ker\prs{T^{i-1}}$
+לבסיס של
+$\ker\prs{T^i}$
+לכל
+$i \in \brs{k}$.
+
+לכל
+$v \in V$
+עבורו
+$T^\ell\prs{v} = 0$
+אבל
+$T^{\ell - 1}\prs{v} \neq 0$
+נסמן את שרשרת ז'ורדן
 $C_v = \prs{T^{\ell-1}\prs{v}, \ldots, T\prs{v}, v}$
-וכן
-$V_{v_{i,j}} = \Span\prs{C_v}$.
+וכן את המרחב הנפרש על ידה
+$V_v = \Span\prs{C_v}$.
 
 אז ניתן לקבל בסיס ז'ורדן עבור
 $T$
@@ -67,7 +94,7 @@ $T$
 \begin{enumerate}
 \item
 ניקח
-$B = \biguplus_{j \in n_k} C_{v_{k,j}}$
+$B = \biguplus_{v \in B_k} C_v$
 וניקח
 $i = k$.
 
@@ -81,9 +108,9 @@ $\tilde{B}_i$
 $B_i$
 שהינה בלתי־תלויה לינארית בוקטורים ב־%
 $B$
-(היא תהיה מגודל
-$2\dim \ker\prs{T^i} - \dim\ker\prs{T^{i+1}} - \dim\ker\prs{T^{i-1}}$),
-ולכל וקטור
+היא תהיה מגודל
+$2\dim \ker\prs{T^i} - \dim\ker\prs{T^{i+1}} - \dim\ker\prs{T^{i-1}}$ כי זה מספר הבלוקים מגודל $i$ בצורת ז'ורדן של $T$.
+לכל וקטור
 $v \in \tilde{B}_i$
 נשרשר ל־%
 $B$
@@ -102,59 +129,84 @@ $n$,
 
 \end{propositionstarred}
 
-לשם הוכחת הטענה, נוכיח תחילה שתי למות לגבי סכומים ישרים.
+לשם הוכחת הטענה, נזכיר תחילה הגדרה וטענה מההרצאה, ונוכיח למה על סכומים ישרים.
+
+\begin{definition}
+יהי
+$V$
+מרחב וקטורי סוף־מימדי מעל שדה $\mbb{F}$ ויהיו
+$V_1, V_2 \leq V$
+תת־מרחבים וקטוריים עבורם
+$V = V_1 \oplus V_2$.
+ההטלה על
+$V_1$
+במקביל ל־%
+$V_2$
+היא ההעתקה
+$P_{V_1, V_2} \in \End_{\mbb{F}}\prs{V}$
+היחידה המקיימת
+$P_{V_1, V_2}\prs{v_1 + v_2} = v_1$
+לכל
+$v_1 \in V_1$
+ולכל
+$v_2 \in V_2$.
+\end{definition}
+
+\begin{proposition} \label{proposition:direct-sums}
+יהי
+$V$
+מרחב וקטורי סוף־מימדי מעל שדה
+$\mbb{F}$
+ויהיו
+$V_1, \ldots, V_m \leq V$
+תת־מרחבים וקטוריים של $V$.
+התנאים הבאים שקולים.
+
+\begin{enumerate}
+\item $V = \bigoplus_{i \in \brs{m}} V_i$;
+\item לכל בחירה של בסיסים $B_i$ עבור כל $V_i$ בהתאמה, הקבוצה הסדורה
+$\biguplus_{i \in \brs{m}} B_i$
+הינה בסיס של
+$V$;
+\item
+קיימים בסיסים
+$B_i$
+לכל
+$V_i$
+בהתאמה כך שהקבוצה הסדורה
+$\biguplus_{i \in \brs{m}} B_i$
+היא בסיס של
+$V$.
+\end{enumerate}
+\end{proposition}
 
 \begin{lemma} \label{lemma:basis-projection}
 יהי
 $V$
 מרחב וקטורי סוף־מימדי מעל שדה
-$\mbb{F}$,
-יהי
-$T \in \End_{\mbb{F}}\prs{V}$
+$\mbb{F}$
 ויהיו
 $V_1, V_2 \leq V$
 תת־מרחבים עבורם
 $V = V_1 \oplus V_2$.
-תהי
-$P$
-ההטלה על
-$V_1$
-במקביל ל־%
-$V_2$,
-כלומר ההעתקה המקיימת
-$P\prs{v_1 + v_2} = v_1$
-לכל
-$v_1 \in V_1$
-ולכל
-$v_2 \in V_2$.
 
 יהי
 $B = \prs{u_1, \ldots, u_k}$
 בסיס של
-$V_2$
+$V_1$
 ותהי
 $C = \prs{w_1, \ldots, w_\ell}$
 קבוצה סדורה של
-$\ell \coloneqq \dim_{\mbb{F}}\prs{V_1}$
+$\ell \coloneqq \dim_{\mbb{F}}\prs{V_2}$
 וקטורים.
 אז
 $B \uplus C$
 בסיס של
 $V$
 אם ורק אם
-$P(C) \coloneqq \prs{P{\prs{w_1}}, \ldots, P\prs{w_\ell}}$
+\[P_{V_2, V_1}(C) \coloneqq \prs{P_{V_2, V_1}{\prs{w_1}}, \ldots, P_{V_2, V_1}\prs{w_\ell}}\]
 בסיס של
-$C$
-כאשר
-$P \in \End_{\mbb{F}}\prs{V}$
-ההטלה על
-$V_1$
-במקביל ל־%
 $V_2$.
-כלומר, ההעתקה המקיימת
-$P\prs{v_1 + v_2} = v_1$
-לכל
-$v_1 \in V_1, v_2 \in V_2$.
 \end{lemma}
 
 \begin{proof}
@@ -164,13 +216,13 @@ $B \uplus C$
 בסיס  של
 $V$
 ונראה כי
-$P\prs{C}$
+$P_{V_2, V_1}\prs{C}$
 בסיס של
-$V_1$.
+$V_2$.
 יהיו
 $\alpha_i \in \mbb{F}$
 עבורם
-\[\text{.} \sum_{i \in \brs{\ell}} \alpha_i P\prs{w_i} = 0\]
+\[\text{.} \sum_{i \in \brs{\ell}} \alpha_i P_{V_2, V_1}\prs{w_i} = 0\]
 נראה כי
 $\alpha_i = 0$
 לכל
@@ -180,12 +232,12 @@ $i \in \brs{\ell}$.
 \begin{align*}
 \sum_{i \in \brs{\ell}} \alpha_i w_i
 &=
-\sum_{i \in \brs{\ell}} \alpha_i \prs{w_i - P\prs{w_i}} + \sum_{i \in \brs{\ell}} \alpha_i P\prs{w_i}
+\sum_{i \in \brs{\ell}} \alpha_i \prs{w_i - P_{V_2, V_1}\prs{w_i}} + \sum_{i \in \brs{\ell}} \alpha_i P_{V_2, V_1}\prs{w_i}
 \\&=
-\sum_{i \in \brs{\ell}} \alpha_i \prs{w_i - P\prs{w_i}}
+\sum_{i \in \brs{\ell}} \alpha_i \prs{w_i - P_{V_2, V_1}\prs{w_i}}
 \end{align*}
 כאשר
-$w_i - P\prs{w_i} \in V_2$
+\[w_i - P_{V_2, V_1}\prs{w_i} \in \im\prs{\id_V - P_{V_2, V_1}} \subseteq V_1\]
 לכל
 $i \in \brs{\ell}$.
 קיבלנו צירוף לינארי של וקטורים ב־%
@@ -197,7 +249,7 @@ $B \uplus C$
 הינו בסיס של
 $V$
 ולכן הביטוי הנ"ל שווה אפס.
-לכן, מכך שהקבוצה
+לכן, מכך שהקבוצה הסדורה
 $C$
 בלתי תלויה לינארית (כי $B \uplus C$ בסיס) נקבל כי
 $\alpha_i = 0$
@@ -206,72 +258,78 @@ $i \in \brs{\ell}$,
 כנדרש.
 
 \item נניח כעת כי
-$P\prs{C}$
+$P_{V_2, V_1}\prs{C}$
 הינו בסיס של
-$V_1$.
-בסיס של
-$V$.
+$V_2$.
 
-מתקיים כי
-$P\prs{C}$
-בסיס של
-$V_1$
-ו־%
-$B$
-בסיס של
-$V_2$
-כאשר
-$V = V_1 \oplus V_2$,
-לכן
-$B \uplus P\prs{C}$
+מטענה
+\ref{proposition:direct-sums}
+נקבל כי
+$B \uplus P_{V_2, V_1}\prs{C}$
 בסיס של
 $V$.
 
 יהיו
 $\alpha_i, \beta_j \in \mbb{F}$
 עבורם
-\[\text{.} \sum_{i \in \brs{\ell}} \alpha_i w_i + \sum_{j \in \brs{k}} \beta_j u_j = 0\]
+\[\text{.} \sum_{i \in \brs{k}} \alpha_i u_i + \sum_{j \in \brs{\ell}} \beta_j w_j = 0\]
 נראה כי
 $\alpha_i = \beta_j = 0$
 לכל
 $i,j$.
 אכן, מתקיים
 \begin{align*}
-0 &= \sum_{i \in \brs{\ell}} \alpha_i w_i + \sum_{j \in \brs{k}} \beta_j u_j
+0 &= \sum_{i \in \brs{k}} \alpha_i u_i + \sum_{j \in \brs{\ell}} \beta_j w_j
 \\&=
-\sum_{i \in \brs{\ell}} \alpha_i P\prs{w_i} + \sum_{i \in \brs{\ell}} \alpha_i \prs{w_i - P\prs{w_i}} + \sum_{j \in \brs{k}} \beta_j u_j
+\sum_{i \in \brs{k}} \alpha_i u_i + \sum_{j \in \brs{\ell}} \beta_j P_{V_2, V_1}\prs{w_j} + \sum_{j \in \brs{\ell}} \beta_j \prs{w_j - P_{V_2, V_1}\prs{w_j}}
 \end{align*}
 אבל
-$w_i - P\prs{w_i} \in V_2$
+$w_j - P_{V_2, V_1}\prs{w_j} \in V_1$
 לכל
-$i \in \brs{\ell}$
-ולכן יש
+$j \in \brs{\ell}$
+ולכן גם
+\[\text{.} \sum_{j \in \brs{\ell}} \beta_j \prs{w_j - P_{V_2, V_1}\prs{w_j}} \in V_1\]
+אז יש
 $\gamma_j \in \mbb{F}$
 עבורן
-\[\sum_{i \in \brs{\ell}} \alpha_i \prs{w_i - P\prs{w_i}} = \sum_{j \in \brs{k}} \gamma_j u_j\]
+\[\sum_{j \in \brs{\ell}} \beta_j \prs{w_j - P_{V_2, V_1}\prs{w_j}} = \sum_{i \in \brs{k}} \gamma_i u_i\]
 ונקבל כי
-\[0 = \sum_{i \in \brs{\ell}} \alpha_i P\prs{w_i} + \sum_{j \in \brs{k}} \prs{\beta_j + \gamma_j} u_j\]
-ולכן כי
-$\alpha_i = \beta_j + \gamma_j = 0$
+\[0 = \sum_{i \in \brs{k}} \prs{\alpha_i + \gamma_i} u_i + \sum_{j \in \brs{\ell}} \beta_j P_{V_2, V_1}\prs{w_j}\]
+אבל ראינו כי
+$B \uplus P_{V_2, V_1}\prs{C}$
+הינו בסיס עבור
+$V$,
+ולכן כל המקדמים שווים לאפס. כלומר,
+$\alpha_i + \gamma_i = 0$
+וכן
+$\beta_j = 0$
 לכל
 $i,j$.
-כיוון ש־%
-$\alpha_i = 0$
-לכל
-$i$,
-מתקיים כי
-$\gamma_j = 0$
+מכך ש־%
+$\beta_j = 0$
 לכל
 $j$
-מאופן הגדרת
-$\gamma_j$,
-ולכן נקבל כי גם
-$\beta_j = 0$,
+נקבל מהגדרת
+$\gamma_i$
+כי
+\[\sum_{i \in \brs{k}} \gamma_i u_i = 0\]
+ולכן כיוון ש־%
+$B = \prs{u_1, \ldots, u_k}$
+בסיס נקבל כי
+$\gamma_i = 0$
+לכל
+$i$.
+אז מכך ש־%
+$\alpha_i + \gamma_i = 0$
+נקבל כי גם
+$\alpha_i = 0$
+לכל
+$i \in \brs{k}$,
 כנדרש.
 \end{itemize}
 \end{proof}
 
-\begin{proof}
+\begin{proof}[הוכחת הטענה]
 נוכיח את הטענה באינדוקציה על
 $n$.
 
@@ -280,17 +338,11 @@ $n$.
 
 עבור
 $n = 1$
-מתקיים כי $T$ אופרטור סקלרי נילפוטנטי, ולכן אופרטור האפס. אז
-$k = 1$
-ולכן
-\[B = \prs{v_{1,1}}\]
-בסיס של
-$V$
-וכן
-$\Span\prs{B} = V$
-כי
-$v_{1,1}$
-וקטור השונה מאפס.
+מתקיים כי $T$ אופרטור סקלרי נילפוטנטי, ולכן אופרטור האפס. אז לכל בחירה $\prs{v}$ עבור בסיס של
+$\ker\prs{T}$
+נקבל כי
+$B = \prs{v}$
+בסיס ז'ורדן.
 
 \item[צעד האינדוקציה:]
 
@@ -311,98 +363,46 @@ $V = \bigoplus_{i \in \brs{\ell}} V_i$
 $T|_{V_i}$
 הינו אי־פריד לכל
 $i \in \brs{\ell}$.
-
-מספר האיברים ב־$B_k$ הוא מספר הבלוקים מגודל
+נניח בלי הגבלת הכלליות כי המרחבים
+$V_i$
+עבורם
+$\dim_{\mbb{F}}\prs{V_i} = k$
+הם
+$V_1, \ldots, V_{n_k}$
+(נזכיר כי
+$n_k$
+הוא מספר הבלוקים מגודל
 $k$
 בצורת ז'ורדן של
-$T$,
-שזהו מספר הערכים
-$i$
-עבורם
-$\dim_{\mbb{F}} V_i = k$,
-כי עבור בסיסים
-$D_i$
-ל־%
-$V_i$
-ועבור
-$D \coloneqq \biguplus_{i \in \brs{\ell}} D_i$
-מתקיים
-\begin{align*}
-\text{.} \brs{T}_D = \pmat{\brs{T|_{V_1}}_{D_1} & 0 & \cdots & \cdots & 0 \\
-0 & \brs{T|_{V_2}}_{D_2} & 0 & \ddots & \vdots \\
-\vdots & \ddots & \ddots & \ddots & \vdots \\
-\vdots & \ddots & \ddots & \brs{T|_{V_{\ell-1}}}_{D_{\ell-1}} & 0 \\
-0 & \cdots & \cdots & 0 & \brs{T|_{V_\ell}}_{D_\ell}}
-\end{align*}
-
-לכל
-$d \in \brs{k}$
+$T$).
 נסמן
-\[\text{.} N_d \coloneqq \set{i \in \brs{k}}{\dim_{\mbb{F}} V_i = d}\]
+$\tilde{W} = \bigoplus_{i \in \brs{n_k}} V_i$
+$\hat{W} = \bigoplus_{i \in \brs{\ell} \setminus \brs{n_k}} V_i$.
 
-כיוון שלכל
+מתקיים כי לכל
+$i \in \brs{n_k}$
+הצמצום
 $T|_{V_i}$
-יש צורת ז'ורדן, וכיוון שאלו אופרטורים אי־פרידים, קיימים וקטורים
-$u_1, \ldots, u_{n_k}$
-כך ש־%
-$C_{u_1}, \ldots, C_{u_{n_k}}$
-בסיסי ז'ורדן של
-המרחבים
-$V_i$
-כך ש־%
-$i \in N_k$.
-מתקיים
-$u_j \in \ker\prs{T^k} \setminus \ker\prs{T^{k-1}}$
+הוא אופרטור נילפוטנטי אי־פריד על מרחב וקטורי ממימד
+$k$,
+ולכן יש לו צורת ז'ורדן
+$J_k\prs{0}$.
+לכן, קיימים וקטורים
+$w_1, \ldots, w_{n_k}$
+עבורם
+$C_{w_i}$
+בסיס ז'ורדן של
+$V_i$,
 לכל
-$j \in n_k$
-וכן
-$\prs{u_1, \ldots, u_{n_k}}$
-בלתי־תלויה לינארית כיוון שהסכום
-$V = \bigoplus_{i \in \brs{\ell}} V_i$
-ישר.
-לכן
-$\prs{u_1, \ldots, u_{n_k}}$
+$i \in \brs{n_k}$.
+כיוון שהסכום
+$V = \bigoplus_{i \in \ell} V_i$
+ישר, נקבל מטענה
+\ref{proposition:direct-sums}
+כי
+\[B_W \coloneqq \biguplus_{i \in \brs{n_k}} C_{w_i} = \prs{T^{k-1}\prs{w_1}, \ldots, T\prs{w_1}, w_1, \ldots, T^{k-1}\prs{w_{n_k}}, \ldots, T\prs{w_{n_k}}, w_{n_k}}\]
 בסיס של
-.$\ker\prs{T^k} \setminus \ker\prs{T^{k-1}}$
-אז
-\[\Span\prs{B_k} = \Span\prs{u_1, \ldots, u_{n_k}}\]
-ולכן
-\[\text{.} \Span\prs{\biguplus_{j \in \brs{n_k}} C_{v_{k,j}}} = \Span\prs{\biguplus_{j \in\ \brs{n_k}} C_{u_j}} = \bigoplus_{i \in N_k} V_i\]
-
-כעת, עבור כל
-$i < k$
-נגדיר
-\begin{align*}
-\tilde{B}_i \coloneqq P\prs{B_i}
-\end{align*}
-כאשר
-$P$
-ההטלה על
-$\bigoplus_{i \notin \brs{\ell}} V_i$
-במקביל ל־%
-$\bigoplus_{i \in \brs{\ell}} V_i$,
-וכאשר
-$P\prs{v_1, \ldots, v_m} = \prs{P\prs{v_1}, \ldots, P\prs{v_k}}$
-עבור כל קבוצה סדורה
-$\prs{v_1, \ldots, v_k}$.
-לפי למה
-\ref{lemma:basis-projection}
-הקבוצות הסדורות
-$\tilde{B}_i = P\prs{B_i}$
-הן בסיסים עבור
-\[\ker\prs{T^i} \setminus \ker\prs{T^{i-1}}\]
-בהתאמה.
-אז לפי הנחת האינדוקציה
-\[\biguplus_{i \in \brs{k-1}} \tilde{B}_i = P\prs{\biguplus_{i \in \brs{k-1}} B_i}\]
-בסיס ז'ורדן עבור
-$T|_{\biguplus_{i \notin N_k} V_i}$,
-ולכן, לפי למה
-\ref{lemma:basis-projection},
-\[B = \biguplus_{i \in \brs{k}} B_i\]
-הינו בסיס
-$V$,
-שמאופן בנייתו הינו בסיס ז'ורדן עבור
-$T$.
+$W$.
 \end{description}
 \end{proof}
 

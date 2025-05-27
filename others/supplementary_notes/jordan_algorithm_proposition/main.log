@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.3.10)  26 MAY 2025 10:48
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.3.10)  26 MAY 2025 17:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1999,21 +1999,17 @@ LaTeX Warning: No \author given.
 
 Package hyperref Info: bookmark level for unknown propositionstarred defaults t
 o 0 on input line 42.
+Package hyperref Info: bookmark level for unknown definitionx defaults to 0 on 
+input line 135.
+Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
+input line 155.
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 107.
+line 183.
 Package hyperref Info: bookmark level for unknown proof defaults to 0 on input 
-line 161.
+line 213.
 [1
 
 ]
-Overfull \hbox (3.79231pt too wide) in paragraph at lines 343--368
-[]\TU/Alef(0)/m/n/10 לכל $\OML/cmm/m/it/10 j \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/1
-0 n[]$ \TU/Alef(0)/m/n/10 וכן $[]$ בלתי־תלויה לינארית כיוון שהסכום $\OML/cmm/m/
-it/10 V \OT1/cmr/m/n/10 = [][] \OML/cmm/m/it/10 V[]$ \TU/Alef(0)/m/n/10 ישר. לכ
-ן $[]$[]
- []
-
-[2]
 \tf@thm=\write7
 \openout7 = `main.thm'.
 
@@ -2106,7 +2102,7 @@ The property list \__xpg_alias contains the pairs (without outer braces):
 >  {newzealand/target}  =>  {english}
 >  {newzealand/variant}  =>  {newzealand}
 >  {newzealand/options}  =>  {variant=newzealand}.
- [3] (./main.aux
+ [2] (./main.aux
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
@@ -2119,12 +2115,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43474 strings out of 476775
- 923749 string characters out of 5808212
- 1924052 words of memory out of 5000000
- 62873 multiletter control sequences out of 15000+600000
+ 43476 strings out of 476775
+ 923803 string characters out of 5808212
+ 1924082 words of memory out of 5000000
+ 62875 multiletter control sequences out of 15000+600000
  520196 words of font info for 92 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 115i,19n,118p,1276b,880s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 115i,12n,118p,1276b,880s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (3 pages).
+Output written on main.pdf (2 pages).
