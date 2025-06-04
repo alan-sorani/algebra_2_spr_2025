@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.3.10)  27 MAY 2025 09:59
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.3.10)  4 JUN 2025 08:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2159,9 +2159,13 @@ n/10 2 \OML/cmm/m/it/10 W$ \TU/Alef(0)/m/n/10 וכיוון ש־$\OML/cmm/m/it/10
 TU/Alef(0)/m/n/10 מרחב המטריצות האנטיסימטריות,[]
  []
 
-[48]
+[48] [49]
+פרק 7.
+[50
 
-LaTeX Warning: Empty bibliography on input line 4564.
+] [51] [52] [53] [54]
+
+LaTeX Warning: Empty bibliography on input line 5161.
 
 \tf@thm=\write8
 \openout8 = `algebra_2_recitations.thm'.
@@ -2255,7 +2259,7 @@ The property list \__xpg_alias contains the pairs (without outer braces):
 >  {newzealand/target}  =>  {english}
 >  {newzealand/variant}  =>  {newzealand}
 >  {newzealand/options}  =>  {variant=newzealand}.
-[49] (./algebra_2_recitations.aux
+[55] (./algebra_2_recitations.aux
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
@@ -2264,19 +2268,25 @@ Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 
 LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `algebra_2_recitations.out' has not changed.
-(rerunfilecheck)             Checksum: 2284CD4FBB2E05AC3F1CACF0E99957F2;5581.
+
+Package rerunfilecheck Warning: File `algebra_2_recitations.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `algebra_2_recitations.out':
+(rerunfilecheck)             Before: F53FCAAA7B4311EFE86F47E0BC32DC95;6346
+(rerunfilecheck)             After:  38EBE7D6B89F075514DBF829CFC75F43;6665.
 Package logreq Info: Writing requests to 'algebra_2_recitations.run.xml'.
 \openout1 = `algebra_2_recitations.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43968 strings out of 476775
- 931961 string characters out of 5808212
- 1938767 words of memory out of 5000000
- 63347 multiletter control sequences out of 15000+600000
+ 43969 strings out of 476775
+ 931972 string characters out of 5808212
+ 1939571 words of memory out of 5000000
+ 63348 multiletter control sequences out of 15000+600000
  520252 words of font info for 99 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  115i,20n,118p,1293b,880s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on algebra_2_recitations.pdf (51 pages).
+Output written on algebra_2_recitations.pdf (57 pages).

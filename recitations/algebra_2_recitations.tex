@@ -4561,5 +4561,602 @@ $d\prs{A, W} = \frac{1}{\sqrt{2}}$.
 \end{enumerate}
 \end{solution}
 
+\chapter{אופרטורים על מרחבי מכפלה פנימית}
+
+\section{המרחב הדואלי, ומשפט ההצגה של ריס}
+
+\begin{definition}[המרחב הדואלי]
+יהי
+$V$
+מרחב מכפלה פנימית מעל שדה
+$\mbb{F}$.
+\emph{המרחב הדואלי}
+של
+$V$
+הוא
+\[\text{.} V^* \coloneqq \hom_{\mbb{F}}\prs{V,\mbb{F}}\]
+איבריו נקראים
+\emph{פונקציונלים לינאריים}.
+\end{definition}
+
+\begin{theorem}[משפט ההצגה של ריס]
+יהי
+$V$
+מרחב מכפלה פנימית סוף־מימדי מעל שדה
+$\mbb{F}$,
+ויהי
+$\phi \in V^*$
+פונקציונל לינארי על
+$V$.
+קיים וקטור
+$w \in V$
+יחיד עבורו
+$\phi\prs{v} = \trs{v,w}$
+לכל
+$v \in V$.
+
+בנוסף, אם
+$B = \prs{v_1, \ldots, v_n}$
+בסיס אורתונורמלי של
+$V$,
+מתקיים
+\[\text{.} w = \sum_{i \in \brs{n}} \trs{w, v_i} v_i = \sum_{i \in \brs{n}} \overline{\phi\prs{v_i}} v_i\]
+\end{theorem}
+
+\begin{exercisechap}
+יהי
+$V = \Mat_n\prs{\mbb{C}}$
+ותהי
+$\tr \colon V \to \mbb{C}$
+העתקת העקבה.
+מיצאו מטריצה
+$B$
+עבורה
+$\tr\prs{A} = \trs{A,B}$
+לכל
+$A \in V$.
+\end{exercisechap}
+
+\begin{solution}
+נסתכל על הבסיס האורתונורמלי
+$\prs{E_{i,j}}_{i,j \in \brs{n}}$
+של
+$V$
+וניעזר בנוסחא. נקבל
+\[\text{.} B = \sum_{i,j \in \brs{n}} \overline{\tr\prs{E_{i,j}}} E_{i,j} = \sum_{i \in \brs{n}} E_{i,i} = I_n\]
+\end{solution}
+
+\begin{exercisechap}
+\begin{enumerate}
+\item הוכיחו כי לכל
+$n \in \mbb{N}$
+קיים
+$C > 0$
+כך שלכל
+$p \in \mbb{R}_n\brs{x}$
+מתקיים
+\[\text{.} \abs{p\prs{0}} \leq C \prs{\int_{-1}^1 p\prs{x}^2 \diff x}^{\frac{1}{2}}\]
+
+\item חשבו את
+$C$
+המינימלי עבור
+$n=2$.
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item נשים לב כי
+\[\trs{f,g} = \int_{-1}^1 f\prs{x} g\prs{x} \diff x\]
+מכפלה פנימית.
+אז
+\begin{align*}
+\text{.} \prs{\int_{-1}^1 p\prs{x}^2 \diff x}^{\frac{1}{2}} = \pmat{\trs{p,p}}^{\frac{1}{2}} = \norm{p}
+\end{align*}
+כלומר, עלינו להוכיח
+\[\text{.} \abs{p\prs{0}} \leq C\norm{p}\]
+
+ההצבה
+\begin{align*}
+\ev_0 \colon \mbb{R}_n\brs{x} &\to \mbb{R} \\
+f &\mapsto f\prs{0}
+\end{align*}
+היא פונקציונל לינארי, ולכן ממשפט ריס יש
+$g \in \mbb{R}_n\brs{x}$
+עבורו
+\[\text{.} p\prs{0} = \ev_0\prs{p} = \trs{p,g}\]
+עכשיו, מקושי־שוורץ
+\[\text{.} \abs{p\prs{0}} = \abs{\trs{p,g}} \leq \norm{p} \norm{g}\]
+לכן ניקח
+$C = \norm{g}$.
+
+\item
+נסמן
+$g\prs{x} = ax^2 + bx + c$.
+נשים לב כי
+כאשר
+$p = g$
+יש שוויון בקושי־שוורץ ואז
+\[\text{.} \abs{p\prs{0}} = \norm{p}\norm{g} \leq C\norm{p}\]
+גורר
+$C \geq \norm{g}$.
+ראינו כי
+$C = \norm{g}$
+מקיים את הנדרש, ולכן נותר למצוא את
+$\norm{g}$.
+
+כדי לא להצטרך בסיס אורתונורמלי, שיהיה פחות יפה במקרה הזה, נשים לב שמספיק לחשב את המכפלות הפנימיות בין
+$g$
+לאיברי בסיס כלשהו.
+לפי בסיס אורתונורמלי
+$B = \prs{v_1, \ldots, v_n}$
+מתקיים
+\[\text{.} g = \sum_{i \in \brs{n}} \trs{g, v_i} v_i\]
+אם
+$C = \prs{u_1, \ldots, u_n}$
+בסיס נוסף, נוכל לכתוב
+\[v_i = \sum_{j \in \brs{n}} \alpha_{i,j} u_j\]
+ואז
+\[\text{,} g = \sum_{i \in \brs{n}} \trs{g, v_i} v_i = \sum_{i,j \in \brs{n}} \bar{\alpha}_{i,j} \trs{g, u_j}\]
+ונקבל שמהכפלות הפנימיות
+$\trs{g, u_i}$
+נותנות מספיק אינפורמציה כדי למצוא את
+$g$.
+
+כעת, נחשב את המכפלות הפנימיות של
+$g$
+עם איברי הבסיס הסטנדרטי ונפתור מערכת משוואות שיהיה לה פתרון יחיד שהוא מקדמי
+$g$.
+\begin{align*}
+1 &= 1\prs{0} = \trs{g\prs{x},1} = \int_{-1}^1 g\prs{x} \diff x = \left. \frac{ax^3}{3} + \frac{bx^2}{2} + cx \right|_{x=-1}^1 = \frac{2a}{3} + 2c \\
+0 &= x\prs{0} = \trs{g\prs{x}, x} = \int_{-1}^1 g\prs{x} x \diff x = \left. \frac{ax^4}{4} + \frac{bx^3}{3} + \frac{cx^2}{2} \right|_{x=-1}^1 = \frac{2b}{3} \\
+\text{.} 0 &= x^2\prs{0} = \trs{g\prs{x}, x^2} = \int_{-1}^1 g\prs{x} x^2 \diff x = \left. \frac{ax^5}{5} + \frac{bx^4}{4} + \frac{cx^3}{3} \right|_{x=-1}^1 = \frac{2a}{5} + \frac{2c}{3}
+\end{align*}
+מהמשוואה השנייה נקבל
+$b = 0$.
+מהמשוואה הראשונה פחות
+$3$
+פעמים השנייה נקבל
+\[1 = \frac{2a}{3} - 3 \cdot \frac{2a}{5} + 0 = \frac{10a - 18a}{15}\]
+ולכן
+$a = -\frac{15}{8}$.
+אז מהמשוואה השלישית נקבל
+\[c = -\frac{3a}{5} = -\frac{9}{8}\]
+ולכן
+\[\text{.} g\prs{x} = -\frac{15}{8} x^2 - \frac{9}{8}\]
+
+אז
+\[\text{.} C = \norm{g} = \sqrt{\int_{-1}^1 \prs{-\frac{15}{8} x^2 - \frac{9}{8}}^2} \diff x = \frac{27}{4}\]
+\end{enumerate}
+\end{solution}
+
+\section{ההעתקה הצמודה}
+
+\begin{theorem}[ההעתקה הצמודה]
+יהיו
+$V,W$
+מרחבי מכפלה פנימית סוף־מימדיים ותהי
+$T \in \Hom_{\mbb{F}}\prs{V,W}$.
+קיימת העתקה יחידה
+$T^* \in \Hom_{\mbb{F}}\prs{W,V}$
+עבורה
+\begin{align*}
+\trs{T\prs{v}, w}_W = \trs{v, T^*\prs{w}}_V
+\end{align*}
+לכל
+$v \in V$
+ולכל
+$w \in W$.
+
+היא נקראת
+\emph{ההעתקה הצמודה}
+של
+$T$.
+\end{theorem}
+
+\begin{theorem}
+יהיו
+$\prs{V, \trs{\cdot, \cdot}_V}, \prs{W, \trs{\cdot, \cdot}_W}$
+מרחבי מכפלה פנימית סוף מימדיים עם בסיסים אורתונורמליים
+$B,C$
+בהתאמה, ותהי
+$T \in \Hom_{\mbb{F}}\prs{V,W}$.
+אז
+$\brs{T^*}^C_B = \prs{\brs{T}^B_C}^*$.
+\end{theorem}
+
+כעת, אם
+$T \in \End_{\mbb{F}}\prs{V}$,
+יש לנו דרכים שונות לחשב את
+$T^*$.
+נוכל לנחש איזה אופרטור יקיים
+$\trs{Tv, w} = \trs{v, T^* w}$
+לכל
+$v,w \in V$,
+על ידי מניפולציות של הצגת המכפלה הפנימית.
+נוכל גם לכתוב את
+$T^*$
+בצורה כללית ולפתור מערכת משוואות.
+לבסוף, נוכל לקחת בסיס אורתונורמלי
+$B$,
+כדי שיתקיים
+$\brs{T^*}_B = \overline{\brs{T}_B}^t$,
+ואז לשחזר את
+$T^*$
+מהמטריצה המייצגת.
+נראה דוגמאות לחישוב בכל אחת מהדרכים.
+
+\begin{exercisechap}
+יהי
+$V = \mbb{R}_2\brs{x}$
+עם המכפלה הפנימית
+\[\text{.} \trs{f,g} = \int_{-1}^1 f\prs{x} \bar{g}\prs{x} \diff x\]
+יהי
+$D \in \End_{\mbb{R}}\prs{V}$
+אופרטור הגזירה.
+מיצאו את
+$D^*$.
+\end{exercisechap}
+
+\begin{solution}
+כדי להראות
+$D^* = S$
+די להראות כי
+$\trs{Df,g} = \trs{f,Dg}$
+עבור
+$f,g$
+בבסיס נתון, מלינאריות.
+נחשב מה צריך להיות
+$D^*$
+לפי הבסיס
+$\prs{1,x,x^2}$.
+יהי
+$g\prs{x} = ax^2 + bx + c$.
+נחשב את מכפלת
+$D\prs{g}$
+עם
+$1$
+\begin{align*}
+    0 &= \trs{0,g} \\&= \trs{D\prs{1}, g} \\&= \trs{1, D^*\prs{g}} \\&= \int_{-1}^1 D^*\prs{g}\prs{x} \diff x
+\end{align*}
+עם
+$x$
+\begin{align*}
+        \frac{2a}{3} + 2c &= \left. \frac{ax^3}{3} + \frac{bx^2}{2} + cx \right|_{-1}^1 \\&= \int_{-1}^1 ax^2 + bx + c \diff x \\&= \trs{1,g} \\&= \trs{D\prs{x}, g} \\&= \trs{x, D^*\prs{g}} \\&= \int_{-1}^1 x D^*\prs{g}\prs{x} \diff x
+\end{align*}
+ועם
+$x^2$
+\begin{align*}
+        \frac{4b}{3} &= \left. \frac{2ax^4}{4} + \frac{2bx^3}{3} + \frac{2cx^2}{2} \right|_{-1}^1 \\&= 2 \int_{-1}^1 ax^3 + bx^2 + cx \diff x \\&= \trs{2x,g} \\&= \trs{D\prs{x^2}, g} \\&= \trs{x^2, D^*\prs{g}} \\&= \int_{-1}^1 x^2 D^*\prs{g}\prs{x} \diff x
+\end{align*}
+
+נכתוב
+$D^*\prs{g} = \alpha x^2 + \beta x + \gamma$
+ונקבל
+\begin{align*}
+    0 &= \int_{-1}^1 \alpha x^2 + \beta x + \gamma \diff x = \frac{2 \alpha}{3} + 2 \gamma \\
+    \frac{2a}{3} + c &= \int_{-1}^1 \alpha x^3 + \beta x^2 + \gamma x \diff x = \frac{2\beta}{3} \\
+    \frac{4b}{3} &= \int_{-1}^1 \alpha x^4 + \beta x^3 + \gamma x^2 \diff x = \left. \frac{\alpha x^5}{5} + \frac{\beta x^4}{4} + \frac{\gamma x^3}{3} \right|_{-1}^1 = \frac{2 \alpha}{5} + \frac{2 \gamma}{3}
+\end{align*}
+מהמשוואה הראשונה,
+$\gamma = -\frac{\alpha}{3}$.
+אז מהמשוואה השלישית,
+$\frac{4b}{3} = \frac{2 \alpha}{5} - \frac{2 \alpha}{9}$
+כלומר
+\[4b = \prs{\frac{6}{5} - \frac{2}{3}}\alpha = \prs{\frac{18}{15} - \frac{10}{15}}\alpha = \frac{8 \alpha}{15}\]
+כלומר
+$b = \frac{2 \alpha}{15}$
+כלומר
+$\alpha = \frac{15}{2} b$.
+נקבל כי
+$\gamma = -\frac{5}{2}$
+ומהמשוואה השנייה כי
+$\beta = a + \frac{3c}{2}$.
+לכן
+\[\text{.} D^*\prs{ax^2 + bx + c} = \frac{15}{2} b x^2 + \prs{a + \frac{3c}{2}}x - \frac{5}{2}\]
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$V = \Mat_n\prs{\mbb{C}}$
+עם המכפלה הפנימית
+$\trs{A,B} = \tr\prs{B^*, A}$,
+ויהי
+\begin{align*}
+    \Phi \colon V &\to V \\
+    \text{.} \hphantom{lala} A &\mapsto A^t
+\end{align*}
+חשבו את
+$\Phi^*$.
+\end{exercisechap}
+
+\begin{solution}
+נוכל לחשב ישירות,
+\begin{align*}
+    \trs{\Phi\prs{A},B} &= \trs{A^t, B} \\&= \tr\prs{B^* A^t} \\&= \overline{\tr\prs{\overline{B^* A^t}}} \\&= \overline{\tr\prs{B^t A^*}} \\&= \overline{\tr\prs{A^* B^t}} \\&= \overline{\trs{B^t, A}} \\&= \trs{A, B^t} \\&= \trs{A, \Phi\prs{B}}
+\end{align*}
+ולכן
+$\Phi^* = \Phi$.
+
+נוכל לחשב זאת גם בעזרת מטריצה מייצגת בבסיס אורתונורמלי.
+נסמן ב־%
+$E_{i,j}$
+מטריצה עבורה
+$\prs{E_{i,j}}_{k,\ell} = \delta_{i,k} \delta_{j,\ell}$.
+כלומר, זאת מטריצה עם
+$0$
+בכל המקדמים חוץ מזה בשורה ה־%
+$i$
+והעמודה ה־%
+$j$.
+אז בבסיס
+\[B \coloneqq \prs{E_{1,1}, \ldots, E_{n,n}, E_{1,2}, E_{2,1}, E_{1,3}, E_{3,1} \ldots, E_{n-1, n} E_{n,n-1}}\]
+נקבל כי
+\begin{align*}
+    \text{.} \brs{\Phi}_B &= I_n \oplus \pmat{0 & 1 \\ 1 & 0} \oplus \ldots \oplus \pmat{0 & 1 \\ 1 & 0}
+\end{align*}
+כיוון ש־%
+$B$
+בסיס אורתונורמלי
+נקבל כי
+$\brs{\Phi^*}_B = \overline{\brs{\Phi}_B}^t$.
+אך
+$\brs{\Phi}_B$
+מטריצה ממשית סימטרית, ולכן
+$\brs{\Phi^*}_B = \brs{\Phi}_B$
+ואז
+$\Phi^* = \Phi$.
+\end{solution}
+
+\section{אופרטורים אוניטריים ואורתוגונליים}
+
+תכונה אינטואיטיבית גיאומטרית של אופרטורים על מרחבי מכפלה פנימית היא שמירה של המכפלה הפנימית.
+אופרטור
+$T \in \End_{\mbb{F}}\prs{V}$
+עבורו
+$\trs{Tv, Tw} = \trs{v,w}$
+לכל
+$v,w \in V$
+מקיים
+$\trs{T^* T v, w} = \trs{v,w}$
+ולכן
+$T^* T = \id$
+כלומר
+$T^* = T^{-1}$.
+נקרא לאופרטור כזה
+\emph{אורתוגונלי}
+אם
+$\mbb{F} = \mbb{R}$,
+או
+\emph{אוניטרי},
+אם
+$\mbb{F} = \mbb{C}$.
+
+\begin{definition}[אופרטור אורתוגונלי (אוניטרי)]
+אופרטור
+$T \in \End_{\mbb{F}}\prs{V}$
+מעל
+$\mbb{R}$
+(מעל
+$\mbb{C}$
+נקרא
+\emph{אורתוגונלי (אוניטרי)}
+אם
+$T^* = T^{-1}$.
+\end{definition}
+
+\begin{definition}[מטריצה אורתונוגלית (אוניטרית)]
+מטריצה
+$A \in \Mat_n\prs{\mbb{F}}$
+עבור
+$\mbb{F} = \mbb{R}$
+(עבור
+$\mbb{F} = \mbb{C}$)
+נקראת
+\emph{אורתוגונלית (אוניטרית)}
+אם
+$A^t = A^{-1}$.
+\end{definition}
+
+\begin{exercisechap}
+הראו כי
+$T \in \End_{\mbb{F}}\brs{V}$
+אורתוגונלי (אוניטרי) אם ורק אם
+$\norm{Tv} = \norm{v}$
+לכל
+$v \in V$.
+\end{exercisechap}
+
+\begin{solution}
+אם
+$T \in \End_{\mbb{F}}\prs{V}$
+אופרטור אורתוגונלי (אוניטרי), מתקיים
+\[\norm{Tv} = \sqrt{\trs{Tv, Tv}} = \sqrt{\trs{v,v}} = \norm{v}\]
+לכל
+$v \in V$.
+
+להיפך, אם
+$\norm{Tv} = \norm{v}$
+לכל
+$v \in V$,
+נקבל מזהות הפולריזציה כי
+$\trs{Tv, Tw} = \trs{v,w}$
+לכל
+$v,w \in W$.
+\end{solution}
+
+\begin{remark}
+קיבלנו כי אופרטורים אורתוגונליים (או אוניטריים) הם בדיוק אלו השומרים על הנורמה, ולכן הם גם אלו השומרים על מרחקים.
+
+העתקות השומרות על מרחקים נקראות
+\emph{איזומטריות}
+ולכן אופרטור אורתוגונלי נקרא גם
+\emph{איזומטריה לינארית}.
+כיוון שבקורס נדבר רק על העתקות לינאריות, נתייחס לפעמים לאופרטור לינארי בתור
+\emph{איזומטריה}.
+\end{remark}
+
+\begin{proposition}
+יהי
+$V$
+מרחב מכפלה פנימית ממשי ממימד
+$n$,
+ויהי
+$T \in \End_{\mbb{R}}\prs{V}$.
+התנאים הבאים שקולים.
+
+\begin{enumerate}
+    \item $T$ אורתוגונלי.
+
+    \item קיים בסיס אורתונורמלי
+    $B = \prs{v_1, \ldots, v_n}$,
+    כך שהבסיס
+    $\prs{T v_1, \ldots, Tv_n}$
+    אורתונורמלי.
+    
+    \item לכל בסיס אורתונורמלי
+    $B = \prs{v_1, \ldots, v_n}$,
+    הבסיס
+    $\prs{T v_1, \ldots, Tv_n}$
+    אורתונורמלי.
+\end{enumerate}
+\end{proposition}
+
+\begin{exercisechap}
+יהי
+$V = \mbb{R}^2$
+ויהי
+\begin{align*}
+    R \colon V &\to V \\
+    \pmat{x \\ y} &\mapsto \pmat{x \\ -y}
+\end{align*}
+שיקוף דרך ציר ה־%
+$x$.
+
+הראו כי
+$R$
+איזומטריה.
+\end{exercisechap}
+
+\begin{solution}
+מתקיים
+$\brs{R}_E = \pmat{1 & 0 \\ 0 & -1}$
+וזאת מטריצה שעמודותיה מהוות בסיס אורתונורמלי של
+$V$.
+לכן
+$R$
+שולח בסיס אורתונורמלי (הסטנדרטי) לבסיס אורתונורמלי, ולכן הינו איזומטריה.
+\end{solution}
+
+\begin{exercisechap}
+הראו כי
+$\rho_\theta \coloneqq A_\theta$
+עבור
+\[A_\theta = \pmat{\cos \theta & - \sin \theta \\ \sin \theta & \cos\theta}\]
+הינו איזומטריה.
+\end{exercisechap}
+
+\begin{solution}
+מתקיים כי
+$\rho_{\theta}\prs{e_i} = A_{\theta} e_i$
+העמודה ה־%
+$i$
+של
+$A_{\theta}$.
+נראה שעמודות
+$A_\theta$
+מהוות בסיס אורתונורמלי ונקבל כי
+$\rho_{\theta}$
+שולחת בסיס אורתונורמלי (הסטנדרטי) לבסיס אורתונורמלי. ראינו שזה תנאי שקול לאורתוגונליות ולכן נקבל את הנדרש.
+
+אכן, מתקיים
+\begin{align*}
+    \trs{\pmat{\cos \theta \\ \sin \theta}, \pmat{-\sin \theta \\ \cos \theta}} &= -\sin \theta \cos \theta + \sin \theta \cos \theta = 0 \\
+    \trs{\pmat{\cos \theta \\ \sin \theta}, \pmat{\cos \theta \sin \theta}} &= \cos^2 \theta + \sin^2 \theta = 1 \\
+    \trs{\pmat{-\sin \theta \\ \cos \theta}, \pmat{-\sin \theta \\ \cos \theta}} &= \prs{-\sin \theta}^2 + \cos^2 \theta = \sin^2 \theta + \cos^2 \theta = 1
+\end{align*}
+כנדרש.
+\end{solution}
+
+\begin{exercisechap}
+הראו כי כל איזומטריה של
+$\mbb{R}^2$
+היא מהצורה
+$\rho_\theta$
+או
+$\rho_\theta R$
+עבור
+$\theta \in \mbb{R}$.
+\end{exercisechap}
+
+\begin{solution}
+תהי
+$T \in \End_{\mbb{R}}\prs{\mbb{R}^2}$
+איזומטריה.
+מהתנאים השקולים, הבסיס
+$\prs{T\prs{e_1}, T\prs{e_2}}$
+הינו אורתונורמלי.
+בפרט,
+$v \coloneqq T\prs{e_1}$
+הינו מנורמה
+$1$.
+
+נראה שניתן לכתוב
+$v = \pmat{\cos\theta \\ \sin\theta}$.
+נכתוב
+$v = \pmat{v_1, v_2}$
+ונקבל כי
+$v_1^2 + v_2^2 = 1$.
+בפרט,
+$v_1 \in \brs{-1,1}$
+ולכן יש
+$\theta \in \mbb{R}$
+עבורה
+$v_1 = \cos\theta$.
+נקבל כי
+$v_2^2 = 1 - \prs{\cos \theta}^2 = \prs{\sin \theta}^2$
+ולכן
+$v_2 \in \set{\pm \sin \theta}$.
+אם
+$v_2 = \sin\theta$,
+סיימנו.
+אחרת, ניתן לכתוב
+\begin{align*}
+    v_1 &= \cos\prs{-\theta} \\
+    v_2 &= \sin\prs{-\theta}
+\end{align*}
+ואז הזווית המתאימה היא
+$-\theta$.
+
+נקבל כי
+$v = \rho_\theta\prs{e_1}$
+ולכן
+\[\text{.} \rho_{-\theta}\prs{v} = \rho_{-\theta} \circ T \prs{e_1} = e_1\]
+הרכבת איזומטריות הינה איזומטריה, ולכן נקבל כי
+$\rho_{-\theta} \circ T$
+היא איזומטריה שמקבעת את
+$e_1$.
+מהתנאים השקולים, היא מעבירה בסיס אורתונורמלי לבסיס אורתונורמלי, לכן
+$\prs{e_1, u} \coloneqq \prs{e_1, \rho_{-\theta} \circ T\prs{e_2}}$
+אורתונורמלי.
+אבל אז
+$u \in \set{\pm e_2}$
+כי
+$u \in \set{e_1}^\perp = \Span\prs{e_2}$
+מנורמה
+$1$.
+אם
+$u = e_2$
+נקבל כי
+$\rho_{-\theta} \circ T = \id_{\mbb{R}^2}$
+כלומר
+$T = \rho_{\theta}$.
+אחרת,
+$\rho_{-\theta} \circ T = R$
+ואז
+$T = \rho_{\theta} \circ R$.
+\end{solution}
+
+
 \printbibliography
 \end{document}
