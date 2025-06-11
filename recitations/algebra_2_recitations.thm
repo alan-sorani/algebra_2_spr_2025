@@ -168,15 +168,36 @@
 \contentsline {solution}{{פתרון}{44}{}}{52}{solution.44}%
 \contentsline {exercisechap}{{תרגיל}{7.{4}}{}}{53}{exercisechap.7.4}%
 \contentsline {solution}{{פתרון}{45}{}}{53}{solution.45}%
-\contentsline {definitionx}{{הגדרה}{7.3.{1}}{אופרטור אורתוגונלי (אוניטרי)}}{54}{theoremx.7.3.1}%
-\contentsline {definitionx}{{הגדרה}{7.3.{2}}{מטריצה אורתונוגלית (אוניטרית)}}{54}{theoremx.7.3.2}%
+\contentsline {theoremx}{{משפט}{7.3.{1}}{משפט הפירוק הספקטרלי לאופרטורים צמודים לעצמם}}{54}{theoremx.7.3.1}%
+\contentsline {definitionx}{{הגדרה}{7.3.{2}}{אופרטור נורמלי}}{54}{theoremx.7.3.2}%
+\contentsline {theoremx}{{משפט}{7.3.{3}}{משפט הפירוק הספקטרלי לאופרטורים נורמליים}}{54}{theoremx.7.3.3}%
+\contentsline {definitionx}{{הגדרה}{7.3.{4}}{}}{54}{theoremx.7.3.4}%
+\contentsline {remark}{{הערה}{7.3.{5}}{}}{54}{theoremx.7.3.5}%
+\contentsline {theoremx}{{משפט}{7.3.{6}}{משפט הפירוק הספקטרלי למטריצות}}{54}{theoremx.7.3.6}%
 \contentsline {exercisechap}{{תרגיל}{7.{5}}{}}{54}{exercisechap.7.5}%
 \contentsline {solution}{{פתרון}{46}{}}{54}{solution.46}%
-\contentsline {remark}{{הערה}{7.3.{3}}{}}{54}{theoremx.7.3.3}%
-\contentsline {proposition}{{טענה}{7.3.{4}}{}}{54}{theoremx.7.3.4}%
-\contentsline {exercisechap}{{תרגיל}{7.{6}}{}}{54}{exercisechap.7.6}%
-\contentsline {solution}{{פתרון}{47}{}}{54}{solution.47}%
-\contentsline {exercisechap}{{תרגיל}{7.{7}}{}}{54}{exercisechap.7.7}%
-\contentsline {solution}{{פתרון}{48}{}}{54}{solution.48}%
+\contentsline {exercisechap}{{תרגיל}{7.{6}}{}}{55}{exercisechap.7.6}%
+\contentsline {theoremx}{{משפט}{7.3.{7}}{אינטרפולציית לגרנג'}}{55}{theoremx.7.3.7}%
+\contentsline {solution}{{פתרון}{47}{}}{55}{solution.47}%
+\contentsline {exercisechap}{{תרגיל}{7.{7}}{}}{55}{exercisechap.7.7}%
+\contentsline {solution}{{פתרון}{48}{}}{55}{solution.48}%
 \contentsline {exercisechap}{{תרגיל}{7.{8}}{}}{55}{exercisechap.7.8}%
 \contentsline {solution}{{פתרון}{49}{}}{55}{solution.49}%
+\contentsline {exercisechap}{{תרגיל}{7.{9}}{}}{55}{exercisechap.7.9}%
+\contentsline {solution}{{פתרון}{50}{}}{55}{solution.50}%
+\contentsline {exercisechap}{{תרגיל}{7.{10}}{}}{57}{exercisechap.7.10}%
+\contentsline {solution}{{פתרון}{51}{}}{57}{solution.51}%
+\contentsline {exercisechap}{{תרגיל}{7.{11}}{}}{57}{exercisechap.7.11}%
+\contentsline {solution}{{פתרון}{52}{}}{57}{solution.52}%
+\contentsline {definitionx}{{הגדרה}{7.4.{1}}{אופרטור אורתוגונלי (אוניטרי)}}{58}{theoremx.7.4.1}%
+\contentsline {definitionx}{{הגדרה}{7.4.{2}}{מטריצה אורתונוגלית (אוניטרית)}}{58}{theoremx.7.4.2}%
+\contentsline {exercisechap}{{תרגיל}{7.{12}}{}}{58}{exercisechap.7.12}%
+\contentsline {solution}{{פתרון}{53}{}}{58}{solution.53}%
+\contentsline {remark}{{הערה}{7.4.{3}}{}}{58}{theoremx.7.4.3}%
+\contentsline {proposition}{{טענה}{7.4.{4}}{}}{58}{theoremx.7.4.4}%
+\contentsline {exercisechap}{{תרגיל}{7.{13}}{}}{58}{exercisechap.7.13}%
+\contentsline {solution}{{פתרון}{54}{}}{58}{solution.54}%
+\contentsline {exercisechap}{{תרגיל}{7.{14}}{}}{59}{exercisechap.7.14}%
+\contentsline {solution}{{פתרון}{55}{}}{59}{solution.55}%
+\contentsline {exercisechap}{{תרגיל}{7.{15}}{}}{59}{exercisechap.7.15}%
+\contentsline {solution}{{פתרון}{56}{}}{59}{solution.56}%

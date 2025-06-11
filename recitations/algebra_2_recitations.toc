@@ -28,4 +28,5 @@
 \contentsline {chapter}{\numberline {7}אופרטורים על מרחבי מכפלה פנימית}{50}{chapter.7}%
 \contentsline {section}{\numberline {7.1}המרחב הדואלי, ומשפט ההצגה של ריס}{50}{section.7.1}%
 \contentsline {section}{\numberline {7.2}ההעתקה הצמודה}{52}{section.7.2}%
-\contentsline {section}{\numberline {7.3}אופרטורים אוניטריים ואורתוגונליים}{53}{section.7.3}%
+\contentsline {section}{\numberline {7.3}אופרטורים נורמליים וצמודים לעצמם, ומשפט הפירוק הספקטרלי}{53}{section.7.3}%
+\contentsline {section}{\numberline {7.4}אופרטורים אוניטריים ואורתוגונליים}{58}{section.7.4}%

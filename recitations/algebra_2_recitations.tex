@@ -4908,6 +4908,701 @@ $\brs{\Phi^*}_B = \brs{\Phi}_B$
 $\Phi^* = \Phi$.
 \end{solution}
 
+\section{אופרטורים נורמליים וצמודים לעצמם, ומשפט הפירוק הספקטרלי}
+
+ראינו בתרגיל קודם דוגמא לאופרטור
+$T$
+עבורו
+$T^* = T$.
+אופרטור כזה נקרא
+\emph{צמוד לעצמו}
+מעל
+$\mbb{R}$
+או
+\emph{הרמיטי}
+מעל
+$\mbb{C}$.
+אופרטורים צמודים לעצמם מאופיינים על ידי המשפט הבא.
+
+\begin{theorem}[משפט הפירוק הספקטרלי לאופרטורים צמודים לעצמם]
+יהי
+$V$
+מרחב מכפלה פנימית ממשי סוף־מימדי, ויהי
+$T \in \End_{\mbb{R}}\prs{V}$.
+אז
+$T$
+צמוד לעצמו אם ורק אם יש בסיס אורתונורמלי
+$B$
+של
+$V$
+עבורו
+$\brs{T}_B$
+מטריצה אלכסונית.
+\end{theorem}
+
+מעל
+$\mbb{C}$,
+אופרטורים בעלי אפיון דומה אינם אופרטורים הרמיטיים, אלא אופרטורים
+\emph{נורמליים}.
+
+\begin{definition}[אופרטור נורמלי]
+יהי
+$V$
+מרחב מכפלה פנימית ויהי
+$T \in \End_{\mbb{F}}\prs{V}$.
+נגיד כי
+$T$
+\emph{נורמלי}
+אם
+$T^* T = T T^*$.
+\end{definition}
+
+\begin{theorem}[משפט הפירוק הספקטרלי לאופרטורים נורמליים]
+יהי
+$V$
+מרחב מכפלה פנימית מרוכב סוף־מימדי, ויהי
+$T \in \End_{\mbb{C}}\prs{V}$.
+אז
+$T$
+נורמלי אם ורק אם יש בסיס אורתונורמלי
+$B$
+של
+$V$
+עבורו
+$\brs{T}_B$
+מטריצה אלכסונית.
+\end{theorem}
+
+\begin{definition}
+מטריצה
+$A \in \Mat_n\prs{\mbb{F}}$
+עבור
+$\mbb{F} \in \set{\mbb{R}, \mbb{C}}$
+נקראת
+\emph{נורמלית}
+אם
+$A^* A = A A^*$
+כאשר
+$A^* \coloneqq \bar{A}^t$.
+\end{definition}
+
+\begin{remark}
+תהי
+$A$
+מטריצה סימטרית (נורמלית) מעל
+$\mbb{R}$
+(מעל
+$\mbb{C}$).
+אז
+$T_A$
+אופרטור צמוד לעצמו (נורמלי) ולכן ממשפט הפירוק הספקטרלי קיים בסיס אורתונורמלי
+$B$
+עבורו
+$\brs{T_A}_B$
+מטריצה אלכסונית.
+
+אז
+\[\text{.} A = \brs{T_A}_E = \prs{M^E_B}^{-1} \brs{T_A}_B M^E_B\]
+המטריצה
+$P \coloneqq \prs{M^E_B}^{-1} = M^B_E$
+היא מטריצה שעמודותיה מהוות בסיס אורתונורמלי, ולכן הינה אורתוגונלית (אוניטרית). אז מתקיים כי
+$P^{-1} A P = D$
+עבור מטריצה אורתוגונלית (אוניטרית)
+$P$
+ומטריצה אלכסונית
+$D$.
+\end{remark}
+
+\begin{theorem}[משפט הפירוק הספקטרלי למטריצות]
+תהי
+$A \in \Mat_n\prs{\mbb{F}}$
+עבור
+$\mbb{F} = \mbb{R}$
+($\mbb{F} = \mbb{C}$).
+אז
+$A$
+סימטרית (נורמלית) אם ורק אם קיימת מטריצה אורתוגונלית (אוניטרית)
+$P \in \Mat_n\prs{\mbb{F}}$
+עבורה
+$P^{-1} A P$
+אלכסונית.
+\end{theorem}
+
+\begin{exercisechap}
+תהי
+\[\text{.} A = \pmat{3 & 0 & 0 \\ 0 & 2 & 1 \\ 0 & 1 & 2} \in \Mat_3\prs{\mbb{R}}\]
+מצאו מטריצה אורתוגונלית
+$P \in \Mat_3\prs{\mbb{R}}$
+עבורה
+$P^{-1} A P$
+מטריצה אלכסונית.
+\end{exercisechap}
+
+\begin{solution}
+ראשית נמצא ערכים עצמיים. מתקיים
+\begin{align*}
+\det\pmat{2 & 1 \\ 1 & 2} &= 3 \\
+\text{.} \tr\pmat{2 & 1 \\ 1 & 2} &= 4 
+\end{align*}
+לכן אם
+$\lambda_1, \lambda_2$
+הערכים העצמיים נקבל
+$\lambda_1 \lambda_2 = 3$
+וגם
+$\lambda_1 + \lambda_2 = 4$,
+לכן הערכים העצמיים של
+$A$
+הם
+$3$
+מריבוי אלגברי
+$2$
+ו־%
+$1$
+מריבוי אלגברי
+$1$.
+
+המרחב העצמי של
+$3$
+הוא
+$\Span\prs{e_1, e_2 + e_3}$.
+נחפש את המרחב העצמי של
+$1$.
+נדרג
+\begin{align*}
+A - I &= \pmat{2 & 0 & 0 \\ 0 & 1 & 1 \\ 0 & 1 & 1}
+\to \pmat{1 & 0 & 0 \\ 0 & 1 & 1 \\ 0 & 0 & 0}
+\end{align*}
+ואז המרחב העצמי הוא
+$\Span\prs{e_2 - e_3}$.
+
+כדי לקבל בסיס אורתונורמלי נוכל לבצע את תהליך גרם־שמידט על בסיס של כל מרחב עצמי בנפרד, או על הבסיס כולו. אם אנו יודעים שהמטריצה נורמלית, המרחבים העצמיים השונים שלה ניצבים, ולכן שתי הדרכים שקולות. באופן כללי, יש להראות שקיבלנו בסיס מלכסן, או אורתונורמלי, תלוי בשיטה שבחרנו.
+
+נבצע את תהליך גרם־שמידט על
+$\prs{e_1, e_2+e_3}$.
+נקבל בסיס
+$\prs{e_1, \frac{e_2 + e_3}{\sqrt{2}}}$.
+על
+$\prs{e_2 - e_3}$
+נקבל בסיס
+$\prs{\frac{e_2 - e_3}{\sqrt{2}}}$.
+נרצה להראות כי
+\[B = \pmat{\frac{e_2 - e_3}{\sqrt{2}}, e_1, \frac{e_2 + e_3}{\sqrt{2}}}\]
+בסיס מלכסן של
+$A$.
+
+אכן, כל הוקטורים ב־%
+$B$
+הם וקטורים עצמיים של
+$A$.
+לכן אם ניקח
+$P \ceq \brs{\id_{\mbb{C}^3}}^B_E$
+נקבל כי
+$P^{-1} A P$
+מטריצה אלכסונית, וכי
+$P$
+אורתוגונלית, שכן עמודותיה הן בסיס אורתונורמלי.
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$T \in \End_{\mbb{C}}\prs{V}$.
+הראו כי
+$T$
+נורמלי אם ורק אם קיים פולינום
+$p \in \mbb{C}\brs{x}$
+עבורו
+$T^* = p\prs{T}$.
+
+היעזרו במשפט הבא.
+
+\begin{theorem}[אינטרפולציית לגרנג']
+תהיינה
+$x_1, \ldots, x_n, y_1, \ldots, y_n \in \mbb{C}$.
+קיים
+$p \in \mbb{C}_{n+1}\brs{x}$
+עבורו
+$p\prs{x_i} = y_i$
+לכל
+$i \in [n]$.
+\end{theorem}
+\end{exercisechap}
+
+\begin{solution}
+נניח כי קיים פולינום
+$p \in \mbb{C}\brs{x}$
+עבורו
+$T^* = p\prs{T}$.
+כיוון ש־%
+$T$
+מתחלף עם כל פולינום ב־%
+$T$,
+נקבל
+\[T^* T = p\prs{T} T = T p\prs{T} = T T^*\]
+ולכן
+$T$
+נורמלי.
+
+בכיוון השני, נניח כי
+$T$
+נורמלי.
+ממשפט הפירוק הספקטלי קיים בסיס אורתונורמלי
+$B$
+של
+$V$
+עבורו
+$\brs{T}_B = \diag\prs{\lambda_1, \ldots, \lambda_n}$
+אלכסונית.
+אז
+\[\text{.} \brs{T^*}_B = \brs{T}_B^* = \diag\prs{\bar{\lambda}_1, \ldots, \bar{\lambda}_n}\]
+מאינטרפולציית לגרנג', קיים פולינום
+$p \in \mbb{C}\brs{x}$
+עבורו
+$p\prs{\lambda_i} = \bar{\lambda}_i$
+לכל
+$i \in [n]$.
+אז
+\[\brs{T^*}_B = \diag\prs{p\prs{\lambda}_1, \ldots, p\prs{\lambda_n}} = p\prs{\diag\prs{\lambda_1, \ldots, \lambda_n}} = p\prs{\brs{T}_B} = \brs{p\prs{T}}_B\]
+ונקבל כי
+$T^* = p\prs{T}$,
+כנדרש.
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$T \in \End_{\mbb{C}}\prs{V}$
+נורמלי. הראו כי
+$T$
+הרמיטי אם ורק אם כל הערכים העצמיים של
+$T$
+ממשיים.
+\end{exercisechap}
+
+\begin{solution}
+ממשפט הפירוק הספקטרלי קיים בסיס אורתונורמלי
+$B$
+של
+$V$
+עבורו
+$\brs{T}_B = \diag\prs{\lambda_1, \ldots, \lambda_n}$
+אלכסונית.
+כעת
+$T$
+הרמיטי אם ורק אם
+$T^* = T$
+אם ורק אם
+$\brs{T^*}_B = \brs{T}_B$.
+כיוון ש־%
+$B$
+אורתונורמלי, מתקיים
+$\brs{T^*}_B = \overline{\brs{T}_B}^t = \diag\prs{\bar{\lambda}_1, \ldots, \bar{\lambda}_n}$.
+לכן השוויון הנ"ל מתקיים אם ורק אם
+$\bar{\lambda}_i = \lambda_i$
+לכל
+$i \in \brs{n}$,
+כלומר אם ורק אם כל הערכים העצמיים ממשיים.
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$T \in \End_{\mbb{C}}\prs{V}$
+נורמלי. הראו כי
+$T$
+אוניטרי אם ורק אם
+הערכים העצמיים של
+$T$
+הינם על מעגל היחידה.
+\end{exercisechap}
+
+\begin{solution}
+ממשפט הפירוק הספקטרלי קיים בסיס אורתונורמלי
+$B$
+של
+$V$
+עבורו
+$\brs{T}_B = \diag\prs{\lambda_1, \ldots, \lambda_n}$
+אלכסונית.
+אז
+\[\text{.} \brs{T}_B^* = \overline{\brs{T}_B}^t = \diag\prs{\bar{\lambda}_1, \ldots, \bar{\lambda}_n}\]
+כעת,
+\[\text{.} \brs{T^* T}_B = \brs{T^*}_B \brs{T}_B = \diag\prs{\bar{\lambda}_1 \lambda_1 \ldots, \bar{\lambda}_n \lambda_n} = \diag\prs{\abs{\lambda_1}, \ldots, \abs{\lambda_n}}\]
+$T$
+אוניטרי אם ורק אם
+$T^* T = \id$
+אם ורק אם
+$\brs{T^* T} = I_n$,
+אבל מהחישוב הנ"ל זה מתקיים בדיוק כאשר הערכים העצמיים של
+$T$
+על מעגל היחידה (כלומר, עם ערך מוחלט
+$1$).
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$V$
+מרחב מכפלה פנימית ממימד סופי מעל
+$\mbb{C}$.
+
+\begin{enumerate}
+\item
+יהי
+$T \in \End_{\mbb{C}}\prs{V}$
+הפיך. הוכיחו כי
+$\prs{T^*}^{-1} = \prs{T^{-1}}^*$.
+
+\item
+נסמן ב־%
+$\mcal{M}$
+את קבוצת כל ההעתקות
+$T \in \End_{\mbb{C}}\prs{V}$
+ההרמיטיות, ונסמן ב־%
+$\mcal{N}$
+את קבוצת כל ההעתקות
+$U \in \End_{\mbb{C}}\prs{V}$
+האוניטריות ש־%
+$1$
+אינו ערך עצמי שלהן.
+יהי
+\begin{align*}
+\Phi \colon \mcal{M} &\to V \\
+\text{.} \hphantom{lala} T &\mapsto \prs{T + i \id_V} \prs{T - i \id_V}^{-1}
+\end{align*}
+הראו כי
+$\Phi$
+מוגדר היטב וכי
+$\im\prs{\Phi} \subseteq \mcal{N}$.
+
+\item
+הוכיחו כי
+$\Phi$
+חד־חד ערכית וכי
+$\im\prs{\Phi} = \mcal{N}$.
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item נראה כי
+$\prs{T^{-1}}^* \circ T^* = \id_V$.
+אכן, ידוע
+$\prs{S_1 \circ S_2}^* = S_2^* \circ S_1^*$
+ולכן
+\[\text{,} \prs{T^{-1}}^* \circ T^* = \prs{T \circ T^{-1}}^* = \id_V^* = \id_V\]
+כנדרש.
+
+\item
+ראשית, יש להראות כי
+$T - i \id_V$
+אכן הפיך לכל
+$T \in \mcal{M}$.
+ראינו כי אופרטורים אוניטריים הינם עם ערכים עצמיים ממשיים, לכן
+$i$
+אינו ערך עצמי של
+$T$
+ולכן זה אכן המקרה.
+
+כעת נראה כי
+$\Phi\prs{T} \in \mcal{N}$
+לכל
+$T \in \mcal{M}$.
+ראינו כי אופרטור נורמלי הינו אוניטרי אם ורק אם הערכים העצמיים שלו על מעגל היחידה, לכן יש להראות כי
+$\Phi\prs{T}$
+נורמלי, כי הערכים העצמיים שלו על מעגל היחיד, וכי הם שונים מאחת.
+
+$T$
+הרמטיטי ולכן נורמלי, וממשפט פירוק הספקטרלי קיים בסיס אורתונורמלי
+$B$
+עבורו
+$T$
+לכסין.
+אז
+\[\brs{\Phi\prs{T}}_B = \prs{\brs{T}_B + i I_n} \prs{\brs{T}_B - i I_n}^{-1}\]
+גם מטריצה אלכסונית. כיוון שהבסיס
+$B$
+אורתונורמלי, נקבל שוב ממשפט הפירוק הספקטרלי כי
+$\Phi\prs{T}$
+נורמלי.
+
+כעת, ערך עצמי של
+$\Phi\prs{T}$
+יהיה מהצורה
+$\mu = \frac{\lambda + i}{\lambda - i}$
+עבור
+$\lambda$
+ערך עצמי של
+$T$.
+כיוון ש־%
+$T$
+הרמיטי,
+$\lambda$
+כזה הינו ממשי.
+נשים לב כי
+$\mu \neq 1$
+כי המונה והמכנה שונים, ונותר לנו להראות כי
+$\abs{\mu} = 1$.
+אכן,
+\begin{align*}
+\mu &= \frac{\prs{\lambda + i}^2}{\prs{\lambda + i}\prs{\lambda - i}}
+\end{align*}
+ואז
+\begin{align*}
+\abs{\mu} &= \mu \bar{\mu}
+\\&= \frac{\prs{\lambda + i}^2 \overline{\prs{\lambda + i}}^2}{\prs{\lambda + i}^2\prs{\lambda - i}^2}
+\\&= \frac{\prs{\lambda + i}^2\prs{\lambda - i}^2}{\prs{\lambda + i}^2\prs{\lambda - i}^2}
+\\ \text{,} \hphantom{\abs{\mu}} &= 1
+\end{align*}
+כנדרש.
+
+\item
+ננסה למצוא את
+$\lambda$
+בחזרה מתוך
+$\mu$.
+נבודד אותו במשוואה
+$\mu = \frac{\lambda + i}{\lambda - i}$.
+נתחיל בכפל במכנה.
+\begin{align*}
+\mu \lambda - i \mu = \lambda + i
+\end{align*}
+נעביר אגפים ונקבל
+\begin{align*}
+\prs{\mu - 1}\lambda = \prs{\mu + 1}i
+\end{align*}
+ולכן
+\begin{align*}
+\text{.} \lambda = i \cdot \frac{\mu + 1}{\mu - 1}
+\end{align*}
+בהשראת זאת, נגדיר
+\begin{align*}
+\Psi \colon \mcal{N} &\to V \\
+U &\mapsto i \prs{U + \id_V}\prs{U - \id_V}^{-1}
+\end{align*}
+ונראה שמתקיים
+$\im\prs{\Psi} = \mcal{M}$
+וגם
+$\Psi = \Phi^{-1}$.
+
+ראשית, יהי
+$U \in \mcal{N}$
+ונראה כי
+$\Phi\prs{U} \in \mcal{M}$.
+כיוון ש־%
+$U$
+אוניטרי, הוא נורמלי וממשפט הפירוק הספקטרלי קיים בסיס אורתונורמלי
+$B$
+עבורו
+$\brs{U}_B = \diag\prs{\mu_1, \ldots, \mu_n}$
+מטריצה אלכסונית. ראינו גם שבמקרה זה הערכים העצמיים הינם על מעגל היחידה, ומהגדרת
+$\mcal{N}$
+הם אינם כוללים את
+$1$.
+כעת
+\[\text{,} \brs{\Psi\prs{U}}_B = \diag\prs{i \cdot \frac{\mu_1 + 1}{\mu_1 - 1}, \ldots, i \cdot \frac{\mu_n + 1}{\mu_n - 1}}\]
+ומהחישוב למעלה נקבל כי איברי האלכסון ממשיים. ראינו שאופרטור הינו הרמיטי אם ורק אם הוא לכסין בבסיס אורתונורמלי וגם איברי האלכסון שלו ממשיים, ולכן
+$\Phi\prs{U} \in \mcal{M}$.
+
+מהחישוב למעלה נקבל גם כי
+\begin{align*}
+\brs{\Phi\prs{\Psi\prs{U}}}_B &= \diag\prs{\mu_1, \ldots, \mu_n} = \brs{U}_B \\
+\text{,} \brs{\Psi \prs{\Phi\prs{T}}}_C &= \diag\prs{\lambda_1, \ldots, \lambda_n} = \brs{T}_C 
+\end{align*}
+עבור
+$U$
+כזה ועבור
+$T \in \mcal{M}$
+לכסין בבסיס אורתונורמלי
+$C$.
+לכן אם נסתכל על
+$\Phi, \Psi$
+בתור העתקות
+\begin{align*}
+\Phi \colon \mcal{M} &\to \mcal{N} \\
+\Psi \colon \mcal{N} &\to \mcal{M}
+\end{align*}
+על ידי צמצום הטווח, נקבל כי
+$\Phi, \Psi$
+העתקות הופכיות, ובפרט חד־חד ערכיות ועל.
+
+\end{enumerate}
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$T \in \End_{\mbb{C}}\prs{V}$
+הרמיטי ונניח שלכל ערך עצמי
+$\lambda \in \mbb{C}$
+מתקיים
+$\lambda \geq 0$.
+הראו כי קיים אופרטור
+$S \in \End_{\mbb{C}}\prs{V}$
+שכל הערכים העצמיים שלו אי־שליליים וכך שמתקיים
+$S^2 = T$.
+\end{exercisechap}
+
+\begin{solution}
+$T$
+הרמיטי ולכן נורמלי. ממשפט הפירוק הספקטרלי, קיים בסיס אורתונורמלי
+$B$
+עבורו
+$\brs{T}_B = \diag\prs{\lambda_1, \ldots, \lambda_n}$.
+מההנחה,
+$\lambda_i \geq 0$
+לכל
+$i \in \brs{n}$.
+אז קיים שורש חיובי
+$\sqrt{\lambda_i}$
+וניקח
+$S = \prs{\eta^B_B}^{-1} \prs{\diag\prs{\sqrt{\lambda_1}, \ldots, \sqrt{\lambda_n}}}$
+להיות האופרטור עבורו
+$\brs{S}_B = \prs{\diag\prs{\sqrt{\lambda_1}, \ldots, \sqrt{\lambda_n}}}$.
+אז
+$\brs{S^2}_B = \diag\prs{\lambda_1, \ldots, \lambda_n} = \brs{T}_B$
+ולכן
+$S^2 = T$.
+\end{solution}
+
+\begin{exercisechap}
+נראה בתרגיל זה כי כל אופרטור
+$T \in \End_{\mbb{C}}\prs{V}$
+ניתן לכתיבה כצירוף לינארי של ארבעה אופרטורים אוניטריים.
+
+\begin{enumerate}
+    \item יהי
+    $T \in \End_{\mbb{C}}\prs{V}$.
+    הראו שניתן לכתוב את
+    $T$
+    כצירוף לינארי של שני אופרטורים הרמיטיים.
+    \item יהי
+    $T \in \End_{\mbb{C}}\prs{V}$
+    הרמיטי. הראו שניתן לכתוב את
+    $T$
+    כצירוף לינארי של שני אופרטורים אוניטריים.
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+    \item נכתוב
+    \begin{align*}
+        T &= \frac{T + T^*}{2} + \frac{T - T^*}{2} = \frac{T + T^*}{2} + i \prs{\frac{T - T^*}{2i}}
+    \end{align*}
+    ואכן
+    \begin{align*}
+        \prs{\frac{T+T^*}{2}}^* &= \frac{1}{2} \prs{T^* + T^{**}} = \frac{1}{2} \prs{T + T^*} \\
+        \prs{\frac{T - T^*}{2i}}^* &= \overline{\frac{1}{2i}} \prs{T^* - T^{**}} = -\frac{1}{2i} \prs{T^* - T} = \frac{1}{2} \prs{T - T^*}
+    \end{align*}
+    לכן שני האופרטורים הרמיטיים.
+
+    \item
+    \textbf{רעיון:}
+    נרצה, באנלוגיה למקרה הקודם, לכתוב
+    \[\text{.} T = \frac{T + i S}{2} + \frac{T - i S}{2}\]
+    כיוון ש־%
+    $T$
+    הרמיטי ונרצה לכתוב את
+    $S$
+    בתור ביטוי ב־%
+    $T$,
+    נרצה לחפש
+    $S$
+    הרמיטי שמתחלף עם
+    $T$.
+    אז, כדי ש־%
+    $T + i S$
+    יהיה אוניטרי צריך להתקיים
+\[\id_V = \prs{T+iS}\prs{T+iS}^* = \prs{T+iS}\prs{T^* - i S^*} = \prs{T+iS}\prs{T-iS} = T^2 - S^2\]
+    ולכן
+    $S^2 = \id_V - T^2$.
+    
+    יהי
+    $T \in \End_{\mbb{C}}\prs{V}$
+    הרמיטי.
+    עבור אופרטורים אוניטריים, הערכים העצמיים על מעגל היחידה. אז, הערכים העצמיים של סכום של אופרטורים אוניטריים לא יוכלו להיות גדולים מדי. לשם כך, נתחיל בנרמול של
+    $T$.
+    
+    נסמן ב־%
+    $\sigma\prs{T}$
+    את אוסף הערכים העצמיים של
+    $T$,
+    ונגדיר
+    \begin{align*}
+        c\prs{T} &\coloneqq \max\set{\abs{\lambda}}{\lambda \in \sigma\prs{T}}
+    \end{align*}
+    וגם
+    $\tilde{T} = \frac{1}{c\prs{T}} T$.
+    נראה כי
+    $\tilde{T} = \frac{F + G}{2}$
+    צירוף של שני אופרטורים אוניטריים ונקבל כי
+    $T = c\prs{T} \tilde{T} = \frac{c\prs{T}}{2} F + \frac{c\prs{T}}{2} G$
+    צירוף לינארי של שני אופרטורים אוניטריים.
+    
+    נשים לב כי הערכים העצמיים של
+    $\tilde{T}$
+    מערך מוחלט לכל היותר
+    $1$.
+    אכן, אם
+    $\lambda \in \mbb{C}$
+    ערך עצמי עם וקטור עצמי
+    $v$,
+    נקבל
+    \[T\prs{v} = c\prs{T} \tilde{T}\prs{v} = c\prs{T} \lambda v\]
+    ולכן
+    $v$
+    וקטור עצמי של
+    $T$
+    עם ערך עצמי
+    $c\prs{T} \lambda$.
+    אבל, מהגדרת
+    $c\prs{T}$
+    נקבל
+    \[c\prs{T} \geq \abs{c\prs{T} \lambda} = c\prs{T} \abs{\lambda}\]
+    ולכן
+    $\abs{\lambda} \leq 1$.
+    
+    כעת,
+    $\tilde{T}$
+    הרמיטי כי
+    $T$
+    הרמיטי. לכן הוא נורמלי, ולכן קיים בסיס אורתונורמלי
+    $B$
+    של
+    $V$
+    עבורו
+    $\brs{T}_B = \diag\prs{\lambda_1, \ldots, \lambda_n}$.
+    נקבל כי הערכים העצמיים של
+    $\id_V - T^2$,
+    שהינם מהצורה
+    $1 - \lambda^2$
+    עבור
+    $\lambda$
+    ערך עצמי של
+    $\tilde{T}$,
+    הינם אי־שליליים.
+    לכן, קיים שורש
+    $\sqrt{\id_V - \tilde{T}^2}$.
+    
+    יהיו
+    \begin{align*}
+        F &= \tilde{T} + i\sqrt{\id_V - \tilde{T}^2} \\
+        G &= \tilde{T} - i\sqrt{\id_V - \tilde{T}^2}
+    \end{align*}
+    ואז
+    \begin{align*}
+        \tilde{T} &= \frac{F+G}{2} \\
+        F^* F &= \prs{\tilde{T} + i\sqrt{\id_V - \tilde{T}^2}}* \prs{\tilde{T} + i\sqrt{\id_V - \tilde{T}^2}}
+        \\&=
+        \prs{\tilde{T} - i \sqrt{\id_V - \tilde{T}^2}}\prs{\tilde{T} + i\sqrt{\id_V - \tilde{T}^2}}
+        \\&= \tilde{T}^2 - \prs{\id_V \tilde{T}^2}
+        \\&= \id_V
+    \end{align*}
+    ובאותו אופן
+    $G^* G = \id_V$
+    (אפשר גם לשים לב כי
+    $F^* = G$
+    ולכן
+    $G^* G = F F^* = \id_V$).
+\end{enumerate}
+\end{solution}
+
 \section{אופרטורים אוניטריים ואורתוגונליים}
 
 תכונה אינטואיטיבית גיאומטרית של אופרטורים על מרחבי מכפלה פנימית היא שמירה של המכפלה הפנימית.
