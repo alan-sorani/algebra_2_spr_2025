@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.3.10)  11 JUN 2025 09:42
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.3.10)  18 JUN 2025 14:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2190,9 +2190,36 @@ Overfull \hbox (37.9883pt too wide) in paragraph at lines 5442--5461
 [] \OT1/cmr/m/n/10 = [] []$\TU/Alef(0)/m/n/10 .[]
  []
 
-[57] [58]
+[57]
+Overfull \hbox (29.69803pt too wide) in paragraph at lines 5635--5646
+[][]\TU/Alef(0)/m/it/10 יהיו $\OML/cmm/m/it/10 V; W$ \TU/Alef(0)/m/it/10 מרחבי 
+מכפלה פנימית סוף־מימדיים, ותהי $\OML/cmm/m/it/10 T \OMS/cmsy/m/n/10 2 [][] []$\
+TU/Alef(0)/m/it/10 .[]
+ []
 
-LaTeX Warning: Empty bibliography on input line 5856.
+
+Overfull \hbox (4.62474pt too wide) in paragraph at lines 5658--5668
+[][]\TU/Alef(0)/m/it/10 תהי $\OML/cmm/m/it/10 A \OMS/cmsy/m/n/10 2 [][] []$ \TU
+/Alef(0)/m/it/10 עבור $\U/msb/m/n/10 F \OMS/cmsy/m/n/10 2 []$\TU/Alef(0)/m/it/1
+0 . מהמשפט,[]
+ []
+
+[58] [59]
+Overfull \hbox (19.57808pt too wide) in paragraph at lines 5962--5972
+[][]\TU/Alef(0)/m/n/10 ראשית, $\OML/cmm/m/it/10 B$ \TU/Alef(0)/m/n/10 אורתוגונל
+ית (אוניטרית) כמפכלה של כאלה. כעת, לכל $\OML/cmm/m/it/10 v \OMS/cmsy/m/n/10 2 \
+OML/cmm/m/it/10 V$ \TU/Alef(0)/m/n/10 מתקיים $[] \OT1/cmr/m/n/10 = [] =$[]
+ []
+
+
+Overfull \hbox (6.48773pt too wide) in paragraph at lines 5991--5999
+[][]\TU/Alef(0)/m/it/10 יהי $\OML/cmm/m/it/10 T \OMS/cmsy/m/n/10 2 [][] []$ \TU
+/Alef(0)/m/it/10 אופרטור על מרחב מכפלה פנימית סוף־מימדי.[]
+ []
+
+[60] [61]
+
+LaTeX Warning: Empty bibliography on input line 6275.
 
 \tf@thm=\write8
 \openout8 = `algebra_2_recitations.thm'.
@@ -2286,7 +2313,7 @@ The property list \__xpg_alias contains the pairs (without outer braces):
 >  {newzealand/target}  =>  {english}
 >  {newzealand/variant}  =>  {newzealand}
 >  {newzealand/options}  =>  {variant=newzealand}.
-[59] (./algebra_2_recitations.aux
+[62] (./algebra_2_recitations.aux
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
@@ -2295,25 +2322,19 @@ Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 
 LaTeX Warning: There were undefined references.
 
-
-Package rerunfilecheck Warning: File `algebra_2_recitations.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `algebra_2_recitations.out':
-(rerunfilecheck)             Before: 38EBE7D6B89F075514DBF829CFC75F43;6665
-(rerunfilecheck)             After:  691216B869DA71543C7FA14783D4F7C3;7157.
+Package rerunfilecheck Info: File `algebra_2_recitations.out' has not changed.
+(rerunfilecheck)             Checksum: D4D99DB5EF1B212376742C9EBE9F8B57;7508.
 Package logreq Info: Writing requests to 'algebra_2_recitations.run.xml'.
 \openout1 = `algebra_2_recitations.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43969 strings out of 476775
- 931972 string characters out of 5808212
- 1939901 words of memory out of 5000000
- 63348 multiletter control sequences out of 15000+600000
+ 43971 strings out of 476775
+ 932007 string characters out of 5808212
+ 1940838 words of memory out of 5000000
+ 63350 multiletter control sequences out of 15000+600000
  520252 words of font info for 99 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  115i,20n,118p,1293b,880s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on algebra_2_recitations.pdf (61 pages).
+Output written on algebra_2_recitations.pdf (64 pages).

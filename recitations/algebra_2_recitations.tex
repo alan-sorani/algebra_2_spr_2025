@@ -5603,6 +5603,425 @@ $T \in \End_{\mbb{C}}\prs{V}$
 \end{enumerate}
 \end{solution}
 
+\section{פירוק לערכים סינגולריים ופירוק פולארי}
+
+יהיו
+$V,W$
+מרחבי מכפלה פנימית סוף־מימדיים, ותהי
+$T \in \Hom_{\mbb{F}}\prs{V,W}$.
+אם
+$V = W$
+ראינו כי
+$T$
+צמוד לעצמו (נורמלי) אם ורק אם קיים בסיס
+$B$
+עבורו
+$\brs{T}_B$
+אלכסונית.
+ראינו שלהעתקות לינאריות כלליות יש איפיון דומה.
+
+\begin{definition}[מטריצה מלבנית אלכסונית]
+מטריצה
+$A \in \Mat_{m \times n}\prs{\mbb{F}}$
+נקראת
+\emph{מלבנית אלכסונית}
+אם
+$a_{i,j} = 0$
+לכל
+$i \neq j$.
+\end{definition}
+
+\begin{theorem}[פירוק לערכים סינגולריים]
+יהיו
+$V,W$
+מרחבי מכפלה פנימית סוף־מימדיים, ותהי
+$T \in \Hom_{\mbb{F}}\prs{V,W}$.
+קיימים בסיסים אורתונורמליים
+$B,C$
+של
+$V,W$
+בהתאמה עבורם
+$\brs{T}^B_C$
+מלבנית אלכסונית.
+
+בנוסף, הערכים
+$\sigma_i = \prs{\brs{T}^B_C}_{i,i}$
+שנקראים
+\emph{הערכים הסינגולריים}
+של
+$T$
+הינם ממשיים אי־שליליים ונקבעים ביחידות תחת הדרישה
+\[\text{.} \sigma_1 \geq \sigma_2 \geq \ldots \geq \sigma_{\min\prs{m,n}}\]
+\end{theorem}
+
+\begin{corollary}[פירוק לערכים סינגולריים של מטריצה] \label{corollary:matrix-svd}
+תהי
+$A \in \Mat_{m,n}\prs{\mbb{F}}$
+עבור
+$\mbb{F} \in \set{\mbb{R}, \mbb{C}}$.
+מהמשפט, קיימים בסיסים אורתונורמליים
+$B,C$
+עבורם
+$\Sigma \coloneqq \brs{T_A}^B_C$
+אלכסונית מלבנית.
+אז
+\[\text{.} A = \brs{T_A}_E = M^C_E \brs{T_A}^B_C M^E_B = \brs{T_A}_E = M^C_E \Sigma M^E_B\]
+המטריצות
+$U \coloneqq M^C_E, V \coloneqq M^B_E$
+הינן אורתוגונליות (אוניטריות) כיוון שהן שולחות בסיס אורתונורמלי לבסיס אורתונורמלי. אכן, אם
+$B = \prs{b_1, \ldots, b_n}$
+נקבל
+\[\text{.} M^B_E e_i = M^B_E \brs{b_i}_B = b_i\]
+בפרט,
+$M^E_B = V^{-1} = V^*$
+ונקבל כי
+$A = U \Sigma V^*$.
+\end{corollary}
+
+\begin{definition}[אופרטור מוגדר אי־שלילית]
+אופרטור
+$T \in \End\prs{V}$
+על מרחב מכפלה פנימית סוף־מימדי נקרא
+\emph{מוגדר אי־שלילית}
+אם הוא צמוד לעצמו (הרמיטי) וגם
+$\trs{Tv, v} \geq 0$
+לכל
+$v \in V$.
+\end{definition}
+
+\begin{remark}
+באופן דומה נגדיר אופרטור מוגדר חיובית%
+\slash%
+אי־חיובית%
+\slash
+שלילית.
+\end{remark}
+
+\begin{proposition}
+אופרטור צמוד לעצמו (נורמלי) הינו מוגדר אי־שלילית אם ורק אם כל הערכים העצמיים שלו (ממשיים) אי־שליליים.
+\end{proposition}
+
+\begin{proposition}
+האופרטור
+$T^* T$
+הינו מוגדר חיובית, והערכים הסינגולריים
+$\sigma_1, \ldots, \sigma_n$
+של העתקה לינארית
+$T \in \Hom_{\mbb{F}}\prs{V,W}$
+הם הערכים העצמיים של האופרטור
+$\sqrt{T^* T} \in \End_{\mbb{F}}\prs{V}$.
+\end{proposition}
+
+נתאר כעת איך למצוא בסיסים
+$B,C$
+כנ"ל.
+נסמן
+$n \coloneqq \dim \prs{V}$
+ו־%
+$m \coloneqq \dim\prs{W}$.
+
+\begin{enumerate}
+\item
+כעת נמצא את הערכים העצמיים $\lambda_i$ של $T^* T$. נסמן
+$\sigma_i = \sqrt{\lambda_i}$
+ונסדר אותם מהגדול לקטן
+$\sigma_1 \geq \sigma_2 \geq \ldots \geq \sigma_n$.
+
+\item
+ניקח
+$B = \prs{v_1, \ldots, v_n}$
+בסיס אורתונורמלי של וקטורים עצמיים מתאימים של
+$T^* T$
+(שקיים לפי פירוק ספקטרלי).
+
+יהי
+$k \in \brs{n}$
+המקסימלי עבורו
+$\lambda_k > 0$.
+נגדיר
+$C' = \prs{\frac{1}{\sigma_1} T\prs{v_1}, \ldots, \frac{1}{\sigma_k} T\prs{v_k}}$.
+
+אז אכן מתקיים
+$T\prs{v_i} = \sigma_i u_i$
+וגם
+\begin{align*}
+\trs{\frac{1}{\sigma_i} T\prs{v_i}, \frac{1}{\sigma_j} T\prs{v_j}}
+&=
+\frac{1}{\sigma_i \sigma_j} \trs{T\prs{v_i}, T\prs{v_j}}
+\\&=
+\frac{1}{\sigma_i \sigma_j} \trs{T^* T\prs{v_i}, v_j}
+\\&=
+\frac{\lambda_i}{\sigma_i \sigma_j} \trs{v_i, v_j}
+\\&=
+\frac{\lambda_i}{\sigma_i \sigma_j} \delta_{i,j}
+\\&=
+\frac{\lambda_i}{\sigma_i^2} \delta_{i,j}
+\\ \text{.} \hphantom{\trs{\frac{1}{\sigma_i} T\prs{v_i}, \frac{1}{\sigma_j} T\prs{v_j}}} &=
+\delta_{i,j}
+\end{align*}
+
+\item
+נשלים את
+$C'$
+לבסיס אורתונורמלי
+$C$
+של
+$W$.
+
+לכל
+$i > k$
+מתקיים
+\[\text{.} \norm{T\prs{v_i}}^2 = \trs{Tv_i, Tv_i} = \trs{T^* T v_i, v_i} = 0\]
+לכן
+$T\prs{v_i} = 0$
+ולא משנה באיזו דרך נשלים לבסיס אורתונורמלי.
+\end{enumerate}
+
+\begin{remark}
+כדי למצוא את הפירוק
+$A = U \Sigma V^*$
+של מטריצה
+$A \in \Mat_{m,n}\prs{\mbb{F}}$,
+נמצא את הפירוק לערכים סינגולריים של
+$T_A \in \Hom_{\mbb{F}}\prs{\mbb{F}^n, \mbb{F}^m}$
+ונעבוד לפי התיאור במסקנה
+\ref{corollary:matrix-svd}.
+\end{remark}
+
+\begin{exercisechap}
+תהי
+\[\text{.} A = \pmat{1 & -1 \\ 0 & 1 \\ 1 & 0} \in \Mat_{3 \times 2}\prs{\mbb{C}}\]
+מיצאו את הפירוק של
+$A$
+לערכים סינגולריים.
+\end{exercisechap}
+
+\begin{solution}
+הערכים הסינגולריים הם הערכים העצמיים של
+$\sqrt{A^* A}$.
+מתקיים
+$A^* A = A^t A = \pmat{2 & -1 \\ -1 & 2}$.
+אם
+$\lambda, \mu$
+הערכים העצמיים, נקבל
+\begin{align*}
+\lambda + \mu = \tr\prs{A^* A} = 4 \\
+\text{,} \lambda \mu = \det\prs{A^* A} = 3
+\end{align*}
+לכן הערכים העצמיים הם
+$3,1$,
+ולכן הערכים הסינגולריים הם
+$\sqrt{3}, 1$.
+
+כעת, כדי למצוא את הבסיס
+$B$
+נחפש בסיס אורתונורמלי של וקטורים עצמיים של
+$A^* A$.
+נשים לב מיד כי
+$e_1 - e_2$
+וקטור עצמי של
+$3$
+וכי
+$e_1 + e_2$
+וקטור עצמי של
+$1$.
+ננרמל את הוקטורים, שהינם ניצבים בתור וקטורים עצמיים עם ערכים עצמיים שונים עבור אופרטור צמוד לעצמו (הרמיטי), ונקבל בסיס אורתונורמלי
+\[B = \pmat{\frac{e_1 - e_2}{\sqrt{2}}, \frac{e_1 + e_2}{\sqrt{2}}}\]
+של
+$\mbb{C}^2$.
+
+נגדיר
+\begin{align*}
+\tilde{C} &= \prs{\frac{1}{\sqrt{3}} A \prs{\frac{e_1 - e_2}{\sqrt{2}}}, A\prs{\frac{e_1 + e_2}{\sqrt{2}}}}
+\\&= \prs{\frac{1}{\sqrt{6}} \pmat{2\\-1\\1}, \frac{1}{\sqrt{2}} \pmat{0\\1\\1}}
+\end{align*}
+ונשלים קבוצה סדורה זאת לבסיס אורתונורמלי של
+$\mbb{C}^3$.
+
+נסמן
+$w = \pmat{a\\b\\c}$
+ונפתור את המשוואות
+\begin{align*}
+2a - b + c &= 0\\
+b + c &= 0
+\end{align*}
+כדי לקבל
+$w = \pmat{1\\1\\-1}$.
+כעת,
+$\norm{w} = 3$
+לכן לאחר נרמול נקבל
+$w_3 = \frac{1}{\sqrt{3}} \pmat{1\\1\\-1}$.
+נגדיר
+\begin{align*}
+\text{.} C \ceq \tilde{C} * \prs{w_3}
+\end{align*}
+
+נקבל את הפירוק
+$A = U \Sigma V^*$
+עבור
+\begin{align*}
+U &= M^C_E = \pmat{\frac{2}{\sqrt{6}} & 0 & \frac{1}{\sqrt{3}} \\ -\frac{1}{\sqrt{6}} & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{3}} \\ \frac{1}{\sqrt{6}} & \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{3}}} \\
+\Sigma &= \pmat{\sqrt{3} & 0 \\ 0 & 1 \\ 0 & 0} \\
+\text{.} V &= M^B_E = \frac{1}{\sqrt{2}} \pmat{1 & 1 \\ -1 & 1}
+\end{align*}
+כלומר,
+\begin{align*}
+\text{.} A = \pmat{\frac{2}{\sqrt{6}} & 0 & \frac{1}{\sqrt{3}} \\ -\frac{1}{\sqrt{6}} & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{3}} \\ \frac{1}{\sqrt{6}} & \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{3}}} \pmat{\sqrt{3} & 0 \\ 0 & 1 \\ 0 & 0} \pmat{\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}}
+\end{align*}
+\end{solution}
+
+\begin{exercisechap}
+מה יקרה אם נחשב בעזרת האלגוריתם פירוק לערכים סינגולריים עבור אופרטור נורמלי?
+באילו מקרים האלגוריתם יתן
+$B = C$?
+\end{exercisechap}
+
+\begin{solution}
+ניקח בסיס
+$B = \prs{v_1, \ldots, v_n}$
+עבורו
+$\brs{T}_B = \diag\prs{\lambda_1, \ldots, \lambda_n}$,
+ואז
+\[\text{,} \brs{T^* T}_B = \diag\prs{\bar{\lambda}_1, \ldots, \bar{\lambda}_n} \diag\prs{\lambda_1, \ldots, \lambda_n} = \diag\prs{\abs{\lambda_1}^2, \ldots, \abs{\lambda_n}^2}\]
+\end{solution}
+וכן
+$\sqrt{\brs{T^* T}_B} = \diag\prs{\abs{\lambda_1}, \ldots, \abs{\lambda_n}}$.
+אז החישוב שלנו מראה
+\begin{align*}
+\text{.} C \coloneqq \prs{u_1, \ldots, u_n} = \prs{\frac{1}{\abs{\lambda_1}} T\prs{v_1}, \ldots, \frac{1}{\abs{\lambda_n}} T\prs{v_n}}
+\end{align*}
+כעת,
+$T\prs{v_i} = \lambda_i v_i$
+ונקבל כי
+$u_i = \frac{\lambda_i}{\abs{\lambda_i}} v_i$.
+אז
+$u_i = v_i$
+אם ורק אם
+$\lambda_i$
+ממשי אי־שלילי.
+
+לכן האלגוריתם יתן
+$B = C$
+אם ורק אם כל הערכים העצמיים של
+$T$
+הינם ממשיים אי־שליליים. כלומר, אם ורק אם
+$T$
+מוגדר אי־שלילית.
+
+\begin{exercisechap}
+הוכיחו או הפריכו: הערכים הסינגולריים של
+$T^2$
+הם ריבועי הערכים הסינגולריים של
+$T$.
+\end{exercisechap}
+
+\begin{solution}
+הטענה איננה נכונה, למשל עבור
+$A = \pmat{0 & 1 \\ 0 & 0}$.
+אכן, הערכים הסינגוליים של
+$A^2$
+הם
+$\prs{0,0}$
+כי
+$A^2 = 0$,
+אבל הערכים הסינגולריים של
+$A$
+הם
+$\prs{0,1}$
+כי
+$A^t A = \pmat{0 & 0 \\ 0 & 1}$.
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$T \in \End_{\mbb{R}}\prs{V}$
+עם ערכים סינגולריים
+$\sigma_1, \ldots, \sigma_n$.
+הראו כי
+$\norm{T\prs{v}} \leq \norm{v} \cdot \max_{i \in [n]} \set{\sigma_i}$
+לכל
+$v \in V$.
+\end{exercisechap}
+
+\begin{exercisechap}
+תהיינה
+$A,B,U \in \Mat_n\prs{\mbb{F}}$
+עבור
+$U$
+אורתוגונלית (אוניטרית) המקיימת
+$B = U^* A U$,
+ונניח כי
+$A$
+מוגדרת אי־שלילית.
+הראו כי
+$B$
+מוגדרת אי־שלילית.
+\end{exercisechap}
+
+\begin{solution}
+ראשית,
+$B$
+אורתוגונלית (אוניטרית) כמפכלה של כאלה.
+כעת, לכל
+$v \in V$
+מתקיים
+$\trs{Bv, v} = \trs{U^* A U v, v} = \trs{A \prs{U v}, U v}$
+כאשר ביטוי זה הינו אי־שלילי כי
+$A$
+מוגדרת אי־שלילית.
+\end{solution}
+
+\begin{remark}
+באותו אופן, מטריצה הדומה אורתוגונלית (אוניטרית) למטריצה מוגדרת
+חיובית%
+\slash%
+אי־חיובית%
+\slash%
+שלילית הינה
+חיובית%
+\slash%
+אי־חיובית%
+\slash%
+שלילית.
+\end{remark}
+
+נעבור כעת למשפט פירוק נוסף שנובע מהפירוק לערכים סינגולריים.
+
+\begin{theorem}[פירוק פולארי לאופרטורים]
+יהי
+$T \in \End_{\mbb{F}}\prs{V}$
+אופרטור על מרחב מכפלה פנימית סוף־מימדי. יש אופרטור אורתוגונלי (אוניטרי)
+$U \in \End_{\mbb{F}}\prs{V}$
+ואופרטור מוגדר אי־שלילית
+$R \in \End_{\mbb{F}}\prs{V}$
+עבורם
+$T = UR$.
+
+בנוסף, אם
+$T$
+הפיך, האופרטור
+$R$
+מוגדר חיובית.
+\end{theorem}
+
+\begin{theorem}[פירוק פולארי למטריצות]
+תהי
+$A \in \Mat_n\prs{\mbb{F}}$.
+יש מטריצה
+$U \in \Mat_n\prs{\mbb{F}}$
+אורתוגונלית (אוניטרית) ומטריצה
+$R \in \Mat_n\prs{\mbb{F}}$
+מוגדרת אי־‏שלילית עבורן
+$A = UR$.
+
+בנוסף,
+אם
+$A$
+הפיכה, המטריצה
+$R$
+מוגדרת חיובית.
+\end{theorem}
+
 \section{אופרטורים אוניטריים ואורתוגונליים}
 
 תכונה אינטואיטיבית גיאומטרית של אופרטורים על מרחבי מכפלה פנימית היא שמירה של המכפלה הפנימית.
