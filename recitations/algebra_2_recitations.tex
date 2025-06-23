@@ -6271,6 +6271,822 @@ $\rho_{-\theta} \circ T = R$
 $T = \rho_{\theta} \circ R$.
 \end{solution}
 
+\chapter{תבניות בילינאריות וריבועיות}
+
+\section{תבניות בילינאריות}
+
+\begin{definition}[תבנית בילינארית]
+יהי
+$V$
+מרחב וקטורי. תבנית בילינארית
+$f$
+על
+$V$
+היא העתקה
+$f \colon V \to V$
+שהינה לינארית בשני הרכיבים.
+\end{definition}
+
+\begin{remark}
+מעל
+$\mbb{C}$
+עוסקות לעתים בתבניות ססקווילינאריות ("אחת־וחצי לינאריות") במקום בתבניות בילינאריות. נדבר על אלו בהמשך.
+\end{remark}
+
+\begin{definition}[מטריצה מייצגת של תבנית בילינארית]
+יהי
+$V$
+מרחב וקטורי סוף־מימדי עם בסיס
+$B = \prs{v_1, \ldots, v_n}$,
+ותהי
+$f$
+תבנית בילינארית על
+$V$.
+\emph{המטריצה המייצגת}
+של
+$f$
+לפי
+$B$
+היא
+\begin{align*}
+\text{.} \brs{f}_B &= \pmat{f\prs{v_1, v_1} & \cdots & f\prs{v_1, v_n} \\ \vdots & \ddots & \vdots \\ f\prs{v_n,v_1} & \cdots & f\prs{v_n,v_n}}
+\end{align*}
+\end{definition}
+
+\begin{proposition}
+לכל
+$u,v \in V$
+מתקיים
+\[\text{.} \brs{u}_B^t \brs{f}_B \brs{v}_B = f\prs{u,v}\]
+
+בנוסף, אם
+$\brs{u}_B^t A \brs{v}_B = f\prs{u,v}$
+לכל
+$u,v \in V$,
+אז
+$A = \brs{f}_B$.
+\end{proposition}
+
+\begin{proof}
+נכתוב
+\begin{align*}
+u &= \sum_{i \in \brs{n}} \alpha_i v_i \\
+v &= \sum_{j \in \brs{n}} \beta v_j
+\end{align*}
+ואז
+\begin{align*}
+\brs{u}_B^t \brs{f}_B \brs{v}_B &= \sum_{i,j \in \brs{n}} \alpha_i \beta_j \brs{v_i}_B^t \brs{f}_B \brs{v_j}_B
+\\&= \sum_{i,j \in \brs{n}} \alpha_i \beta_j e_i^t \brs{f}_B e_j
+\\&= \sum_{i,j \in \brs{n}} \alpha_i \beta_j f\prs{v_i, v_j}
+\\&= f\prs{\sum_{i \in \brs{n}} \alpha_i v_i, \sum_{j \in \brs{n}} \beta_j v_j}
+\\ \text{.} \hphantom{\brs{u}_B^t \brs{f}_B \brs{v}_B} &= f\prs{u,v}
+\end{align*}
+
+לבסוף, ניתן לקחת
+$u = v_i, v = v_j$
+ואז
+$\brs{u}_B^t A \brs{v}_B = a_{i,j}$.
+לכן אם
+$\brs{u}_B^t A \brs{v}_B = f\prs{u,v}$
+לכל
+$u,v \in V$
+נקבל כי
+$A = \brs{f}_B$.
+\end{proof}
+
+\begin{corollary}
+יהיו
+$B,C$
+שני בסיסים של אותו מרחב וקטורי סוף־מימדי
+$V$,
+ותהי
+$f$
+תבנית בילינארית על
+$V$.
+אז
+\begin{align*}
+\text{.} \brs{f}_B = \prs{M^B_C}^t \brs{f}_C M^B_C
+\end{align*}
+\end{corollary}
+
+\begin{proof}
+לכל
+$u,v \in V$
+מתקיים
+\begin{align*}
+\brs{u}_B^t \prs{M^B_C}^t \brs{f}_C M^B_C \brs{v}_B &=
+\prs{M^B_C \brs{u}_B}^t \brs{f}_C M^B_C \brs{v}_B
+\\&= \brs{u}_C^t \brs{f}_C \brs{v}_C
+\\&= f\prs{u,v}
+\end{align*}
+לכן מהטענה נקבל שוויון.
+\end{proof}
+
+במקרה של אופרטור
+$T$
+על
+$V$
+הקשר בין
+$\brs{T}_B, \brs{T}_C$
+הוא דימיון. המסקנה מראה קשר אחר במקרה של תבניות בילינאריות, שמוביל להגדרה הבאה.
+
+\begin{definition}[מטריצות חופפות]
+מטריצות
+$A,B \in \Mat_n\prs{\mbb{F}}$
+נקראות
+\emph{חופפות}
+אם קיימת
+$P \in \Mat_n\prs{\mbb{F}}$
+\textbf{הפיכה}
+עבורה
+$B = P^t A P$.
+\end{definition}
+
+\begin{corollary}
+המטריצות
+$\brs{f}_B, \brs{f}_C$
+המייצגות תבנית בילינארית לפי בסיסים שונים, הינן חופפות.
+\end{corollary}
+
+\begin{remark}
+ניתן לשחזר את תבנית הבילינארית ממטריצה מייצגת שלה, ולמעשה ההעתקה
+$f \mapsto \brs{f}_B$
+הינה איזומורפיזם בין מרחב התבניות הבילינאריות והמרחב
+$\Mat_n\prs{\mbb{F}}$.
+\end{remark}
+
+\begin{definition}[תבנית בילינארית סימטרית]
+יהי
+$V$
+מרחב מכפלה פנימית ותהי
+$f$
+תבנית בילינארית על
+$V$.
+נגיד כי
+$f$
+\emph{סימטרית}
+אם
+$f\prs{u,v} = f\prs{v,u}$
+לכל
+$u,v \in V$.
+\end{definition}
+
+\begin{definition}
+יהי
+$V$
+מרחב מכפלה פנימית ותהי
+$f$
+תבנית בילינארית על
+$V$.
+נגיד כי
+$f$
+\emph{מוגדרת חיובית לחלוטין}
+אם
+$f\prs{u,u} > 0$
+לכל
+$u \in V$.
+
+נגדיר באופן דומה תבנית מוגדרת שלילית לחלוטין%
+\slash%
+אי־שלילית%
+\slash%
+אי־חיובית.
+\end{definition}
+
+\begin{exercisechap}
+תהיינה
+$A,B,P \in \Mat_n\prs{\mbb{R}}$
+כאשר
+$P$
+הפיכה ומתקיים
+$B = P^t A P$.
+
+הוכיחו או הפריכו את הטענות הבאות.
+\begin{enumerate}
+\item $\det\prs{A} = \det\prs{B}$.
+\item ל־%
+$A,B$
+יש אותם ערכים עצמיים.
+\item $\rank\prs{A} = \rank\prs{B}$.
+\item $A$
+הפיכה אם ורק אם
+$B$
+הפיכה, וכאשר זה מתקיים
+$A^{-1}, B^{-1}$
+חופפות.
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item מתקיים
+\[\det\prs{B} = \det\prs{P^t A P} = \det\prs{P^t} \det\prs{A} \det\prs{P}\]
+ולכן יש שוויון אם ורק אם
+$\det\prs{P^t} \det\prs{P} = 1$.
+אבל,
+$\det\prs{P^t} = \det\prs{P}$
+ולכן זה מתקיים אם ורק אם
+$\det\prs{P} \in \set{\pm 1}$.
+זה לא חייב להיות המצב. למשל, נוכל לקחת
+$A = I_n, B = 4I_n, P = 2I_n$.
+
+\item הדוגמא הקודמת מראה שהערכים העצמיים לא נשמרים.
+
+\item הדרגה נשמרת כי
+$P^t, P$
+הפיכות.
+
+\item נניח כי
+$A$
+הפיכה. אז
+$B$
+הפיכה כי הדרגות שלהן שוות.
+נשים לב כי
+\[B^{-1} = \prs{P^t A P}^{-1} = P^{-1} A^{-1} \prs{P^t}^{-1}\]
+ועבור
+$\tilde{P} = \prs{P^t}^{-1}$
+נקבל
+$B^{-1} = \tilde{P}^t A^{-1} \tilde{P}$.
+\end{enumerate}
+\end{solution}
+
+\begin{exercisechap}
+תהי
+\begin{align*}
+    g\prs{v,w} = v_1 w_1 - v_2 w_2
+\end{align*}
+תבנית בילינארית על
+$V \coloneqq \mbb{R}^2$.
+
+\begin{enumerate}
+    \item מיצאו את כל האיזומטריות
+    של התבנית
+    $g$.
+    כלומר, מיצאו כל
+    $T \in \End_{\mbb{R}}\prs{V}$
+    עבורן
+    $f\prs{T\prs{v}, T\prs{w}} = f\prs{v,w}$.
+    
+    \item התבנית
+    $g$
+    אינה חיובית, ולכן אין לנו מושג של אורך. אבל, עדיין אפשר להסתכל על
+    $g\prs{v,v}$
+    ולחשוב עליו כאנלוגי לריבוע של האורך.
+    מיצאו את כל הוקטורים
+    $v \in V$
+    עבורם
+    $g\prs{v,v} = 1$.
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+    \item
+    תהי
+    $T \in \End_{\mbb{R}}\prs{V}$
+    איזומטריה של
+    $g$
+    ונכתוב
+    $\brs{T}_E = \pmat{a & b \\ c & d}$.
+    אז
+    \begin{align*}
+        a^2 - c^2 &= g\prs{\pmat{a\\c}, \pmat{a\\c}} = g\prs{T\prs{e_1}, T\prs{e_1}} = g\prs{e_1, e_1} = 1 \\
+        b^2 - d^2 &= g\prs{\pmat{b\\d}, \pmat{b\\d}} = g\prs{T\prs{e_2}, T\prs{e_2}} = g\prs{e_2, e_2} = -1 \\
+        \text{.} ab - cd &= g\prs{\pmat{a\\c}, \pmat{b\\d}} = g\prs{T\prs{e_1}, T\prs{e_2}} = g\prs{e_1, e_2} = 0
+    \end{align*}
+    עבור
+    \begin{align*}
+        \sinh\prs{x} \coloneqq \frac{e^x - e^{-x}}{2} \\
+        \text{,}\cosh\prs{x} \coloneqq \frac{e^x + e^{-x}}{2}
+    \end{align*}
+    ידוע שמתקיים
+    $\cosh^2\prs{x} - \sinh^2\prs{x} = 1$.
+    כיוון ש־%
+    $\sinh, \cosh$
+    פונקציות על, נוכל לכתוב
+    $a = \cosh\prs{\theta}$
+    ואז
+    $c = \sinh\prs{\theta}$.
+    באותו אופן,
+    $b = \cosh\prs{\rho}$
+    ואז
+    $d = -\sin\prs{\rho}$.
+    אז מהמשוואה השלישית ניתן לבדוק כי בהכרח
+    $\rho = \theta$
+    ולכן מתקיים
+    \[\text{.} \brs{T}_E = \pmat{\cosh\prs{\theta} & -\sinh\prs{\theta} \\ \sinh\prs{\theta} & \cosh\prs{\theta}}\]
+    
+    \item עבור
+    $v \in V$
+    מתקיים
+    $g\prs{v,v} = 1$
+    אם ורק אם
+    $v_1^2 - v_2^2 = 1$
+    אם ורק אם
+    $v_2 = \pm \sqrt{v_1^2 - 1}$.
+    הפתרונות
+    $\pmat{v_1 \\ v_2}$
+    יהוו היפרבולה במישור.
+\end{enumerate}
+\end{solution}
+
+\pagebreak
+
+\begin{exercisechap}
+\begin{enumerate}
+    \item תהי
+\[\text{.} A = \pmat{2 & 1 & 2 \\ 1 & 2 & 1 \\ 2 & 1 & 2} \in \Mat_3\prs{\mbb{Z}/5\mbb{Z}}\]
+מיצאו מטריצה
+$P \in \Mat_3\prs{\mbb{Z}/5\mbb{Z}}$
+הפיכה
+עבורה
+$P^t A P$
+אלכסונית.
+
+\item האם יכולנו לקחת מטריצה
+$P'$
+אחרת שתיתן תשובה מתאימה?
+
+\item האם יש מטריצה
+$Q \in \Mat_3\prs{\mbb{Z}/5\mbb{Z}}$
+הפיכה עבורה
+$Q^t A Q = I_3$?
+
+\item האם יש מטריצה
+$Q \in \Mat_3\prs{\mbb{Z}/5}$
+הפיכה עבורה
+$Q^t B Q = I_3$
+כאשר
+$B = \pmat{2 & 1 & 2 \\ 1 & 1 & 0 \\ 2 & 0 & 1}$?
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+    \item 
+ניזכר שמטריצה הפיכה
+$P$
+הינה כפל של מטריצות אלמנטריות. כפל משמאל במטריצה אלמנטרית
+$E$
+מתאים לפעולת דירוג על השורות, וכפל ב־%
+$E^t$
+מתאים לפעולת דירוג זהה על העמודות.
+
+לכן, ננסה לדרג את
+$A$
+למטריצה אלכסונית כאשר בכל שלב נבצע פעולת דירוג שורה ולאחריה פעולת דירוג עמודה מתאימה.
+
+נעשה זאת.
+
+\begin{align*}
+    A &= \pmat{2 & 1 & 2 \\ 1 & 2 & 1 \\ 2 & 1 & 2}
+    \\&\xrightarrow{R_2 \mapsto R_2 + 2 R_1}
+    \pmat{2 & 1 & 2 \\ 0 & 4 & 0 \\ 2 & 1 & 2}
+    \\&\xrightarrow{C_2 \mapsto C_2 + 2 C_1}
+    \pmat{2 & 0 & 2 \\ 0 & 4 & 0 \\ 2 & 0 & 2}
+    \\&\xrightarrow{R_3 \mapsto R_3 - R_1}
+    \pmat{2 & 0 & 2 \\ 0 & 4 & 0 \\ 0 & 0 & 0}
+    \\&\xrightarrow{C_3 \mapsto C_3 - C_1}
+    \pmat{2 & 0 & 0 \\ 0 & 4 & 0 \\ 0 & 0 & 0}
+\end{align*}
+
+נקבל כי
+\[P^t = \pmat{1 & 0 & 0 \\ 0 & 1 & 0 \\ -1 & 0 & 1} \pmat{1 & 0 & 0 \\ 2 & 1 & 0 \\ 0 & 0 & 1} = \pmat{1 & 0 & 0 \\ 2 & 1 & 0 \\ -1 & 0 & 1}\]
+מקיימת את הנדרש, ולכן ניקח
+\[\text{.} P = \pmat{1 & 2 & -1 \\ 0 & 1 & 0 \\ 0 & 0 & 1}\]
+
+\item כן. למשל, יכולנו קודם להחליף את השורות הראשונה והשלישית, ולקבל
+\[\prs{P'}^t = P^t \pmat{0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0} = \pmat{-1 & 0 & 1 \\ 2 & 1 & 0 \\ 1 & 0 & 0} \neq P^t\]
+ואז
+$P' \neq P$.
+
+\item קיבלנו
+$P^t A P = \diag\prs{2,4,0}$
+וזאת אינה מטריצה מדרגה מלאה. דרגה נשמרת תחת חפיפת מטריצות, ולכן לא יתכן שיש
+$Q$
+כנדרש.
+
+\item ננסה דירוג לפי שורה ועמודה.
+\begin{align*}
+    B &= \pmat{2 & 1 & 2 \\ 1 & 1 & 0 \\ 2 & 0 & 1}
+    \\&\xrightarrow{R_3 \mapsto R_3 - R_1}
+    \pmat{2 & 1 & 2 \\ 1 & 1 & 0 \\ 0 & 4 & 4}
+    \\&\xrightarrow{C_3 \mapsto C_3 - C_1}
+    \pmat{2 & 1 & 0 \\ 1 & 1 & 4 \\ 0 & 4 & 4}
+    \\&\xrightarrow{R_2 \mapsto R_2 + 2 R_1}
+    \pmat{2 & 1 & 0 \\ 0 & 3 & 4 \\ 0 & 4 & 4}
+    \\&\xrightarrow{C_2 \mapsto C_2 + 2 C_1}
+    \pmat{2 & 0 & 0 \\ 0 & 3 & 4 \\ 0 & 4 & 4}
+    \\&\xrightarrow{R_3 \mapsto R_3 + 2 R_2}
+    \pmat{2 & 0 & 0 \\ 0 & 3 & 4 \\ 0 & 0 & 2}
+    \\&\xrightarrow{C_3 \mapsto C_3 + 2 C_2}
+    \pmat{2 & 0 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 2}
+\end{align*}
+כעת, נוכל לחלק איברים על האלכסון רק בריבוע, כיוון שיש לכפול גם את השורה וגם את העמודה באותו מספר. כיוון ש־%
+$3$
+אינו ריבוע ב־%
+$\mbb{Z}/5\mbb{Z}$
+לא נוכל לקבל ככה את מטריצת היחידה.
+גם, הדטרמיננטה של המטריצה שקיבלנו היא
+$2 \cdot 3 \cdot 2 \equiv 2$.
+הדטרמיננטה של מטריצות חופפות נבדלת בכפל בריבוע, אך לא יתכן
+$2 = a^2 \det\prs{I_3} = a^2$
+כי
+$2$
+אינו ריבוע.
+
+השיטה הזאת לא עובדת תמיד. יתכן מצב בו מטריצה אינה חופפת ליחידה אך כן בעלת דטרמיננטה שהינה ריבוע.
+למשל, המטריצה
+$\pmat{0 & 1 \\ 1 & 0} \in \Mat_3\prs{\mbb{Z}/5\mbb{Z}}$
+כזאת.
+\end{enumerate}
+\end{solution}
+
+\section{חוק האינרציה של סילבסטר}
+
+\subsection{חזרה}
+
+\begin{theorem}[סילבסטר]
+תהי
+$A \in \Mat_n\prs{\mbb{R}}$
+סימטרית.
+$A$
+חופפת למטריצה יחידה מהצורה
+$\pmat{I_{\prs{n_+}} & & \\ & - I_{\prs{n_{-}}} & \\ & & 0_{\prs{n_0}}}$.
+מטריצה זאת נקראת
+\emph{צורת סילבסטר הקנונית של
+$A$}.
+$n_+$
+ו־%
+$n_-$
+נקראים
+\emph{אינדקס האינרציה החיובי והשלילי}
+של
+$A$,
+בהתאמה.
+ההפרש
+$n_+ - n_-$
+נקרא
+\emph{הסיגנטורה}
+של
+$A$.
+\end{theorem}
+
+\begin{remark}
+משפט סילבסטר אומר באופן שקול שלכל תבנית בילינארית סימטרית
+$g$
+קיים בסיס
+$C$
+עבורו
+$\brs{g}_C$
+בצורת סילבסטר.
+\end{remark}
+
+\begin{fact}
+המספר
+$n_+$
+הוא סכום הריבויים האלגבריים של הערכים העצמיים החיוביים של
+$A$,
+המספר
+$n_{-}$
+הוא סכום הריבויים האלגבריים של הערכים העצמיים השליליים, והמספר
+$n_0$
+הוא מימד הגרעין.
+\end{fact}
+
+\subsection{תרגילים}
+
+\begin{exercisechap}
+תהי
+$A \in \Mat_n\prs{\mbb{R}}$
+סימטרית.
+\begin{enumerate}
+\item הוכיחו כי
+$A, A^3$
+חופפות.
+\item הוכיחו כי אם
+$A$
+הפיכה, היא חופפת ל־%
+$A^{-1}$.
+\item תהי
+$B \in \Mat_n\prs{\mbb{R}}$
+סימטרית
+ונניח כי
+\begin{align*}
+p_A\prs{x} &= x^2 - 2 \\
+\text{.} p_B\prs{x} &= x^2 + 2x - 3
+\end{align*}
+האם
+$A,B$
+בהכרח חופפות?
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item
+ל־%
+$A,A^3$
+יש אותם אינדקסיי אינרציה כי הערכים העצמיים של
+$A^3$
+הם
+$\lambda^3$
+עבור
+$\lambda$
+ערך עצמי של
+$A$.
+לכן ל־%
+$A,A^3$
+אותה צורת סילבסטר, ולכן הן חופפות.
+
+\item כמו מקודם, כאשר הערכים העצמיים של
+$A^{-1}$
+הם
+$\frac{1}{\lambda}$
+עבור
+$\lambda$
+ערך עצמי של
+$A$.
+
+\item נמצא שורשים של הפולינומים.
+\begin{align*}
+x^2 - 2 &= \prs{x+\sqrt{2}}\prs{x-\sqrt{2}} \\
+x^2 + 2x - 3 &= x^2 + 3x - \prs{x+3} = \prs{x-1}\prs{x+3}
+\end{align*}
+לכן לכל אחד מהפולינומים ערך עצמי אחד חיובי ואחד שלילי. לכן צורות סילבסטר של
+$A,B$
+שתיהן
+$\pmat{1 & 0 \\ 0 & -1}$
+ולכן הן חופפות.
+\end{enumerate}
+\end{solution}
+
+\begin{exercisechap}
+מצאו את צורת סילבסטר של
+\[\text{.} A = \pmat{0 & 1 & 1 & \cdots & 1 \\ 1 & 0 & -1 & \cdots & -1 \\ 1 & -1 & 0 & \cdots & -1 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 1 & -1 & -1 & \cdots & 0} \in \Mat_n\prs{\mbb{R}}\]
+\end{exercisechap}
+
+\begin{solution}
+כדי למצוא את צורת סילבסטר, נחפש ערכים עצמיים.
+נשים לב כי
+$1$
+ערך עצמי מריבוי
+$n-1$.
+אז הערך העצמי הנוסף הוא
+$\tr\prs{A} -\prs{n-1}\cdot 1 = -n+1$.
+אם
+$n = 1$
+מתקיים
+$A = \prs{0}$.
+אחרת צורת סילבסטר היא
+$\pmat{I_{n-1} & \\ & -1}$.
+\end{solution}
+
+\begin{algorithm}
+כדי למצוא בסיס
+$C$
+עבורו
+$\brs{g}_C$
+בצורת סילבסטר נבצע את השלבים הבאים.
+
+\begin{enumerate}
+\item נמצא בסיס
+$\tilde{C} = \prs{v_1, \ldots, v_n}$
+של
+$V$
+עבורו
+$\brs{g}_{\tilde{C}}$
+אלכסונית, בעזרת לכסון אורתוגונלי.
+
+\item
+נגדיר
+\[\text{.} u_i = \fcases{\frac{v_i}{\sqrt{\abs{\lambda_i}}} & \lambda_i \neq 0 \\ v_i & \lambda_i = 0}\]
+
+\item על ידי בחירת סדר מתאים של ה־%
+$u_i$
+נקבל בסיס
+$C$
+המקיים את הנדרש.
+\end{enumerate}
+\end{algorithm}
+
+\begin{exercisechap}
+תהי
+$A = \pmat{2 & 1 & 1 \\ 1 & 2 & 1 \\ 1 & 1 & 2}$.
+מצאו מטריצה
+$P \in \Mat_3\prs{\mbb{R}}$
+עבורה
+$P^t A P$
+בצורת סילבסטר.
+\end{exercisechap}
+
+\begin{solution}
+נתחיל במציאת ערכים עצמיים של
+$A$.
+נשים לב כי
+$1$
+ערך עצמי של
+$A$
+מריבוי
+$2$.
+הערך העצמי הנוסף הוא
+$\tr\prs{A} - 2\cdot 1 = 4$.
+בסיס מתאים הוא
+$B = \prs{\pmat{1\\1\\1}, \pmat{1\\0\\-1}, \pmat{0\\1\\-1}}$.
+
+נבצע את תהליך גרם־שמידט על כל אחד מהמרחבים העצמיים, כדי לקבל בסיס אורתונורמלי
+\[\text{.} \tilde{C} \ceq \prs{v_1, v_2, v_3} = \prs{\pmat{1/\sqrt{3} \\ 1/\sqrt{3} \\ 1/\sqrt{3}}, \pmat{1/\sqrt{2} \\ 0 \\ -1/\sqrt{2}}, \pmat{-\sqrt{6}/6 \\ \sqrt{6}/3 \\ -\sqrt{6}/6}}\]
+נחלק את הוקטורים העצמיים ב־%
+$\sqrt{\lambda_i}$
+ונקבל בסיס
+\[\text{.} C \ceq \prs{\pmat{1/2\sqrt{3}\\1/2\sqrt{3}\\1/2\sqrt{3}}, \pmat{1/\sqrt{2} \\ 0 \\ -1/\sqrt{2}}, \pmat{-\sqrt{6}/6 \\ \sqrt{6}/3 \\ -\sqrt{6}/6}}\]
+תהי
+\[P = \pmat{1/2\sqrt{3} & 1/\sqrt{2} & -\sqrt{6}/6 \\ 1/2\sqrt{3} & 0 & \sqrt{6}/3 \\ 1/2\sqrt{3} & -1/\sqrt{2} & -\sqrt{6}/6}\]
+ונקבל כי
+\[P^t A P = I_3\]
+בצורת סילבסטר.
+\end{solution}
+
+\begin{remark}
+לפעמים חישוב הערכים העצמיים יכול להיות מסובך. נוכל בעצם למצוא את צורת סילבסטר ואת הבסיס המתאים לה בלי מציאת המרחבים העצמיים.
+לשם כך, נשים לב כי אם
+$E$
+מטריצה אלמנטרית, הכפל
+$A \mapsto A E^t$
+נקבע על פי אותן פעולות על עמודות
+$A$
+כמו פעולות
+$E$
+על השורות. נוכל אם כן לדרג את
+$A$
+לפי שורה ועמודה במקביל, כאשר בכל שלב נבצע את אותה פעולה על השורות ואז על העמודות (או להיפך). נקבל מטריצה
+$P$
+כמכפלת המטריצות האלמנטריות, שעבורה
+$PAP^t$
+תהיה בצורת סילבסטר.
+\end{remark}
+
+\section{קריטריון סילבסטר}
+
+\subsection{חזרה}
+
+\begin{theorem}[סילבסטר]
+תהי
+$f \in \mrm{Bil}\prs{V}$
+תבנית בילינארית סימטרית על מרחב מכפלה פנימית
+$V$,
+עם סימן
+$\prs{r,s,t}$.
+יהי
+$B$
+בסיס של
+$V$
+ותהי
+$A = \brs{f}_B$.
+נסמן ב־%
+$\gamma_k \coloneqq \det\prs{\prs{a_{i,j}}_{i,j \in [k]}}$
+את
+\emph{המינורים הראשיים}
+של
+$A$
+ונניח כי
+$\gamma_k \neq 0$
+לכל
+$k \in [n]$.
+אז
+$t = 0$,
+מספר הערכים החיוביים בקבוצה הסדורה
+$\prs{\gamma_1, \frac{\gamma_2}{\gamma_1}, \ldots, \frac{\gamma_n}{\gamma_{n-1}}}$
+הוא
+$r$,
+ומספר הערכים השליליים בה הוא
+$s$.
+\end{theorem}
+
+\subsection{תרגילים}
+
+\begin{exercisechap}
+תהי
+$f \in \Bil\prs{V}$,
+יהי
+$B$
+בסיס של
+$V$
+ותהי
+$A = \brs{f}_B$.
+
+הראו כי
+$f$
+מכפלה פנימית אם ורק אם המינורים הראשיים של
+$A$
+חיוביים.
+\end{exercisechap}
+
+\begin{solution}
+נניח כי כל המינורים הראשיים חיוביים. נקבל כי כל האיברים בקבוצה הסדורה
+$\prs{\gamma_1, \frac{\gamma_2}{\gamma_1}, \ldots, \frac{\gamma_n}{\gamma_{n-1}}}$
+חיוביים, ולכן ממשפט סילבסטר הסימן של
+$f$
+הוא
+$\prs{n,0,0}$.
+תבנית בילינארית סימטרית הינה מכפלה פנימית אם הסימן שלה כזה, לכן
+$f$
+מכפלה פנימית.
+
+נניח כי
+$f$
+מכפלה פנימית. אז
+$\gamma_k = \det\prs{\prs{a_{i,j}}_{i,j \in [k]}}$
+כאשר
+$\prs{a_{i,j}}_{i,j \in [k]}$
+מטריצה מייצגת של
+$\left. f \right|_{\Span\prs{b_1, \ldots, b_k}}$.
+צמצום של מכפלה פנימית הוא מכפלה פנימית, והדטרמיננטה של מטריצה מוגדרת חיובית לחלוטין היא חיובית, לכן כל המינורים הראשיים חיוביים.
+\end{solution}
+
+\begin{exercisechap}
+תהי
+$f \in \mrm{Bil}\prs{V}$
+ויהי
+$B$
+בסיס של
+$V$.
+מיצאו תנאי הכרחי ומספיק על המינורים
+$\gamma_i\prs{\brs{f}_B}$
+לכך ש־%
+$f$
+מוגדרת שלילית (לחלוטין).
+\end{exercisechap}
+
+\begin{solution}
+ניעזר בתרגיל הקודם, ונשים לב כי
+$f$
+מוגדרת שלילית אם ורק אם
+$-f$
+מוגדרת חיובית לחלוטין. אכן, מתקיים
+$f\prs{v,v} < 0$
+לכל
+$v \in V$
+אם ורק אם
+$-f\prs{v,v} > 0$
+לכל
+$v \in V$.
+
+כעת,
+$-f$
+מוגדרת חיובית אם ורק אם המינורים הראשיים של
+$-A \coloneqq \brs{-f}_B$
+חיוביים. כעת,
+\[\gamma_k\prs{A} = \det\prs{\prs{a_{i,j}}_{i,j \in [k]}} = \prs{-1}^k \det\prs{\prs{-a_{i,j}}_{i,j \in [k]}} = \prs{-1}^k \gamma_k\prs{-A}\]
+לכן זה מתקיים אם ורק אם
+$\sgn\prs{\gamma_k\prs{A}} = \prs{-1}^k$
+לכל
+$k \in [n]$.
+\end{solution}
+
+\begin{exercisechap}
+תהי
+\[\text{.} A = \pmat{1 & 0 & 1 & 0 & 1 \\ 0 & 2 & 3 & 1 & 1 \\ 1 & 3 & -7 & 1 & 2 \\ 0 & 1 & 1 & 1 & 1 \\ 1 & 1 & 1 & 2 & 1} \in \Mat_5\prs{\mbb{R}}\]
+מיצאו את הסימן של
+$A$.
+\end{exercisechap}
+
+\begin{solution}
+ניעזר בקריטריון סילבסטר.
+מתקיים
+\begin{align*}
+    \det\prs{1} &= 1 \\
+    \det\prs{\pmat{1 & 0 \\ 0 & 2}} &= 2 \\
+    \det\prs{\pmat{1 & 0 & 1 \\ 0 & 2 & 3 \\ 1 & 3 & 7}} &= 1 \det\pmat{2 & 3 \\ 3 & 7} + 1 \det\pmat{0 & 2 \\ 1 & 3} = -23-2 = -25 \\
+    \det\pmat{1 & 0 & 1 & 0 \\ 0 & 2 & 3 & 1 \\ 1 & 3 & -7 & 1 \\ 0 & 1 & 1 & 1} &= -25 - \det\pmat{1 & 0 & 0 \\ 0 & 2 & 1 \\ 1 & 3 & 1} + \det\pmat{1 & 1 & 0 \\ 0 & 3 & 1 \\ 1 & -7 & 1} = -25 - \prs{-1} + \prs{10+1} = -13 \\
+    \text{.} \det A &= {\ldots} = 13
+\end{align*}
+נקבל כי המינורים הראשיים לא מתאפסים, וכי הסימן שלהם מתחיל חיובי ומתחלף פעמיים. מקריטריון סילבסטר נקבל כי הסימן של
+$A$
+הוא
+$\prs{3,2,0}$.
+\end{solution}
+
+\begin{exercisechap}
+הראו כי
+\[A \ceq \pmat{-1 & 1 & 0 & 1 \\ 1 & -3 & 0 & 0 \\ 0 & 0 & -1 & -1 \\ 1 & 0 & -1 & -3}\]
+מוגדרת שלילית.
+\end{exercisechap}
+
+\begin{solution}
+נחשב את המינורים הראשיים.
+מתקיים
+\begin{align*}
+    \det\prs{-1} &= -1 < 0 \\
+    \det\pmat{-1 & 1 \\ 1 & -3} &= 3-1 = 2 > 0 \\
+    \det\pmat{-1 & 1 & 0 \\ 1 & -3 & 0 \\ 0 & 0 & -1} &= -1 \cdot \det\pmat{-1 & 1 \\ 1 & -3} = -2 < 0 \\
+    \det A &= -3 \cdot \det\pmat{-1 & 1 & 0 \\ 1 & -3 & 0 \\ 0 & 0 & -1} +1 \cdot \det\pmat{-1 & 1 & 1 \\ 1 & -3 & 0 \\ 0 & 0 & -1} - 1 \cdot \det\pmat{1 & 0 & 1 \\ -3 & 0 & 0 \\ 0 & -1 & -1} \\&= 6 - \prs{3-1} - \prs{-3}\prs{-1}\prs{1} = 6 - 2 - 3 = 1 > 0
+\end{align*}
+ולכן מהתרגיל הקודם
+$A$
+מוגדרת שלילית.
+\end{solution}
+
 
 \printbibliography
 \end{document}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.3.10)  18 JUN 2025 15:31
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.3.10)  23 JUN 2025 12:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2217,9 +2217,54 @@ Overfull \hbox (6.48773pt too wide) in paragraph at lines 5991--5999
 /Alef(0)/m/it/10 אופרטור על מרחב מכפלה פנימית סוף־מימדי.[]
  []
 
-[60] [61]
+[60] [61] [62]
+פרק 8.
 
-LaTeX Warning: Empty bibliography on input line 6275.
+Overfull \hbox (13.98892pt too wide) in paragraph at lines 6291--6294
+[][]\TU/Alef(0)/m/n/10 מעל $\U/msb/m/n/10 C$ \TU/Alef(0)/m/n/10 עוסקות לעתים בת
+בניות ססקווילינאריות ("אחת־וחצי לינאריות") במקום בתבניות בילינאריות.[]
+ []
+
+
+Overfull \hbox (28.52228pt too wide) in paragraph at lines 6297--6311
+[][]\TU/Alef(0)/m/n/10 יהי $\OML/cmm/m/it/10 V$ \TU/Alef(0)/m/n/10 מרחב וקטורי 
+סוף־מימדי עם בסיס $\OML/cmm/m/it/10 B \OT1/cmr/m/n/10 = []$\TU/Alef(0)/m/n/10 ,
+[]
+ []
+
+Package hyperref Info: bookmark level for unknown proof defaults to 0 on input 
+line 6331.
+[63
+
+] [64]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [65]
+[66]
+Overfull \hbox (43.7908pt too wide) in paragraph at lines 6710--6733
+[][]\TU/Alef(0)/m/it/10 תהי $\OML/cmm/m/it/10 A \OMS/cmsy/m/n/10 2 [][] []$ \TU
+/Alef(0)/m/it/10 סימטרית. $\OML/cmm/m/it/10 A$ \TU/Alef(0)/m/it/10 חופפת למטריצ
+ה יחידה מהצורה $[]$.[]
+ []
+
+Package hyperref Info: bookmark level for unknown fact defaults to 0 on input l
+ine 6746.
+[67]
+Package hyperref Info: bookmark level for unknown algorithmx defaults to 0 on i
+nput line 6846.
+ [68] [69]
+Overfull \hbox (5.71169pt too wide) detected at line 7063
+[]
+ []
+
+
+Overfull \hbox (20.99078pt too wide) detected at line 7084
+[]
+ []
+
+[70]
+
+LaTeX Warning: Empty bibliography on input line 7091.
 
 \tf@thm=\write8
 \openout8 = `algebra_2_recitations.thm'.
@@ -2313,7 +2358,7 @@ The property list \__xpg_alias contains the pairs (without outer braces):
 >  {newzealand/target}  =>  {english}
 >  {newzealand/variant}  =>  {newzealand}
 >  {newzealand/options}  =>  {variant=newzealand}.
-[62] (./algebra_2_recitations.aux
+[71] (./algebra_2_recitations.aux
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
@@ -2322,19 +2367,25 @@ Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 
 LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `algebra_2_recitations.out' has not changed.
-(rerunfilecheck)             Checksum: D4D99DB5EF1B212376742C9EBE9F8B57;7508.
+
+Package rerunfilecheck Warning: File `algebra_2_recitations.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `algebra_2_recitations.out':
+(rerunfilecheck)             Before: D4D99DB5EF1B212376742C9EBE9F8B57;7508
+(rerunfilecheck)             After:  176C024D1F91684F07C57BF8E7004007;8811.
 Package logreq Info: Writing requests to 'algebra_2_recitations.run.xml'.
 \openout1 = `algebra_2_recitations.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43971 strings out of 476775
- 932007 string characters out of 5808212
+ 43974 strings out of 476775
+ 932053 string characters out of 5808212
  1940838 words of memory out of 5000000
- 63350 multiletter control sequences out of 15000+600000
+ 63353 multiletter control sequences out of 15000+600000
  520252 words of font info for 99 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  115i,20n,118p,1293b,880s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on algebra_2_recitations.pdf (64 pages).
+Output written on algebra_2_recitations.pdf (73 pages).
