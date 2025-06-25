@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.3.10)  23 JUN 2025 12:27
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.3.10)  25 JUN 2025 13:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2183,88 +2183,67 @@ it/10 B$ \TU/Alef(0)/m/n/10 של $\OML/cmm/m/it/10 V$ \TU/Alef(0)/m/n/10 עבו�
 ][] \OT1/cmr/m/n/10 = [] []$ \TU/Alef(0)/m/n/10 אלכסונית.[]
  []
 
-[55] [56]
-Overfull \hbox (37.9883pt too wide) in paragraph at lines 5442--5461
-[][]$\OML/cmm/m/it/10 T$ \TU/Alef(0)/m/n/10 הרמיטי ולכן נורמלי. ממשפט הפירוק הס
-פקטרלי, קיים בסיס אורתונורמלי $\OML/cmm/m/it/10 B$ \TU/Alef(0)/m/n/10 עבורו $[]
-[] \OT1/cmr/m/n/10 = [] []$\TU/Alef(0)/m/n/10 .[]
- []
-
-[57]
-Overfull \hbox (29.69803pt too wide) in paragraph at lines 5635--5646
-[][]\TU/Alef(0)/m/it/10 יהיו $\OML/cmm/m/it/10 V; W$ \TU/Alef(0)/m/it/10 מרחבי 
-מכפלה פנימית סוף־מימדיים, ותהי $\OML/cmm/m/it/10 T \OMS/cmsy/m/n/10 2 [][] []$\
-TU/Alef(0)/m/it/10 .[]
- []
-
-
-Overfull \hbox (4.62474pt too wide) in paragraph at lines 5658--5668
-[][]\TU/Alef(0)/m/it/10 תהי $\OML/cmm/m/it/10 A \OMS/cmsy/m/n/10 2 [][] []$ \TU
-/Alef(0)/m/it/10 עבור $\U/msb/m/n/10 F \OMS/cmsy/m/n/10 2 []$\TU/Alef(0)/m/it/1
-0 . מהמשפט,[]
- []
-
-[58] [59]
-Overfull \hbox (19.57808pt too wide) in paragraph at lines 5962--5972
+[55] [56] [57] [58]
+Overfull \hbox (19.57808pt too wide) in paragraph at lines 5789--5799
 [][]\TU/Alef(0)/m/n/10 ראשית, $\OML/cmm/m/it/10 B$ \TU/Alef(0)/m/n/10 אורתוגונל
 ית (אוניטרית) כמפכלה של כאלה. כעת, לכל $\OML/cmm/m/it/10 v \OMS/cmsy/m/n/10 2 \
 OML/cmm/m/it/10 V$ \TU/Alef(0)/m/n/10 מתקיים $[] \OT1/cmr/m/n/10 = [] =$[]
  []
 
 
-Overfull \hbox (6.48773pt too wide) in paragraph at lines 5991--5999
+Overfull \hbox (1.99554pt too wide) in paragraph at lines 5818--5826
 [][]\TU/Alef(0)/m/it/10 יהי $\OML/cmm/m/it/10 T \OMS/cmsy/m/n/10 2 [][] []$ \TU
 /Alef(0)/m/it/10 אופרטור על מרחב מכפלה פנימית סוף־מימדי.[]
  []
 
-[60] [61] [62]
+[59] [60] [61]
 פרק 8.
 
-Overfull \hbox (13.98892pt too wide) in paragraph at lines 6291--6294
+Overfull \hbox (13.98892pt too wide) in paragraph at lines 6118--6121
 [][]\TU/Alef(0)/m/n/10 מעל $\U/msb/m/n/10 C$ \TU/Alef(0)/m/n/10 עוסקות לעתים בת
 בניות ססקווילינאריות ("אחת־וחצי לינאריות") במקום בתבניות בילינאריות.[]
  []
 
 
-Overfull \hbox (28.52228pt too wide) in paragraph at lines 6297--6311
+Overfull \hbox (28.52228pt too wide) in paragraph at lines 6124--6138
 [][]\TU/Alef(0)/m/n/10 יהי $\OML/cmm/m/it/10 V$ \TU/Alef(0)/m/n/10 מרחב וקטורי 
 סוף־מימדי עם בסיס $\OML/cmm/m/it/10 B \OT1/cmr/m/n/10 = []$\TU/Alef(0)/m/n/10 ,
 []
  []
 
 Package hyperref Info: bookmark level for unknown proof defaults to 0 on input 
-line 6331.
-[63
+line 6158.
+[62
 
-] [64]
+] [63]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [65]
-[66]
-Overfull \hbox (43.7908pt too wide) in paragraph at lines 6710--6733
+ [64]
+[65]
+Overfull \hbox (43.7908pt too wide) in paragraph at lines 6537--6560
 [][]\TU/Alef(0)/m/it/10 תהי $\OML/cmm/m/it/10 A \OMS/cmsy/m/n/10 2 [][] []$ \TU
 /Alef(0)/m/it/10 סימטרית. $\OML/cmm/m/it/10 A$ \TU/Alef(0)/m/it/10 חופפת למטריצ
 ה יחידה מהצורה $[]$.[]
  []
 
 Package hyperref Info: bookmark level for unknown fact defaults to 0 on input l
-ine 6746.
-[67]
+ine 6573.
+[66]
 Package hyperref Info: bookmark level for unknown algorithmx defaults to 0 on i
-nput line 6846.
- [68] [69]
-Overfull \hbox (5.71169pt too wide) detected at line 7063
+nput line 6673.
+ [67] [68]
+Overfull \hbox (5.71169pt too wide) detected at line 6890
 []
  []
 
 
-Overfull \hbox (20.99078pt too wide) detected at line 7084
+Overfull \hbox (20.99078pt too wide) detected at line 6911
 []
  []
 
-[70]
+[69]
 
-LaTeX Warning: Empty bibliography on input line 7091.
+LaTeX Warning: Empty bibliography on input line 6918.
 
 \tf@thm=\write8
 \openout8 = `algebra_2_recitations.thm'.
@@ -2358,7 +2337,7 @@ The property list \__xpg_alias contains the pairs (without outer braces):
 >  {newzealand/target}  =>  {english}
 >  {newzealand/variant}  =>  {newzealand}
 >  {newzealand/options}  =>  {variant=newzealand}.
-[71] (./algebra_2_recitations.aux
+[70] (./algebra_2_recitations.aux
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
@@ -2367,25 +2346,19 @@ Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 
 LaTeX Warning: There were undefined references.
 
-
-Package rerunfilecheck Warning: File `algebra_2_recitations.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `algebra_2_recitations.out':
-(rerunfilecheck)             Before: D4D99DB5EF1B212376742C9EBE9F8B57;7508
-(rerunfilecheck)             After:  176C024D1F91684F07C57BF8E7004007;8811.
+Package rerunfilecheck Info: File `algebra_2_recitations.out' has not changed.
+(rerunfilecheck)             Checksum: 176C024D1F91684F07C57BF8E7004007;8811.
 Package logreq Info: Writing requests to 'algebra_2_recitations.run.xml'.
 \openout1 = `algebra_2_recitations.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43974 strings out of 476775
- 932053 string characters out of 5808212
- 1940838 words of memory out of 5000000
- 63353 multiletter control sequences out of 15000+600000
+ 43977 strings out of 476775
+ 932090 string characters out of 5808212
+ 1942233 words of memory out of 5000000
+ 63356 multiletter control sequences out of 15000+600000
  520252 words of font info for 99 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  115i,20n,118p,1293b,880s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on algebra_2_recitations.pdf (73 pages).
+Output written on algebra_2_recitations.pdf (72 pages).
