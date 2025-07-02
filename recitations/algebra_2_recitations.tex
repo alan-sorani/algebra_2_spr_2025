@@ -1859,16 +1859,6 @@ $W_2 = \mbb{F}^n, W_1 = \set{0}$,
 \end{enumerate}
 \end{solution}
 
-\begin{example}
-יהי
-$V = \mbb{C}^4$,
-ויהי
-$T = T_{J_4\prs{0}} \in \End_{\mbb{C}}\prs{V}$.
-נניח כי
-$W \leq V$
-מכיל
-\end{example}
-
 \begin{exercisechap}
 \begin{enumerate}
 \item תהי
@@ -6338,88 +6328,6 @@ $B^{-1} = \tilde{P}^t A^{-1} \tilde{P}$.
 \end{solution}
 
 \begin{exercisechap}
-תהי
-\begin{align*}
-    g\prs{v,w} = v_1 w_1 - v_2 w_2
-\end{align*}
-תבנית בילינארית על
-$V \coloneqq \mbb{R}^2$.
-
-\begin{enumerate}
-    \item מיצאו את כל האיזומטריות
-    של התבנית
-    $g$.
-    כלומר, מיצאו כל
-    $T \in \End_{\mbb{R}}\prs{V}$
-    עבורן
-    $f\prs{T\prs{v}, T\prs{w}} = f\prs{v,w}$.
-    
-    \item התבנית
-    $g$
-    אינה חיובית, ולכן אין לנו מושג של אורך. אבל, עדיין אפשר להסתכל על
-    $g\prs{v,v}$
-    ולחשוב עליו כאנלוגי לריבוע של האורך.
-    מיצאו את כל הוקטורים
-    $v \in V$
-    עבורם
-    $g\prs{v,v} = 1$.
-\end{enumerate}
-\end{exercisechap}
-
-\begin{solution}
-\begin{enumerate}
-    \item
-    תהי
-    $T \in \End_{\mbb{R}}\prs{V}$
-    איזומטריה של
-    $g$
-    ונכתוב
-    $\brs{T}_E = \pmat{a & b \\ c & d}$.
-    אז
-    \begin{align*}
-        a^2 - c^2 &= g\prs{\pmat{a\\c}, \pmat{a\\c}} = g\prs{T\prs{e_1}, T\prs{e_1}} = g\prs{e_1, e_1} = 1 \\
-        b^2 - d^2 &= g\prs{\pmat{b\\d}, \pmat{b\\d}} = g\prs{T\prs{e_2}, T\prs{e_2}} = g\prs{e_2, e_2} = -1 \\
-        \text{.} ab - cd &= g\prs{\pmat{a\\c}, \pmat{b\\d}} = g\prs{T\prs{e_1}, T\prs{e_2}} = g\prs{e_1, e_2} = 0
-    \end{align*}
-    עבור
-    \begin{align*}
-        \sinh\prs{x} \coloneqq \frac{e^x - e^{-x}}{2} \\
-        \text{,}\cosh\prs{x} \coloneqq \frac{e^x + e^{-x}}{2}
-    \end{align*}
-    ידוע שמתקיים
-    $\cosh^2\prs{x} - \sinh^2\prs{x} = 1$.
-    כיוון ש־%
-    $\sinh, \cosh$
-    פונקציות על, נוכל לכתוב
-    $a = \cosh\prs{\theta}$
-    ואז
-    $c = \sinh\prs{\theta}$.
-    באותו אופן,
-    $b = \cosh\prs{\rho}$
-    ואז
-    $d = -\sin\prs{\rho}$.
-    אז מהמשוואה השלישית ניתן לבדוק כי בהכרח
-    $\rho = \theta$
-    ולכן מתקיים
-    \[\text{.} \brs{T}_E = \pmat{\cosh\prs{\theta} & -\sinh\prs{\theta} \\ \sinh\prs{\theta} & \cosh\prs{\theta}}\]
-    
-    \item עבור
-    $v \in V$
-    מתקיים
-    $g\prs{v,v} = 1$
-    אם ורק אם
-    $v_1^2 - v_2^2 = 1$
-    אם ורק אם
-    $v_2 = \pm \sqrt{v_1^2 - 1}$.
-    הפתרונות
-    $\pmat{v_1 \\ v_2}$
-    יהוו היפרבולה במישור.
-\end{enumerate}
-\end{solution}
-
-\pagebreak
-
-\begin{exercisechap}
 \begin{enumerate}
     \item תהי
 \[\text{.} A = \pmat{2 & 1 & 2 \\ 1 & 2 & 1 \\ 2 & 1 & 2} \in \Mat_3\prs{\mbb{Z}/5\mbb{Z}}\]
@@ -6527,6 +6435,63 @@ $2$
 $\pmat{0 & 1 \\ 1 & 0} \in \Mat_3\prs{\mbb{Z}/5\mbb{Z}}$
 כזאת.
 \end{enumerate}
+\end{solution}
+
+\begin{exercise}
+יהי
+$V$
+מרחב וקטורי סוף־מימדי מעל
+$\mbb{R}$.
+תהי
+$g$
+מכפלה פנימית על
+$V$
+ותהי
+$h$
+תבנית בילינארית סימטרית על
+$V$.
+הוכיחו שקיים בסיס
+$B$
+של
+$V$
+עבורו
+$\brs{g}_B, \brs{h}_B$
+שתיהן אלכסוניות.
+\end{exercise}
+
+\begin{solution}
+נסמן
+$n \coloneqq \dim_{\mbb{R}}\prs{V}$.
+יהי
+$E$
+בסיס אורתונורמלי של
+$V$
+ביחס ל־%
+$g$,
+שקיים לפי גרם־שמידט. אז
+$\brs{g}_E = I_n$.
+כעת,
+$\brs{h}_E$
+סימטרית כי
+$h$
+סימטרית, ולכן יש ממשפט הפירוק הסקפטרלי מטריצה
+$Q \in \Mat_n\prs{\mbb{R}}$
+אורתוגונלית עבורה
+$Q^t \brs{h}_E Q$
+אלכסונית.
+נרצה שיתקיים
+$Q = P^B_E$ עבור בסיס
+$B$,
+ולכן נגדיר
+$B \coloneqq \prs{Q^{-1} v_1, \ldots, Q^{-1} v_n}$
+כאשר
+$E = \prs{v_1, \ldots, v_n}$.
+אז
+\begin{align*}
+\brs{g}_B &= \prs{P^B_E}^t \brs{g}_E P^B_E = Q^t \brs{g}_E Q = Q^t I_n Q = Q^t Q = I_n \\
+\brs{h}_B = \prs{P^B_E}^t \brs{h}_E P^B_E = Q^t \brs{h}_E Q
+\end{align*}
+שתיהן אלכסוניות, כנדרש.
 \end{solution}
 
 \section{חוק האינרציה של סילבסטר}
@@ -6752,167 +6717,6 @@ $P$
 $PAP^t$
 תהיה בצורת סילבסטר.
 \end{remark}
-
-\section{קריטריון סילבסטר}
-
-\subsection{חזרה}
-
-\begin{theorem}[סילבסטר]
-תהי
-$f \in \mrm{Bil}\prs{V}$
-תבנית בילינארית סימטרית על מרחב מכפלה פנימית
-$V$,
-עם סימן
-$\prs{r,s,t}$.
-יהי
-$B$
-בסיס של
-$V$
-ותהי
-$A = \brs{f}_B$.
-נסמן ב־%
-$\gamma_k \coloneqq \det\prs{\prs{a_{i,j}}_{i,j \in [k]}}$
-את
-\emph{המינורים הראשיים}
-של
-$A$
-ונניח כי
-$\gamma_k \neq 0$
-לכל
-$k \in [n]$.
-אז
-$t = 0$,
-מספר הערכים החיוביים בקבוצה הסדורה
-$\prs{\gamma_1, \frac{\gamma_2}{\gamma_1}, \ldots, \frac{\gamma_n}{\gamma_{n-1}}}$
-הוא
-$r$,
-ומספר הערכים השליליים בה הוא
-$s$.
-\end{theorem}
-
-\subsection{תרגילים}
-
-\begin{exercisechap}
-תהי
-$f \in \Bil\prs{V}$,
-יהי
-$B$
-בסיס של
-$V$
-ותהי
-$A = \brs{f}_B$.
-
-הראו כי
-$f$
-מכפלה פנימית אם ורק אם המינורים הראשיים של
-$A$
-חיוביים.
-\end{exercisechap}
-
-\begin{solution}
-נניח כי כל המינורים הראשיים חיוביים. נקבל כי כל האיברים בקבוצה הסדורה
-$\prs{\gamma_1, \frac{\gamma_2}{\gamma_1}, \ldots, \frac{\gamma_n}{\gamma_{n-1}}}$
-חיוביים, ולכן ממשפט סילבסטר הסימן של
-$f$
-הוא
-$\prs{n,0,0}$.
-תבנית בילינארית סימטרית הינה מכפלה פנימית אם הסימן שלה כזה, לכן
-$f$
-מכפלה פנימית.
-
-נניח כי
-$f$
-מכפלה פנימית. אז
-$\gamma_k = \det\prs{\prs{a_{i,j}}_{i,j \in [k]}}$
-כאשר
-$\prs{a_{i,j}}_{i,j \in [k]}$
-מטריצה מייצגת של
-$\left. f \right|_{\Span\prs{b_1, \ldots, b_k}}$.
-צמצום של מכפלה פנימית הוא מכפלה פנימית, והדטרמיננטה של מטריצה מוגדרת חיובית לחלוטין היא חיובית, לכן כל המינורים הראשיים חיוביים.
-\end{solution}
-
-\begin{exercisechap}
-תהי
-$f \in \mrm{Bil}\prs{V}$
-ויהי
-$B$
-בסיס של
-$V$.
-מיצאו תנאי הכרחי ומספיק על המינורים
-$\gamma_i\prs{\brs{f}_B}$
-לכך ש־%
-$f$
-מוגדרת שלילית (לחלוטין).
-\end{exercisechap}
-
-\begin{solution}
-ניעזר בתרגיל הקודם, ונשים לב כי
-$f$
-מוגדרת שלילית אם ורק אם
-$-f$
-מוגדרת חיובית לחלוטין. אכן, מתקיים
-$f\prs{v,v} < 0$
-לכל
-$v \in V$
-אם ורק אם
-$-f\prs{v,v} > 0$
-לכל
-$v \in V$.
-
-כעת,
-$-f$
-מוגדרת חיובית אם ורק אם המינורים הראשיים של
-$-A \coloneqq \brs{-f}_B$
-חיוביים. כעת,
-\[\gamma_k\prs{A} = \det\prs{\prs{a_{i,j}}_{i,j \in [k]}} = \prs{-1}^k \det\prs{\prs{-a_{i,j}}_{i,j \in [k]}} = \prs{-1}^k \gamma_k\prs{-A}\]
-לכן זה מתקיים אם ורק אם
-$\sgn\prs{\gamma_k\prs{A}} = \prs{-1}^k$
-לכל
-$k \in [n]$.
-\end{solution}
-
-\begin{exercisechap}
-תהי
-\[\text{.} A = \pmat{1 & 0 & 1 & 0 & 1 \\ 0 & 2 & 3 & 1 & 1 \\ 1 & 3 & -7 & 1 & 2 \\ 0 & 1 & 1 & 1 & 1 \\ 1 & 1 & 1 & 2 & 1} \in \Mat_5\prs{\mbb{R}}\]
-מיצאו את הסימן של
-$A$.
-\end{exercisechap}
-
-\begin{solution}
-ניעזר בקריטריון סילבסטר.
-מתקיים
-\begin{align*}
-    \det\prs{1} &= 1 \\
-    \det\prs{\pmat{1 & 0 \\ 0 & 2}} &= 2 \\
-    \det\prs{\pmat{1 & 0 & 1 \\ 0 & 2 & 3 \\ 1 & 3 & 7}} &= 1 \det\pmat{2 & 3 \\ 3 & 7} + 1 \det\pmat{0 & 2 \\ 1 & 3} = -23-2 = -25 \\
-    \det\pmat{1 & 0 & 1 & 0 \\ 0 & 2 & 3 & 1 \\ 1 & 3 & -7 & 1 \\ 0 & 1 & 1 & 1} &= -25 - \det\pmat{1 & 0 & 0 \\ 0 & 2 & 1 \\ 1 & 3 & 1} + \det\pmat{1 & 1 & 0 \\ 0 & 3 & 1 \\ 1 & -7 & 1} = -25 - \prs{-1} + \prs{10+1} = -13 \\
-    \text{.} \det A &= {\ldots} = 13
-\end{align*}
-נקבל כי המינורים הראשיים לא מתאפסים, וכי הסימן שלהם מתחיל חיובי ומתחלף פעמיים. מקריטריון סילבסטר נקבל כי הסימן של
-$A$
-הוא
-$\prs{3,2,0}$.
-\end{solution}
-
-\begin{exercisechap}
-הראו כי
-\[A \ceq \pmat{-1 & 1 & 0 & 1 \\ 1 & -3 & 0 & 0 \\ 0 & 0 & -1 & -1 \\ 1 & 0 & -1 & -3}\]
-מוגדרת שלילית.
-\end{exercisechap}
-
-\begin{solution}
-נחשב את המינורים הראשיים.
-מתקיים
-\begin{align*}
-    \det\prs{-1} &= -1 < 0 \\
-    \det\pmat{-1 & 1 \\ 1 & -3} &= 3-1 = 2 > 0 \\
-    \det\pmat{-1 & 1 & 0 \\ 1 & -3 & 0 \\ 0 & 0 & -1} &= -1 \cdot \det\pmat{-1 & 1 \\ 1 & -3} = -2 < 0 \\
-    \det A &= -3 \cdot \det\pmat{-1 & 1 & 0 \\ 1 & -3 & 0 \\ 0 & 0 & -1} +1 \cdot \det\pmat{-1 & 1 & 1 \\ 1 & -3 & 0 \\ 0 & 0 & -1} - 1 \cdot \det\pmat{1 & 0 & 1 \\ -3 & 0 & 0 \\ 0 & -1 & -1} \\&= 6 - \prs{3-1} - \prs{-3}\prs{-1}\prs{1} = 6 - 2 - 3 = 1 > 0
-\end{align*}
-ולכן מהתרגיל הקודם
-$A$
-מוגדרת שלילית.
-\end{solution}
 
 
 \printbibliography

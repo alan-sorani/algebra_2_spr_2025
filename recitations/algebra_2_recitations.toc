@@ -33,9 +33,6 @@
 \contentsline {section}{\numberline {7.5}אופרטורים אוניטריים ואורתוגונליים}{60}{section.7.5}%
 \contentsline {chapter}{\numberline {8}תבניות בילינאריות וריבועיות}{62}{chapter.8}%
 \contentsline {section}{\numberline {8.1}תבניות בילינאריות}{62}{section.8.1}%
-\contentsline {section}{\numberline {8.2}חוק האינרציה של סילבסטר}{66}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}חזרה}{66}{subsection.8.2.1}%
-\contentsline {subsection}{\numberline {8.2.2}תרגילים}{67}{subsection.8.2.2}%
-\contentsline {section}{\numberline {8.3}קריטריון סילבסטר}{68}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}חזרה}{68}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}תרגילים}{68}{subsection.8.3.2}%
+\contentsline {section}{\numberline {8.2}חוק האינרציה של סילבסטר}{65}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}חזרה}{65}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}תרגילים}{66}{subsection.8.2.2}%
