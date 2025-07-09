@@ -6437,7 +6437,7 @@ $\pmat{0 & 1 \\ 1 & 0} \in \Mat_3\prs{\mbb{Z}/5\mbb{Z}}$
 \end{enumerate}
 \end{solution}
 
-\begin{exercise}
+\begin{exercisechap}
 יהי
 $V$
 מרחב וקטורי סוף־מימדי מעל
@@ -6457,7 +6457,7 @@ $V$
 עבורו
 $\brs{g}_B, \brs{h}_B$
 שתיהן אלכסוניות.
-\end{exercise}
+\end{exercisechap}
 
 \begin{solution}
 נסמן
@@ -6498,7 +6498,21 @@ $E = \prs{v_1, \ldots, v_n}$.
 
 \subsection{חזרה}
 
+
+
 \begin{theorem}[סילבסטר]
+תהי
+$A \in \Mat_n\prs{\mbb{R}}$
+סימטרית.
+
+מספר הערכים החיוביים%
+\textbackslash%
+שליליים על האלכסון של מטריצה אלכסונית החופפת ל־%
+$A$
+אינו תלוי בבחירה של אותה מטריצה.
+\end{theorem}
+
+\begin{corollary}
 תהי
 $A \in \Mat_n\prs{\mbb{R}}$
 סימטרית.
@@ -6522,7 +6536,7 @@ $n_+ - n_-$
 \emph{הסיגנטורה}
 של
 $A$.
-\end{theorem}
+\end{corollary}
 
 \begin{remark}
 משפט סילבסטר אומר באופן שקול שלכל תבנית בילינארית סימטרית
@@ -6718,6 +6732,489 @@ $PAP^t$
 תהיה בצורת סילבסטר.
 \end{remark}
 
+\chapter{תרגילים ממבחנים}
+
+\begin{exercisechap}
+נתונה המטריצה
+\begin{align*}
+\text{.} A = \pmat{2 & 0 & 1 & -3 \\ 0 & 2 & 10 & 4 \\ 0 & 0 & 2 & 0 \\ 0 & 0 & 0 & 2} \in \Mat_4\prs{\mbb{C}}
+\end{align*}
+\begin{enumerate}
+\item מצאו את הפולינום האופייני
+$p_A\prs{x}$
+של
+$A$,
+את הפולינום המינימלי
+$m_A\prs{x}$
+של
+$A$,
+צורת ז'ורדן
+$J$
+ומטריצה הפיכה
+$P$
+כך ש־%
+$P^{-1} A P = J$.
+
+\item
+האם קיימת
+$B \in \Mat_4\prs{\mbb{C}}$
+כך ש־%
+$B^2 + 2I = A$?
+נמקו.
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item
+$A$
+משולשת עליונה, לכן הערכים העצמיים שלה על האלכסון. לכן
+$2$
+ערך עצמי יחיד מריבוי אלגברי
+$4$.
+הריבוי האלגברי של ערך עצמי הוא הריבוי שלו כשורש של הפולינום האופייני, לכן נקבל כי
+\begin{align*}
+\text{.} p_A\prs{x} = \prs{x-2}^4
+\end{align*}
+מתקיים
+\begin{align*}
+\rank\prs{A - 2I} = \rank\pmat{0 & 0 & 1 & -3 \\ 0 & 0 & 10 & 4 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0} = 2
+\end{align*}
+לכן הריבוי הגיאומטרי של
+$2$
+כערך עצמי של
+$A$
+הוא
+$ - \rank\prs{A - 2I} = 2$.
+ראינו כי הריבוי הגיאומטרי של ערך עצמי
+$\lambda$
+הוא מספר הבלוקים עם ערך עצמי
+$\lambda$
+בצורת ז'ורדן. לכן צורת ז'ורדן של
+$A$
+היא
+$\diag\prs{J_3\prs{2}, 2}$
+או
+$\diag\prs{J_2\prs{2}, J_2\prs{2}}$.
+מתקיים
+\begin{align*}
+\prs{A - 2I}^2 = \pmat{
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+}
+\end{align*}
+לכן
+$\dim \ker\prs{A - 2I} = 4$.
+ידוע כי מספר הבלוקים מגודל לפחות
+$i$
+עם ערך עצמי
+$\lambda$
+הוא
+\[ \text{,} \dim \ker\prs{\prs{A - \lambda I}^i} - \dim \ker\prs{\prs{A - 2I}^{i-1}}\]
+ולכן מספר הבלוקים מגודל לפחות
+$2$
+עם ערך עצמי
+$2$
+הוא
+\[\text{.} \dim \ker\prs{\prs{A - 2I}^2} - \dim \ker\prs{A} = 4 - 2 = 2\]
+נקבל כי צורת ז'ורדן של
+$A$
+היא
+\[\text{.} J = \diag\prs{J_2\prs{2}, J_2\prs{2}}\]
+ידוע כי הריבוי של
+$\lambda$
+כשורש של הפולינום המינימלי הוא גודל הבלוק המקסימלי עם ערך עצמי
+$\lambda$
+בצורת ז'ורדן של
+$A$,
+לכן
+\[\text{.} m_A\prs{x} = \prs{x-2}^2\]
+
+נותר למצוא
+$P$
+הפיכה עבורה
+$P^{-1} A P = J$.
+לשם כך נמצא בסיס ז'ורדן של
+$T_A$.
+ראינו כי
+$\ker\prs{A - 2I} = \Span\prs{e_1, e_2}$
+וכי
+$\ker\prs{\prs{A - 2I}^2} = \Span\prs{e_1, e_2, e_3, e_4}$.
+ניקח בסיס שמורכב משרשראות ז'ורדן שנפתחות ע"י הוקטורים שהוספנו לבסיס של הגרעין. כלומר,
+\[\text{.} B = \prs{\prs{A - 2I} e_3, e_3, \prs{A - 2I} e_4, e_4} = \prs{\pmat{1 \\ 10 \\ 0 \\ 0}, \pmat{0 \\ 0 \\ 1 \\ 0}, \pmat{-3 \\ 4 \\ 0 \\ 0}, \pmat{0 \\ 0 \\0 \\ 1}}\]
+אז
+$B$
+בסיס ז'ורדן של
+$T_A$
+ולכן
+\[P = M^B_E = \pmat{1 & 0 & -3 & 0 \\ 10 & 0 & 4 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1}\]
+עונה על הנדרש, שכן
+\begin{align*}
+\text{.} P^{-1} A P = M^E_B \brs{T_A}_E M^B_E = \brs{T_A}_B = J
+\end{align*}
+
+\item
+
+קיימת
+$B$
+כזאת אם ורק אם קיימת
+$B$
+עבורה מתקיים
+\begin{align*}
+\text{.} P^{-1} \prs{B^2 + 2 I} P = P^{-1} A P
+\end{align*}
+אבל, אגף שמאל שווה
+$\prs{P^{-1} B P}^2 + I$
+ואגף ימין
+שווה
+$J$.
+נסיק מכך שקיימת
+$B$
+כנ"ל אם ורק אם קיימת
+$\hat{B}$
+עבורה
+$\hat{B}^2 + 2 I = J$.
+אכן,
+אם קיימת
+$B$
+כנ"ל, ניקח
+$\hat{B} = P^{-1} B P$
+שתקיים את הנדרש, ואם קיימת
+$\hat{B}$
+עבורה
+$\hat{B}^2 + 2 I = J$,
+ניקח
+$B = P \hat{B} P^{-1}$
+ואז
+$\hat{B} = P^{-1} B P$
+ונקבל כי
+\begin{align*}
+P^{-1} \prs{B^2 + 2 I} P = \prs{P^{-1} B P}^2 + I = J = P^{-1} A P
+\end{align*}
+ולאחר צמצום
+$B^2 + I = A$.
+
+לכן, די לבדוק אם קיימת
+$\hat{B}$
+עבורה
+$\hat{B}^2 + 2 I = J$.
+אם נמצא
+$\tilde{B} \in \Mat_4\prs{\mbb{C}}$
+עבורה
+$\tilde{B}^2 + 2I \sim J$
+נקבל כי יש
+$Q \in \Mat_4\prs{\mbb{C}}$
+עבורה
+\[\prs{Q^{-1} \tilde{B} Q}^2 + 2I = Q^{-1} \prs{\tilde{B}^2 + 2I} Q = J\]
+ואז נוכל לקחת
+$\hat{B} = Q^{-1} \tilde{B} Q$.
+לכן, כדי להוכיח שהטענה נכונה, די למצוא
+$\tilde{B}$
+עבורה
+$\tilde{B}^2 + 2I \sim J$,
+כלומר מטריצה
+$\tilde{B} \in \Mat_4\prs{\mbb{C}}$
+עבורה צורת ז'ורדן של
+$\tilde{B}^2 + 2I$
+היא
+$\diag\prs{J_2\prs{2}, J_2\prs{2}}$.
+אבל
+$\tilde{B}^2 + 2I \sim J$
+שקול ל־%
+$\tilde{B}^2 \sim J - 2I$
+לכן הנ"ל שקול לכך שצורת ז'ורדן של
+$\tilde{B}^2$
+היא
+$\diag{\J_2\prs{0}, J_2\prs{0}}$.
+
+ניקח
+$\tilde{B} =  J_4\prs{0}$.
+אז
+\[\tilde{B}^2 = \pmat{0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0}\]
+מטריצה מדרגה
+$2$.
+לכן, בצורת ז'ורדן של
+$\tilde{B}^2$
+יש
+$r_g\prs{0} = 4 - \rank\prs{B^2} = 2$
+בלוקים.
+מתקיים
+$\prs{\tilde{B}^2}^2 = J_4\prs{0}^4 = 0$,
+לכן בצורת ז'ורדן של
+$\tilde{B}^2$
+מספר הבלוקים מגודל לפחות
+$2$
+בצורת ז'ורדן של
+$\tilde{B}^2$
+הוא
+\[\text{.} \dim \ker\prs{\prs{\tilde{B}^2}^2} - \dim \ker\prs{\tilde{B}^2} = 4 - 2 = 2\]
+לכן צורת ז'ורדן של
+$\tilde{B}^2$
+היא
+$\diag\prs{J_2\prs{0}, J_2\prs{0}}$,
+כנדרש.
+
+\end{enumerate}
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$V$
+מרחב מכפלה פנימית מרוכב ממימד סופי ותהיינה
+$S,T \in \endo_{\mbb{C}}\prs{V}$
+אוניטריות.
+הוכיחו או מצאו דוגמא נגדית עבור כל אחד מהסעיפים הבאים.
+
+\begin{enumerate}
+\item $S+T$
+נורמלית.
+\item $S \circ T$
+נורמלית.
+\item אם
+$S,T$
+מתחלפות אז
+$S+T$
+נורמלית.
+\end{enumerate}
+\end{exercisechap}
+
+\begin{solution}
+\begin{enumerate}
+\item מתקיים
+\begin{align*}
+\prs{S+T}^* \circ \prs{S+T} &= \prs{S^* + T^*} \circ \prs{S+T}
+\\&=
+S^* \circ S + S^* \circ T + T^* \circ S + T^* \circ T
+\\&=
+2 \id_V + S^* \circ T + T^* \circ S
+\end{align*}
+וגם
+\begin{align*}
+\prs{S+T} \circ \prs{S+T}^* &= \prs{S + T} \circ \prs{S^* + T^*}
+\\&= S \circ S^* + S \circ T^* + T \circ S^* + T \circ T^*
+\\ \hphantom{\prs{S+T} \circ \prs{S+T}^*} &= 2\id_V + S \circ T^* + T \circ S^*
+\end{align*}
+לכן נרצה לדעת האם בהכרח
+\[\text{.} S^* \circ T + T^* \circ S = S \circ T^* + T \circ S^*\]
+
+כדי למצוא דוגמא נגדית, נצטרך שלפחות אחת מבין
+$S,T$
+לא תהיה צמודה לעצמה.
+ניקח
+\begin{align*}
+S \colon \mbb{C}^2 &\to \mbb{C}^2 \\
+\pmat{x \\ y} &\mapsto \pmat{y \\ x}
+\end{align*}
+וכן
+\begin{align*}
+T \colon \mbb{C}^2 &\to \mbb{C}^2 \\
+\text{.} \pmat{x \\ y} &\mapsto \pmat{\frac{x-y}{\sqrt{2}} \\ \frac{x+y}{\sqrt{2}}}
+\end{align*}
+$E$
+בסיס אורתונורמלי ולכן
+\begin{align*}
+\brs{S^*}_E &= \brs{S}_E^t = \pmat{0 & 1 \\ 1 & 0}^t = \pmat{0 & 1 \\ 1 & 0} = \brs{S}_E
+\end{align*}
+וגם
+\begin{align*}
+\text{.} \brs{T^*}_E &= \brs{T}_E^t = \pmat{1/\sqrt{2} & -1/\sqrt{2} \\ \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}}^t = \pmat{\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}} \neq \brs{T}_E
+\end{align*}
+כעת
+\begin{align*}
+\brs{S^* \circ T + T^* \circ S}_E &=
+\brs{S^*}_E \brs{T}_E + \brs{T^*}_E \brs{S}_E
+\\&=
+\pmat{0 & 1 \\ 1 & 0} \pmat{\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}} + \pmat{\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}} \pmat{0 & 1 \\ 1 & 0}
+\\&=
+\pmat{\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & - \frac{1}{\sqrt{2}}} + \pmat{\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & - \frac{1}{\sqrt{2}}}
+\\&= \pmat{\sqrt{2} & \sqrt{2} \\ \sqrt{2} & - \sqrt{2}}
+\end{align*}
+אבל
+\begin{align*}
+\pmat{S \circ T^* + T \circ S^*}_E &= \brs{S}_E \brs{T^*}_E + \brs{T}_E \brs{S^*}_E
+\\&= \pmat{0 & 1 \\ 1 & 0} \pmat{\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}} + \pmat{\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}} \pmat{0 & 1 \\ 1 & 0}
+\\&=
+\pmat{-\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}} + \pmat{-\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}}
+\\&= \pmat{-\sqrt{2} & \sqrt{2} \\ \sqrt{2} & \sqrt{2}}
+\end{align*}
+ואלו מטריצות שונות.
+
+\item מתקיים
+\begin{align*}
+\prs{S \circ T}^* \circ \prs{S \circ T} &= T^* \circ S^* \circ S \circ T
+\\&=
+T^* \circ S \circ S^* \circ T
+\\&=
+T ^* \circ T
+\\&=
+\id_V
+\end{align*}
+לכן
+$S \circ T$
+אוניטרית ובפרט נורמלית.
+
+\begin{remark}
+ראיתם בתרגול שהרכבה של העתקות אוניטריות היא אוניטרית, ולכן אין צורך בפירוט מעבר לכך כפי שהתרגיל מנוסח.
+\end{remark}
+
+\item 
+כמו מקודם,
+מתקיים
+\begin{align*}
+\prs{S+T}^* \circ \prs{S+T} &= \prs{S^* + T^*} \circ \prs{S+T}
+\\&=
+S^* \circ S + S^* \circ T + T^* \circ S + T^* \circ T
+\\&=
+2 \id_V + S^* \circ T + T^* \circ S
+\end{align*}
+וגם
+\begin{align*}
+\prs{S+T} \circ \prs{S+T}^* &= \prs{S + T} \circ \prs{S^* + T^*}
+\\&= S \circ S^* + S \circ T^* + T \circ S^* + T \circ T^*
+\\ \hphantom{\prs{S+T} \circ \prs{S+T}^*} &= 2\id_V + S \circ T^* + T \circ S^*
+\end{align*}
+כעת,
+$S,T$
+מתחלפות, לכן גם
+$S^*, T$
+מתחלפות וגם
+$S, T^*$
+מתחלפות, ונקבל שוויון.
+\end{enumerate}
+\end{solution}
+
+\begin{exercisechap}
+יהיו
+$v_1, \ldots, v_n \in \mbb{R}^n$.
+הראו כי
+$B \ceq \prs{v_1, \ldots, v_n}$
+בסיס של
+$\mbb{R}^n$
+אם ורק אם למטריצת
+\textenglish{Gram}
+של
+$B$
+\[\mrm{Gr}\prs{B} \ceq \pmat{\trs{v_1, v_1} & \cdots & \trs{v_1, v_n} \\ \vdots & \ddots & \vdots \\ \trs{v_n, v_1} & \cdots & \trs{v_n, v_n}} = \prs{\trs{v_i, v_j}}_{i,j \in \brs{n}}\]
+יש דטרמיננטה חיובית.
+\end{exercisechap}
+
+\begin{solution}
+נניח כי
+$B$
+בסיס.
+אז
+$\mrm{Gr}\prs{B}$
+המטריצה המייצגת של המכפלה הפנימית הסטנדרטית לפי
+$B$.
+לכן קיים
+$a \in \mbb{R}$
+עבורו
+\[\det\prs{\mrm{Gr}\prs{B}} = a^2 \det\prs{I_n} = a^2\]
+(כי
+$\mrm{Gr}\prs{B} = P^t I_n P$
+וכי הדטרמיננטה כפלית).
+כיוון ש־%
+$\mrm{Gr}\prs{B}$
+הפיכה, לא יתכן
+$a = 0$
+ולכן
+$\det\prs{\mrm{Gr}\prs{B}} = a^2 > 0$.
+
+בכיוון השני, נניח ש־%
+$B$
+אינו בסיס. אז יש סקלרים
+$\alpha_1, \ldots, \alpha_{n-1} \in \mbb{R}$
+עבורם
+\[\text{.} v_n = \sum_{i \in [n-1]} \alpha_i v_i\]
+נקבל
+\begin{align*}
+\text{.} \prs{\mrm{Gr}\prs{B}} &= \pmat{\trs{v_1, v_1} & \cdots & \trs{v_1, \sum_{i \in [n-1]} \alpha_i v_i} \\ \vdots & \ddots & \vdots \\ \trs{v_n, v_1} & \cdots & \trs{v_i, \sum_{i \in [n-1]} \alpha_i v_i}}
+=
+\pmat{\trs{v_1, v_1} & \cdots & \sum_{i \in [n-1]} \alpha_i \trs{v_1, v_i} \\ \vdots & \ddots & \vdots \\ \trs{v_n, v_1} & \cdots & \sum_{i \in [n-1]} \alpha_i \trs{v_i, v_i}}
+\end{align*}
+לכן, העמודה הימנית של
+$\mrm{Gr}\prs{B}$
+היא צירוף לינארי של שאר העמודות, ולכן
+$\det\prs{\mrm{Gr}\prs{B}} = 0$.
+\end{solution}
+
+\begin{exercisechap}
+יהי
+$V$
+מרחב מכפלה פנימית ממימד
+$n \in \mbb{N}$
+מעל
+$\mbb{R}$.
+יהיו
+$U,W \leq V$
+עבורם
+$V = U \oplus W$.
+עבור
+$v = u + w$
+כאשר
+$u \in U, w \in W$
+נגדיר
+$T\prs{v} = u - w$.
+הניחו כי
+$T$
+לינארית והראו כי
+$T$
+צמודה לעצמה אם ורק אם
+$U \perp W$.
+\end{exercisechap}
+
+\begin{solution}
+נניח כי
+$U \perp W$.
+יהי
+$B$
+בסיס אורתונורמלי ל־%
+$U$
+ויהי
+$C$
+בסיס אורתונורמלי ל־%
+$W$.
+אז
+$D \ceq B \uplus C$
+בסיס אורתונורמלי ל־%
+$V$.
+נקבל כי בבסיס זה
+\[\brs{T}_D = \pmat{\brs{\rest{T}{U}}_B & 0 \\ 0 & \brs{\rest{T}{W}}_C} = \pmat{I_k & 0 \\ 0 & - I_\ell}\]
+עבור
+$k \ceq \dim U, \ell \ceq \dim W$.
+כיוון ש־%
+$D$
+אורתונורמלי, מתקיים
+\begin{align*}
+\text{.} \brs{T^*}_D &= \brs{T}_D^t = \pmat{I_k & 0 \\ 0 & - I_{\ell}}^t = \pmat{I_k & 0 \\ 0 & - I_{\ell}} = \brs{T}_D
+\end{align*}
+לכן,
+$T^* = T$,
+כנדרש.
+
+נניח כעת כי
+$T^* = T$
+ויהיו
+$u \in U$
+ו־%
+$w \in W$.
+מתקיים
+\begin{align*}
+\trs{u,w} &= \trs{Tu, w}
+\\&= \trs{u, T^*  w}
+\\&= \trs{u, T w}
+\\&= \trs{u, -w}
+\\&= -\trs{u,w}
+\end{align*}
+לכן
+$\trs{u,w} = 0$
+ולכן
+$u \perp w$.
+נקבל כי
+$U \perp W$.
+\end{solution}
 
 \printbibliography
 \end{document}

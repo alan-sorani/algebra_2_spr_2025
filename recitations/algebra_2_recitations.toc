@@ -36,3 +36,4 @@
 \contentsline {section}{\numberline {8.2}חוק האינרציה של סילבסטר}{65}{section.8.2}%
 \contentsline {subsection}{\numberline {8.2.1}חזרה}{65}{subsection.8.2.1}%
 \contentsline {subsection}{\numberline {8.2.2}תרגילים}{66}{subsection.8.2.2}%
+\contentsline {chapter}{\numberline {9}תרגילים ממבחנים}{68}{chapter.9}%

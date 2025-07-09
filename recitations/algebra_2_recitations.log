@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.3.10)  2 JUL 2025 11:38
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex 2025.3.10)  9 JUL 2025 11:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2214,9 +2214,6 @@ line 6148.
 [62
 
 ] [63] [64]
-Package hyperref Info: bookmark level for unknown exercise defaults to 0 on inp
-ut line 6441.
-
 Overfull \hbox (40.12303pt too wide) in paragraph at lines 6463--6490
 []\TU/Alef(0)/m/n/10 אורתוגונלית עבורה $\OML/cmm/m/it/10 Q[] [][] Q$ \TU/Alef(0
 )/m/n/10 אלכסונית. נרצה שיתקיים $\OML/cmm/m/it/10 Q \OT1/cmr/m/n/10 = \OML/cmm/
@@ -2224,21 +2221,22 @@ m/it/10 P[]$ \TU/Alef(0)/m/n/10 עבור בסיס $\OML/cmm/m/it/10 B$\TU/Alef(0
 0 , ולכן נגדיר $\OML/cmm/m/it/10 B [][]\OT1/cmr/m/n/10 = []$[]
  []
 
-
-Overfull \hbox (43.7908pt too wide) in paragraph at lines 6502--6525
-[][]\TU/Alef(0)/m/it/10 תהי $\OML/cmm/m/it/10 A \OMS/cmsy/m/n/10 2 [][] []$ \TU
-/Alef(0)/m/it/10 סימטרית. $\OML/cmm/m/it/10 A$ \TU/Alef(0)/m/it/10 חופפת למטריצ
-ה יחידה מהצורה $[]$.[]
- []
-
 [65]
 Package hyperref Info: bookmark level for unknown fact defaults to 0 on input l
-ine 6538.
+ine 6552.
 Package hyperref Info: bookmark level for unknown algorithmx defaults to 0 on i
-nput line 6638.
- [66]
+nput line 6652.
+ [66] [67]
+פרק 9.
+[68
 
-LaTeX Warning: Empty bibliography on input line 6722.
+] [69] [70]
+LaTeX Info: Redefining \rmfamily on input line 7096.
+LaTeX Info: Redefining \sffamily on input line 7096.
+LaTeX Info: Redefining \ttfamily on input line 7096.
+ [71]
+
+LaTeX Warning: Empty bibliography on input line 7219.
 
 \tf@thm=\write8
 \openout8 = `algebra_2_recitations.thm'.
@@ -2332,7 +2330,7 @@ The property list \__xpg_alias contains the pairs (without outer braces):
 >  {newzealand/target}  =>  {english}
 >  {newzealand/variant}  =>  {newzealand}
 >  {newzealand/options}  =>  {variant=newzealand}.
-[67] (./algebra_2_recitations.aux
+[72] (./algebra_2_recitations.aux
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 Package polyglossia Info: Option: Hebrew, calendar=gregorian.
@@ -2342,18 +2340,18 @@ Package polyglossia Info: Option: Hebrew, calendar=gregorian.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `algebra_2_recitations.out' has not changed.
-(rerunfilecheck)             Checksum: 02E7CFAFC79518FC352A40A0D76317CB;8416.
+(rerunfilecheck)             Checksum: E2E12B54917C3B8C51510C008A8AF6EA;8586.
 Package logreq Info: Writing requests to 'algebra_2_recitations.run.xml'.
 \openout1 = `algebra_2_recitations.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43976 strings out of 476775
- 932078 string characters out of 5808212
- 1941806 words of memory out of 5000000
- 63355 multiletter control sequences out of 15000+600000
+ 43975 strings out of 476775
+ 932061 string characters out of 5808212
+ 1942990 words of memory out of 5000000
+ 63354 multiletter control sequences out of 15000+600000
  520252 words of font info for 99 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  115i,20n,118p,1293b,880s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on algebra_2_recitations.pdf (69 pages).
+Output written on algebra_2_recitations.pdf (74 pages).
